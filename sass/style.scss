@@ -1,0 +1,54 @@
+@import 'fonts';
+@import 'variables';
+@import 'reset';
+@import 'mixins';
+
+
+body {
+  background-color: #fff;
+  color: $gray;
+  font-family: 'Lato';
+  section {
+    margin: 20px 0px;
+  }
+
+  md-content {
+    color: texto;
+    background-color: #fff ;
+  }
+  .header {
+    margin: 0px;
+    height: 120px;
+    padding: 20px 15px;
+    border-bottom: 1px solid #E2E2E2;
+
+  }
+  .content {
+    margin: 0px;
+    padding: 30px 20px;
+  }
+  .footer {
+    margin:  0px;
+    padding: 30px 20px;
+  }
+
+  .title-sec {
+    width: 100%;
+    h1 {
+      text-align: center;
+    }
+
+  }
+  .card {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+    p {
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+    }
+
+  }
+}
+

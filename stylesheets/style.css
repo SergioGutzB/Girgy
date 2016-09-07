@@ -1,0 +1,62 @@
+/* line 2, ../sass/_reset.scss */
+body p {
+  font-weight: 100 !important;
+  font-size: 1rem !important;
+}
+/* line 6, ../sass/_reset.scss */
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: #808080 !important;
+}
+
+/* line 7, ../sass/style.scss */
+body {
+  background-color: #fff;
+  color: #808080;
+  font-family: 'Lato';
+}
+/* line 11, ../sass/style.scss */
+body section {
+  margin: 20px 0px;
+}
+/* line 15, ../sass/style.scss */
+body md-content {
+  color: texto;
+  background-color: #fff;
+}
+/* line 19, ../sass/style.scss */
+body .header {
+  margin: 0px;
+  height: 120px;
+  padding: 20px 15px;
+  border-bottom: 1px solid #E2E2E2;
+}
+/* line 26, ../sass/style.scss */
+body .content {
+  margin: 0px;
+  padding: 30px 20px;
+}
+/* line 30, ../sass/style.scss */
+body .footer {
+  margin: 0px;
+  padding: 30px 20px;
+}
+/* line 35, ../sass/style.scss */
+body .title-sec {
+  width: 100%;
+}
+/* line 37, ../sass/style.scss */
+body .title-sec h1 {
+  text-align: center;
+}
+/* line 42, ../sass/style.scss */
+body .card {
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+/* line 47, ../sass/style.scss */
+body .card p {
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
