@@ -1,23 +1,112 @@
-
 @import 'variables';
+
+$img-width: 200px;
+$in: #337ab7;
+$in-hover: #23527c;
+
+
 
 @media only screen and (min-width:1px) {
   body {    
     #nosotros{
-          border-top: 1px solid #ece9e9;
-      .content-card{
-        p{
-          text-align: justify;
+      border-top: 1px solid #ece9e9;
+      .content {
+        padding: $space 200px 0px 200px;
+      }
+      .circle-image {
+        width: $img-width;
+        height: $img-width;
+        max-width: $img-width;
+        overflow: hidden;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        
+        img {
+          position: absolute;
+          left: 0px;
+          top:0px;
+          border-radius: 50%;
+          width: $img-width;  
+          text-align: center;           
+          filter: grayscale(100%);
+          -webkit-filter: grayscale(100%);
+          -moz-filter: grayscale(100%);
+          @include transition(filter 500ms ease-out);
+          filter: blur(0px);
+          -webkit-filter: blur(0px);
+          -moz-filter: blur(0px);
+          @include transition(filter 500ms ease-out);
+        } 
+        .telon{
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          background-color: #000;
+          width: $img-width; 
+          height: $img-width; 
+          border-radius: 50%;
+          opacity:0;
+          @include transition(opacity 500ms ease-out);
         }
-        ul{
-          list-style-type: none;
-          padding: 0px;
-          font-weight: 100;
-          font-size: 1rem;
-          line-height: 1.6rem;
+
+        .text {
+          visibility: hidden;
+          @include transition(visibility 500ms ease-out);
+          a{            
+            color: #fff;
+          }
         }
       }
-    }
-
+      .circle-image:hover{
+       img {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        @include transition(all 500ms ease-out);
+      }
+      .telon{
+        opacity:.5;
+        @include transition(opacity 500ms ease-out);
+      }
+      .text{
+        visibility: visible;
+        position: absolute;
+        left: 0px;
+        top:30px;
+        text-align: center;
+        width: $img-width;
+        padding: 40px 0px;
+        @include transition(visibility 500ms ease-out);
+        h4 {
+          color: #fff;
+          margin: 0px;
+          font-family: Lato;
+          font-weight: 100;
+        }
+        h4.cargo{
+          font-family: Oswald;
+          font-size: 15px;
+          padding-top: 5px;
+        }
+        a{            
+          color: #fff;
+          text-decoration: none;
+          i {
+            padding-top:20px;
+          }
+          
+        }
+        a:hover{
+          color: $in;
+          
+        }
+      }        
+    }      
   }
+}
 }

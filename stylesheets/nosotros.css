@@ -2,14 +2,116 @@
   body #nosotros {
     border-top: 1px solid #ece9e9;
   }
-  body #nosotros .content-card p {
-    text-align: justify;
+  body #nosotros .content {
+    padding: 80px 200px 0px 200px;
   }
-  body #nosotros .content-card ul {
-    list-style-type: none;
-    padding: 0px;
+  body #nosotros .circle-image {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+  }
+  body #nosotros .circle-image img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+    width: 200px;
+    text-align: center;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -moz-transition: filter 500ms ease-out;
+    -o-transition: filter 500ms ease-out;
+    -webkit-transition: filter 500ms ease-out;
+    transition: filter 500ms ease-out;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -moz-transition: filter 500ms ease-out;
+    -o-transition: filter 500ms ease-out;
+    -webkit-transition: filter 500ms ease-out;
+    transition: filter 500ms ease-out;
+  }
+  body #nosotros .circle-image .telon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #000;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0;
+    -moz-transition: opacity 500ms ease-out;
+    -o-transition: opacity 500ms ease-out;
+    -webkit-transition: opacity 500ms ease-out;
+    transition: opacity 500ms ease-out;
+  }
+  body #nosotros .circle-image .text {
+    visibility: hidden;
+    -moz-transition: visibility 500ms ease-out;
+    -o-transition: visibility 500ms ease-out;
+    -webkit-transition: visibility 500ms ease-out;
+    transition: visibility 500ms ease-out;
+  }
+  body #nosotros .circle-image .text a {
+    color: #fff;
+  }
+  body #nosotros .circle-image:hover img {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+  }
+  body #nosotros .circle-image:hover .telon {
+    opacity: .5;
+    -moz-transition: opacity 500ms ease-out;
+    -o-transition: opacity 500ms ease-out;
+    -webkit-transition: opacity 500ms ease-out;
+    transition: opacity 500ms ease-out;
+  }
+  body #nosotros .circle-image:hover .text {
+    visibility: visible;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    text-align: center;
+    width: 200px;
+    padding: 40px 0px;
+    -moz-transition: visibility 500ms ease-out;
+    -o-transition: visibility 500ms ease-out;
+    -webkit-transition: visibility 500ms ease-out;
+    transition: visibility 500ms ease-out;
+  }
+  body #nosotros .circle-image:hover .text h4 {
+    color: #fff;
+    margin: 0px;
+    font-family: Lato;
     font-weight: 100;
-    font-size: 1rem;
-    line-height: 1.6rem;
+  }
+  body #nosotros .circle-image:hover .text h4.cargo {
+    font-family: Oswald;
+    font-size: 15px;
+    padding-top: 5px;
+  }
+  body #nosotros .circle-image:hover .text a {
+    color: #fff;
+    text-decoration: none;
+  }
+  body #nosotros .circle-image:hover .text a i {
+    padding-top: 20px;
+  }
+  body #nosotros .circle-image:hover .text a:hover {
+    color: #337ab7;
   }
 }
