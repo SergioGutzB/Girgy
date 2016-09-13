@@ -29,7 +29,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     background-size: cover;
     position: relative;
     height: 100vh;
-    background-image: url(/images/solar-power.jpg);
+    background-image: url(images/solar-power.jpg);
     width: 100%;
     background-attachment: scroll;
     background-position: center top;
@@ -61,7 +61,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   body .header .title {
     height: calc(100vh - 49px);
     background-color: rgba(0, 0, 0, 0.45);
-    background-image: url(/images/weft-blue.png);
+    background-image: url(images/weft-blue.png);
   }
   body .header .title h1, body .header .title h2, body .header .title h3 {
     color: #fff;
