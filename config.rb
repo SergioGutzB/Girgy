@@ -12,10 +12,10 @@ javascripts_dir = "js"
 # output_style = :expanded or :nested or :compact or :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-relative_assets = true
+#relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-#line_comments = false
+line_comments = false
 
 
 # If you prefer the indented syntax, you might want to regenerate this
@@ -23,3 +23,8 @@ relative_assets = true
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+
+asset_cache_buster :none
+cache = false
+

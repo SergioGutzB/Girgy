@@ -1,0 +1,13 @@
+@import 'variables';
+
+@media only screen and (min-width:1px) {
+  body {    
+    #servicios{
+      background-color: $m-green;
+      color: #fff;
+      .title, .sub-title {
+        color: #fff;
+      }
+    }
+  }
+}

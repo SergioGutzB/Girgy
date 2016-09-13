@@ -1,0 +1,10 @@
+@media only screen and (min-width: 1px) {
+  body .content md-grid-tile {
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+  }
+  body .content md-grid-tile img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

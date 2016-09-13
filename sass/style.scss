@@ -4,51 +4,223 @@
 @import 'mixins';
 
 
-body {
+
+#wrap {
+  min-height: 100%;
   background-color: #fff;
   color: $gray;
-  font-family: 'Lato';
-  section {
-    margin: 20px 0px;
-  }
+  font-family: $font-lato;
+} 
 
-  md-content {
-    color: texto;
-    background-color: #fff ;
-  }
-  .header {
-    margin: 0px;
-    height: 120px;
-    padding: 20px 15px;
-    border-bottom: 1px solid #E2E2E2;
+@media only screen and (min-width:1px) {
+  body {
 
-  }
-  .content {
-    margin: 0px;
-    padding: 30px 20px;
-  }
-  .footer {
-    margin:  0px;
-    padding: 30px 20px;
-  }
+    .header {
+      margin: 0px;
+      background-size: cover;
+      position: relative;
+      height: 100vh;
+      background-image: url(/images/solar-power.jpg);
+      width: 100%;
+      background-attachment: scroll;
+      // border-bottom: 1px solid #E2E2E2;
+      background-position: center top;
+      transition: all 0.3s ease 0s;
+      .logo {
+        width: $logo-width;
+        height: 50px;
+        text-align: center;
+        position: absolute;
+      }
+      .title {
+        height: calc(100vh - 49px);
+        background-color: rgba(0,0,0,.45);
+        background-image: url(/images/weft-blue.png);
+        h1, h2, h3{
+          color: #fff;
+          text-align: center;
+          font-family: $font-lato;
+          
+        }
+        h1 {
+          font-size: 3rem;
+        }
+        h3 {
+          font-family: $font-lato;
+          line-height: 0.4rem;
+          font-weight: 100;
+        }
+      }
+      .texto {
+        text-align: center;
+        padding: 0px 0px 50px 0px;
 
-  .title-sec {
-    width: 100%;
-    h1 {
+      }
+      .social-header{
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+        span{
+          i{
+            color:rgb(224, 224, 224)
+          }
+          .fa-inverse{
+             color: rgb(93, 100, 115);;
+          }
+          i:hover {
+            color: $m-green;
+            cursor: pointer;
+          }
+          .fa-inverse:hover{
+             color: $m-green;
+          }
+        }
+      }
+
+    }
+    md-nav-bar{
+      width: 100%;
+      .md-nav-bar {
+        background-color: $dark;
+        /* box-shadow: 0 2px 5px #999; */
+        nav {
+          float: right;
+        }      
+        .md-button.md-accent {
+          color: $m-green;
+        }
+        .md-button.md-active {
+          color: $m-light-green;
+        }
+        md-nav-ink-bar {
+          // color: #76A85D;
+          background: $m-light-green;
+          bottom: -1px;
+        }
+        md-nav-ink-bar.md-active {
+          background: $m-light-green;
+        }
+      }
+    }
+    .button-line {
+      background-color: $transparent ;
+      border: solid 1px #fff;
+      min-width: 200px;
+      margin-bottom: 30px;
+    }
+
+    /* .button-line:not([disabled]):hover {
+      background-color: #18D5CB;
+    }
+
+    .button-line[disabled] {
+      color : #18D5CB;
+      background-color: transparent;
+    } */
+
+
+    .footer {
+      background-color: $dark;
+      padding: 30px 60px;
+      height: auto;
+    }
+
+    #footer {
+      background-color: $dark;
+      padding: 30px 60px;
+      height: auto;
+      ul {
+        list-style-type: none;
+        display: inline-flex;
+        margin-bottom: 0px;
+        li {
+          padding: 5px 10px;
+          a{
+            color: $gray;
+            text-decoration: none;
+          }
+          a:hover{
+            color: $m-green;
+          }
+        }
+      }
+
+      span {
+        i {
+          color: $m-green;
+        }
+        .fa-inverse{
+          color: $dark;
+        }
+      }
+      
+    }
+    #sub-footer{
+      background-color: $m-green;      
+      padding: 10px;
+      h4 {
+        color: #fff;
+        margin: 0px;
+        font-family: Lato;
+        font-size: 1rem;
+        font-weight: 100;
+      }
+
+    }
+
+    .section{
+      padding: 50px 0px;
+      .title {
+        font-size: 3rem;
+        font-family: $font-oswald;
+        text-rendering: optimizeLegibility;
+        line-height: 1.4;
+        font-weight: 500 !important;
+        color: gray;
+        margin-bottom: 40px;
+      }
+      .content{
+        padding: 0px 60px;
+      }
+    }
+
+
+    
+    .card {
+      padding: 10px 20px;
       text-align: center;
+      .sub-title {
+        font-family: Oswald;
+        font-weight: 500;
+      }
+      .content-card {
+        margin: 0px;
+        padding: 0px;
+        p {
+          line-height: 1.6;
+          text-rendering: optimizeLegibility;
+        }
+      }
+      &.card-left{
+        padding: 10px 20px 10px 0px;
+      }
+      &.card-right{
+        padding: 10px 0px 10px 20px;
+      }
     }
 
-  }
-  .card {
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-    background-color: #f9f9f9;
-    p {
-      line-height: 1.6;
-      text-rendering: optimizeLegibility;
-    }
 
+    .card-logo {
+      overflow: hidden;
+      img {
+        width: 200px;
+        height: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        display: none;
+      }
+    }
   }
 }
+
 

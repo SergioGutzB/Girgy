@@ -1,0 +1,17 @@
+@import 'variables';
+
+@media only screen and (min-width:1px) {
+  body {    
+    .content {
+      md-grid-tile{
+        background-color: $transparent;
+        overflow: hidden;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+  }
+}

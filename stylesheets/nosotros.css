@@ -1,0 +1,15 @@
+@media only screen and (min-width: 1px) {
+  body #nosotros {
+    border-top: 1px solid #ece9e9;
+  }
+  body #nosotros .content-card p {
+    text-align: justify;
+  }
+  body #nosotros .content-card ul {
+    list-style-type: none;
+    padding: 0px;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}

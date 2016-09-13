@@ -1,0 +1,9 @@
+@media only screen and (min-width: 1px) {
+  body #servicios {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  body #servicios .title, body #servicios .sub-title {
+    color: #fff;
+  }
+}

@@ -3,61 +3,79 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+  <link href="/stylesheets/font-awesome/font-awesome.css" rel="stylesheet" >
   <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/servicios.css">
+  <link rel="stylesheet" href="stylesheets/clientes.css">
+  <link rel="stylesheet" href="stylesheets/nosotros.css">
+  
 </head>
-<body ng-app="Girgy" ng-cloak>
+<body ng-app="Girgy">
   <!--
     Your HTML content here
   -->  
-  <div class="md-padding" ng-controller="NavController">
+  <div id="wrap">
+    <div ng-controller="NavController">
+      <div class="header">
+        <div layout="row" layout-align="space-between start" >
+          <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-click="goto('page1')" name="page1">Inicio</md-nav-item>
+            <md-nav-item md-nav-click="goto('page2')" name="page2">Servicios</md-nav-item>
+            <md-nav-item md-nav-click="goto('page3')" name="page3">Contacto</md-nav-item>
+          </md-nav-bar>
+          <div class="logo" layout="row" layout-align="center center">
+            <h1 flex>GIRGY - logo </h1>
+          </div>
+        </div>
+        <div class="title" layout="row" layout-align="center center">
+          <div flex="50" class="texto">
+            <h1>Día a día renovables</h1>
+            <h3>CONTRIBUYE AL DESARROLLO SOSTENIBLE Y</h3>
+            <h3>AL APROVECHAMIENTO DE RECURSOS RENOVABLES</h3>
+          </div>
+        </div>
+        <div class="social-header">
+          <div layout="row" layout-align="center center" class="social">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
 
-    <div layout="row" class="header" >
-      <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-        <md-nav-item md-nav-click="goto('page1')" name="page1">Page One</md-nav-item>
-      <md-nav-item md-nav-click="goto('page2')" name="page2">Page Two</md-nav-item>
-      <md-nav-item md-nav-click="goto('page3')" name="page3">Page Three</md-nav-item>
-      </md-nav-bar>
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+            </span>
+          </div> 
+        </div> 
+      </div>
+
+      <div ng-include="'sections/servicios.html'" id="servicios"></div>
+
+      <div ng-include="'sections/clientes.html'"></div>
+
+      <div ng-include="'sections/nosotros.html'"></div>
+
+
     </div>
 
-    External content for <span>{{currentNavItem}}</span>..
-
-    <secction  class="content">
-      <md-content class="title-sec">
-        <h1 >Servicios</h1>
-      </md-content>
-
-      <md-content class="md-padding" layout-xs="column" layout="row" layout-align="center start">
-
-        <div flex class="card">
-          <h2>Venta / Productos</h2>
-          <div class="content">
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
-          </div>
-        </div>
-
-        <div flex class="card">
-          <h2>Instalación</h2>
-          <div class="content">
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
-          </div>
-        </div>
-
-        <div flex class="card">
-          <h2>Mantenimiento</h2>
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis vestibulum commodo. Maecenas non consectetur ante, at volutpat ante. Ut aliquam ligula ut metus pretium, et elementum elit aliquam.
-            </p>
-          </div>
-        </div>
-
-      </md-content>
-    </secction> 
+    <div ng-include="'sections/footer.html'" id="footer"></div>
+    <div layout="row" layout-align="center center" id="sub-footer">
+      <h4>GIRGY - Día a día renovables.</h4>
+    </div>
   </div>
-
-  <div layout="row" class="footer">Footer</div>
 
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
@@ -76,8 +94,3 @@
 
 </body>
 </html>
-
-<!--
-Copyright 2016 Google Inc. All Rights Reserved. 
-Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
--->

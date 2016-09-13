@@ -1,62 +1,202 @@
-/* line 2, ../sass/_reset.scss */
 body p {
-  font-weight: 100 !important;
-  font-size: 1rem !important;
+  font-weight: 100;
+  font-size: 1rem;
 }
-/* line 6, ../sass/_reset.scss */
 body h1, body h2, body h3, body h4, body h5, body h6 {
-  color: #808080 !important;
+  color: #808080;
 }
 
-/* line 7, ../sass/style.scss */
-body {
+#wrap {
+  min-height: 100%;
   background-color: #fff;
   color: #808080;
-  font-family: 'Lato';
+  font-family: "Lato", sans-serif;
 }
-/* line 11, ../sass/style.scss */
-body section {
-  margin: 20px 0px;
-}
-/* line 15, ../sass/style.scss */
-body md-content {
-  color: texto;
-  background-color: #fff;
-}
-/* line 19, ../sass/style.scss */
-body .header {
-  margin: 0px;
-  height: 120px;
-  padding: 20px 15px;
-  border-bottom: 1px solid #E2E2E2;
-}
-/* line 26, ../sass/style.scss */
-body .content {
-  margin: 0px;
-  padding: 30px 20px;
-}
-/* line 30, ../sass/style.scss */
-body .footer {
-  margin: 0px;
-  padding: 30px 20px;
-}
-/* line 35, ../sass/style.scss */
-body .title-sec {
-  width: 100%;
-}
-/* line 37, ../sass/style.scss */
-body .title-sec h1 {
-  text-align: center;
-}
-/* line 42, ../sass/style.scss */
-body .card {
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-/* line 47, ../sass/style.scss */
-body .card p {
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
+
+@media only screen and (min-width: 1px) {
+  body {
+    /* .button-line:not([disabled]):hover {
+      background-color: #18D5CB;
+    }
+
+    .button-line[disabled] {
+      color : #18D5CB;
+      background-color: transparent;
+    } */
+  }
+  body .header {
+    margin: 0px;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    background-image: url(/images/solar-power.jpg);
+    width: 100%;
+    background-attachment: scroll;
+    background-position: center top;
+    transition: all 0.3s ease 0s;
+  }
+  body .header .logo {
+    width: 240px;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+  }
+  body .header .title {
+    height: calc(100vh - 49px);
+    background-color: rgba(0, 0, 0, 0.45);
+    background-image: url(/images/weft-blue.png);
+  }
+  body .header .title h1, body .header .title h2, body .header .title h3 {
+    color: #fff;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+  }
+  body .header .title h1 {
+    font-size: 3rem;
+  }
+  body .header .title h3 {
+    font-family: "Lato", sans-serif;
+    line-height: 0.4rem;
+    font-weight: 100;
+  }
+  body .header .texto {
+    text-align: center;
+    padding: 0px 0px 50px 0px;
+  }
+  body .header .social-header {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+  }
+  body .header .social-header span i {
+    color: #e0e0e0;
+  }
+  body .header .social-header span .fa-inverse {
+    color: #5d6473;
+  }
+  body .header .social-header span i:hover {
+    color: #4CAF50;
+    cursor: pointer;
+  }
+  body .header .social-header span .fa-inverse:hover {
+    color: #4CAF50;
+  }
+  body md-nav-bar {
+    width: 100%;
+  }
+  body md-nav-bar .md-nav-bar {
+    background-color: #3c3c3c;
+    /* box-shadow: 0 2px 5px #999; */
+  }
+  body md-nav-bar .md-nav-bar nav {
+    float: right;
+  }
+  body md-nav-bar .md-nav-bar .md-button.md-accent {
+    color: #4CAF50;
+  }
+  body md-nav-bar .md-nav-bar .md-button.md-active {
+    color: #8BC34A;
+  }
+  body md-nav-bar .md-nav-bar md-nav-ink-bar {
+    background: #8BC34A;
+    bottom: -1px;
+  }
+  body md-nav-bar .md-nav-bar md-nav-ink-bar.md-active {
+    background: #8BC34A;
+  }
+  body .button-line {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px #fff;
+    min-width: 200px;
+    margin-bottom: 30px;
+  }
+  body .footer {
+    background-color: #3c3c3c;
+    padding: 30px 60px;
+    height: auto;
+  }
+  body #footer {
+    background-color: #3c3c3c;
+    padding: 30px 60px;
+    height: auto;
+  }
+  body #footer ul {
+    list-style-type: none;
+    display: inline-flex;
+    margin-bottom: 0px;
+  }
+  body #footer ul li {
+    padding: 5px 10px;
+  }
+  body #footer ul li a {
+    color: #808080;
+    text-decoration: none;
+  }
+  body #footer ul li a:hover {
+    color: #4CAF50;
+  }
+  body #footer span i {
+    color: #4CAF50;
+  }
+  body #footer span .fa-inverse {
+    color: #3c3c3c;
+  }
+  body #sub-footer {
+    background-color: #4CAF50;
+    padding: 10px;
+  }
+  body #sub-footer h4 {
+    color: #fff;
+    margin: 0px;
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  body .section {
+    padding: 50px 0px;
+  }
+  body .section .title {
+    font-size: 3rem;
+    font-family: "Oswald", sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.4;
+    font-weight: 500 !important;
+    color: gray;
+    margin-bottom: 40px;
+  }
+  body .section .content {
+    padding: 0px 60px;
+  }
+  body .card {
+    padding: 10px 20px;
+    text-align: center;
+  }
+  body .card .sub-title {
+    font-family: Oswald;
+    font-weight: 500;
+  }
+  body .card .content-card {
+    margin: 0px;
+    padding: 0px;
+  }
+  body .card .content-card p {
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+  body .card.card-left {
+    padding: 10px 20px 10px 0px;
+  }
+  body .card.card-right {
+    padding: 10px 0px 10px 20px;
+  }
+  body .card-logo {
+    overflow: hidden;
+  }
+  body .card-logo img {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    display: none;
+  }
 }
