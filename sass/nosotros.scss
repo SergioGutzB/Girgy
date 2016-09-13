@@ -12,7 +12,7 @@ $in-hover: #23527c;
     #nosotros{
       border-top: 1px solid #ece9e9;
       background-size: cover;    
-      background-image: url(images/panel-personal.jpg);
+      background-image: url(../images/panel-personal.jpg);
       background-attachment: fixed;
       background-position: center center;
       transition: all 0.3s ease 0s;
@@ -23,7 +23,7 @@ $in-hover: #23527c;
       .section{
         background-size: cover;   
         background-color: rgba(0,0,0,.45);
-        background-image: url(images/weft-blue.png);
+        background-image: url(../images/weft-blue.png);
         .title {
 
           color: #fff;
