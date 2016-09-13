@@ -191,7 +191,7 @@
           text-rendering: optimizeLegibility;
           line-height: .95;
           font-weight: 500 !important;
-          color: gray;
+          color: $m-green;
           margin: 0px;
         }
         .content{
@@ -204,6 +204,7 @@
       .card {
         padding: 0px 20px;
         text-align: center;
+        min-height: 220px;
         .sub-title {
           font-family: Oswald;
           font-weight: 500;

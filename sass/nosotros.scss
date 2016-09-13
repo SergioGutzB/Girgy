@@ -7,12 +7,29 @@ $in-hover: #23527c;
 
 
 @media only screen and (min-width:1px) {
-  body {    
+  body {
+
     #nosotros{
       border-top: 1px solid #ece9e9;
+      background-size: cover;    
+      background-image: url(/images/panel-personal.jpg);
+      background-attachment: fixed;
+      background-position: center center;
+      transition: all 0.3s ease 0s;
       .content {
         padding: $space 200px 0px 200px;
       }
+      
+      .section{
+        background-size: cover;   
+        background-color: rgba(0,0,0,.45);
+        background-image: url(/images/weft-blue.png);
+        .title {
+
+          color: #fff;
+        }
+      }
+
       .circle-image {
         width: $img-width;
         height: $img-width;
@@ -28,15 +45,15 @@ $in-hover: #23527c;
           top:0px;
           border-radius: 50%;
           width: $img-width;  
+          height: $img-width; 
           text-align: center;           
-          filter: grayscale(100%);
-          -webkit-filter: grayscale(100%);
-          -moz-filter: grayscale(100%);
-          @include transition(filter 500ms ease-out);
-          filter: blur(0px);
-          -webkit-filter: blur(0px);
-          -moz-filter: blur(0px);
-          @include transition(filter 500ms ease-out);
+          filter: grayscale(50%);
+          -webkit-filter: grayscale(50%);
+          -moz-filter: grayscale(50%);
+          // filter: blur(0px);
+          // -webkit-filter: blur(0px);
+          // -moz-filter: blur(0px);
+          @include transition(all 500ms ease-out);
         } 
         .telon{
           position: absolute;
@@ -47,12 +64,16 @@ $in-hover: #23527c;
           height: $img-width; 
           border-radius: 50%;
           opacity:0;
-          @include transition(opacity 500ms ease-out);
+          // filter: blur(0px);
+          // -webkit-filter: blur(0px);
+          // -moz-filter: blur(0px);
+          @include transition(all 500ms ease-out);
         }
 
         .text {
           visibility: hidden;
-          @include transition(visibility 500ms ease-out);
+          top:70px;
+          @include transition(all 500ms ease-out);
           a{            
             color: #fff;
           }
@@ -64,14 +85,17 @@ $in-hover: #23527c;
         -webkit-filter: grayscale(0%);
         -moz-filter: grayscale(0%);
         -webkit-filter: grayscale(0%);
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
-        -moz-filter: blur(2px);
+        // filter: blur(2px);
+        // -webkit-filter: blur(2px);
+        // -moz-filter: blur(2px);
         @include transition(all 500ms ease-out);
       }
       .telon{
         opacity:.5;
-        @include transition(opacity 500ms ease-out);
+        // filter: blur(2px);
+        // -webkit-filter: blur(2px);
+        // -moz-filter: blur(2px);
+        @include transition(all 500ms ease-out);
       }
       .text{
         visibility: visible;
@@ -81,7 +105,8 @@ $in-hover: #23527c;
         text-align: center;
         width: $img-width;
         padding: 40px 0px;
-        @include transition(visibility 500ms ease-out);
+
+        @include transition(all 500ms ease-out);
         h4 {
           color: #fff;
           margin: 0px;

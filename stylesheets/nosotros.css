@@ -1,9 +1,22 @@
 @media only screen and (min-width: 1px) {
   body #nosotros {
     border-top: 1px solid #ece9e9;
+    background-size: cover;
+    background-image: url(/images/panel-personal.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    transition: all 0.3s ease 0s;
   }
   body #nosotros .content {
     padding: 80px 200px 0px 200px;
+  }
+  body #nosotros .section {
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.45);
+    background-image: url(/images/weft-blue.png);
+  }
+  body #nosotros .section .title {
+    color: #fff;
   }
   body #nosotros .circle-image {
     width: 200px;
@@ -20,21 +33,15 @@
     top: 0px;
     border-radius: 50%;
     width: 200px;
+    height: 200px;
     text-align: center;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -moz-transition: filter 500ms ease-out;
-    -o-transition: filter 500ms ease-out;
-    -webkit-transition: filter 500ms ease-out;
-    transition: filter 500ms ease-out;
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -moz-transition: filter 500ms ease-out;
-    -o-transition: filter 500ms ease-out;
-    -webkit-transition: filter 500ms ease-out;
-    transition: filter 500ms ease-out;
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
   }
   body #nosotros .circle-image .telon {
     position: absolute;
@@ -45,17 +52,18 @@
     height: 200px;
     border-radius: 50%;
     opacity: 0;
-    -moz-transition: opacity 500ms ease-out;
-    -o-transition: opacity 500ms ease-out;
-    -webkit-transition: opacity 500ms ease-out;
-    transition: opacity 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
   }
   body #nosotros .circle-image .text {
     visibility: hidden;
-    -moz-transition: visibility 500ms ease-out;
-    -o-transition: visibility 500ms ease-out;
-    -webkit-transition: visibility 500ms ease-out;
-    transition: visibility 500ms ease-out;
+    top: 70px;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
   }
   body #nosotros .circle-image .text a {
     color: #fff;
@@ -65,9 +73,6 @@
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
     -moz-transition: all 500ms ease-out;
     -o-transition: all 500ms ease-out;
     -webkit-transition: all 500ms ease-out;
@@ -75,10 +80,10 @@
   }
   body #nosotros .circle-image:hover .telon {
     opacity: .5;
-    -moz-transition: opacity 500ms ease-out;
-    -o-transition: opacity 500ms ease-out;
-    -webkit-transition: opacity 500ms ease-out;
-    transition: opacity 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
   }
   body #nosotros .circle-image:hover .text {
     visibility: visible;
@@ -88,10 +93,10 @@
     text-align: center;
     width: 200px;
     padding: 40px 0px;
-    -moz-transition: visibility 500ms ease-out;
-    -o-transition: visibility 500ms ease-out;
-    -webkit-transition: visibility 500ms ease-out;
-    transition: visibility 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
   }
   body #nosotros .circle-image:hover .text h4 {
     color: #fff;

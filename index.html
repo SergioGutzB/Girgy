@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="stylesheets/servicios.css">
   <link rel="stylesheet" href="stylesheets/clientes.css">
   <link rel="stylesheet" href="stylesheets/nosotros.css">
+  <link rel="stylesheet" href="stylesheets/contacto.css">
   
 </head>
 <body ng-app="Girgy">
@@ -22,14 +23,14 @@
   -->  
   <div id="wrap">
     <div ng-controller="NavController">
-      <div class="header">
+      <div class="header" id="inicio">
         <div layout="row" layout-align="space-between start" >
           <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-            <md-nav-item md-nav-click="goto('page1')" name="page1">Inicio</md-nav-item>
-            <md-nav-item md-nav-click="goto('page2')" name="page2">Servicios</md-nav-item>
-            <md-nav-item md-nav-click="goto('page3')" name="page2">Clientes</md-nav-item>
-            <md-nav-item md-nav-click="goto('page4')" name="page2">Nosotros</md-nav-item>
-            <md-nav-item md-nav-click="goto('page5')" name="page3">Contacto</md-nav-item>
+            <md-nav-item md-nav-href="#inicio" name="inicio">Inicio</md-nav-item>
+            <md-nav-item md-nav-href="#servicios" name="servicios">Servicios</md-nav-item>
+            <md-nav-item md-nav-href="#clientes" name="page3">Clientes</md-nav-item>
+            <md-nav-item md-nav-href="#nosotros" name="nosotros">Nosotros</md-nav-item>
+            <md-nav-item md-nav-href="#contacto" name="page3">Contacto</md-nav-item>
           </md-nav-bar>
           <div class="logo" layout="row" layout-align="center center">
             <img class="logo" src="/images/logo.png">
@@ -68,21 +69,56 @@
 
       <div ng-include="'sections/servicios.html'" id="servicios"></div>
 
-      <div ng-include="'sections/clientes.html'"></div>
+      <div ng-include="'sections/clientes.html'" id="clientes"></div>
 
-      <div ng-include="'sections/nosotros.html'"></div>
+      <div ng-include="'sections/nosotros.html'" id="nosotros"></div>
+
+      <div ng-include="'sections/contacto.html'"  id="contacto"></div>
 
 
     </div>
 
-    <div ng-include="'sections/footer.html'" id="footer"></div>
+    <div id="footer">
+      <div class="column" class="footer" layout-align="center center">
+        <div layout="row" layout-align="center center" class="social">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+          </span>
+
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </div>  
+
+        <div layout="row" layout-align="center center" class="menu">
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#clientes">Nuestros Clientes</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
     <div layout="row" layout-align="center center" id="sub-footer">
       <h4>GIRGY - Día a día renovables.</h4>
     </div>
   </div>
-
+  <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
@@ -94,6 +130,7 @@
   <script src="js/app.js"></script>
 
   <script src="js/controllers/navController.js"></script>
+  <script src="js/controllers/contact.js"></script>
 
 
 </body>
