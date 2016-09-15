@@ -9,7 +9,7 @@
   min-height: 100%;
   background-color: #fff;
   color: $gray;
-  font-family: $font-lato;
+  font-family: $font-ralewat;
 } 
 
 @media only screen and (min-width:1px) {
@@ -26,45 +26,32 @@
       // border-bottom: 1px solid #E2E2E2;
       background-position: center top;
       transition: all 0.3s ease 0s;
-      .logo {
-        width: $logo-width;
-        height: 50px;
-        text-align: center;
+      .logo {        
         position: absolute;
-         display: inline-block;
+        display: inline-block;
+        height: 90px;
+        width: 300px;
+        margin: 0px;
         img {
-          ;
-          width: 40px;
-          height: 40px;
+          height: auto;
           display: inline;
-          /* padding-top: 10px; */
-          margin-top: 5px;
-        }
-        h1{
-          font-family: 'Montserrat', sans-serif;
-          color: #fff;
-          display: inline;
-          padding-left: 50px;
-          line-height: 2;
-          font-size: 25px;
-          font-weight: 400;
+          margin-left: 90px;
         }
       }
       .title {
         height: calc(100vh - 49px);
-        background-color: rgba(0,0,0,.45);
-        background-image: url(../images/weft-blue.png);
+  /*       background-color: rgba(0,0,0,.45);
+        background-image: url(../images/weft-blue.png); */
         h1, h2, h3{
           color: #fff;
           text-align: center;
-          font-family: $font-lato;
-          
+          font-family: $font-ralewat;
         }
         h1 {
           font-size: 3rem;
         }
         h3 {
-          font-family: $font-lato;
+          font-family: $font-ralewat;
           line-height: 0.4rem;
           font-weight: 100;
         }
@@ -101,11 +88,18 @@
  md-nav-bar{
   width: 100%;
   .md-nav-bar {
-    background-color: $dark;
+    background-color: #fff;
+    height: 90px;
     /* box-shadow: 0 2px 5px #999; */
     nav {
       float: right;
-    }      
+      margin-right: 80px;
+    }
+    .md-button._md-nav-button {
+      line-height: 90px;
+      margin: 0 4px;
+      padding: 0px 16px;
+    }
     .md-button.md-accent {
       color: $m-green;
     }
@@ -176,7 +170,7 @@
         h4 {
           color: #fff;
           margin: 0px;
-          font-family: Lato;
+          font-family: $font-ralewat;
           font-size: 1rem;
           font-weight: 100;
         }
@@ -187,7 +181,7 @@
         padding: $space 60px;
         .title {
           font-size: 3rem;
-          font-family: $font-oswald;
+          font-family: $font-ralewat;
           text-rendering: optimizeLegibility;
           line-height: .95;
           font-weight: 500 !important;
@@ -206,7 +200,7 @@
         text-align: center;
         min-height: 220px;
         .sub-title {
-          font-family: Oswald;
+          font-family: $font-ralewat;
           font-weight: 500;
           margin: 0px;
           line-height: 1;

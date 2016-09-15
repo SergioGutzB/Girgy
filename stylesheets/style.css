@@ -10,7 +10,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   min-height: 100%;
   background-color: #fff;
   color: #808080;
-  font-family: "Lato", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 @media only screen and (min-width: 1px) {
@@ -36,43 +36,32 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     transition: all 0.3s ease 0s;
   }
   body .header .logo {
-    width: 240px;
-    height: 50px;
-    text-align: center;
     position: absolute;
     display: inline-block;
+    height: 90px;
+    width: 300px;
+    margin: 0px;
   }
   body .header .logo img {
-    width: 40px;
-    height: 40px;
+    height: auto;
     display: inline;
-    /* padding-top: 10px; */
-    margin-top: 5px;
-  }
-  body .header .logo h1 {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    display: inline;
-    padding-left: 50px;
-    line-height: 2;
-    font-size: 25px;
-    font-weight: 400;
+    margin-left: 90px;
   }
   body .header .title {
     height: calc(100vh - 49px);
-    background-color: rgba(0, 0, 0, 0.45);
-    background-image: url(../images/weft-blue.png);
+    /*       background-color: rgba(0,0,0,.45);
+          background-image: url(../images/weft-blue.png); */
   }
   body .header .title h1, body .header .title h2, body .header .title h3 {
     color: #fff;
     text-align: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Raleway", sans-serif;
   }
   body .header .title h1 {
     font-size: 3rem;
   }
   body .header .title h3 {
-    font-family: "Lato", sans-serif;
+    font-family: "Raleway", sans-serif;
     line-height: 0.4rem;
     font-weight: 100;
   }
@@ -92,24 +81,31 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #5d6473;
   }
   body .header .social-header span i:hover {
-    color: #4CAF50;
+    color: #05894d;
     cursor: pointer;
   }
   body .header .social-header span .fa-inverse:hover {
-    color: #4CAF50;
+    color: #05894d;
   }
   body md-nav-bar {
     width: 100%;
   }
   body md-nav-bar .md-nav-bar {
-    background-color: #3c3c3c;
+    background-color: #fff;
+    height: 90px;
     /* box-shadow: 0 2px 5px #999; */
   }
   body md-nav-bar .md-nav-bar nav {
     float: right;
+    margin-right: 80px;
+  }
+  body md-nav-bar .md-nav-bar .md-button._md-nav-button {
+    line-height: 90px;
+    margin: 0 4px;
+    padding: 0px 16px;
   }
   body md-nav-bar .md-nav-bar .md-button.md-accent {
-    color: #4CAF50;
+    color: #05894d;
   }
   body md-nav-bar .md-nav-bar .md-button.md-active {
     color: #8BC34A;
@@ -145,22 +141,22 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     text-decoration: none;
   }
   body #footer ul li a:hover {
-    color: #4CAF50;
+    color: #05894d;
   }
   body #footer span i {
-    color: #4CAF50;
+    color: #05894d;
   }
   body #footer span .fa-inverse {
     color: #3c3c3c;
   }
   body #sub-footer {
-    background-color: #4CAF50;
+    background-color: #05894d;
     padding: 10px;
   }
   body #sub-footer h4 {
     color: #fff;
     margin: 0px;
-    font-family: Lato;
+    font-family: "Raleway", sans-serif;
     font-size: 1rem;
     font-weight: 100;
   }
@@ -169,11 +165,11 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
   body .section .title {
     font-size: 3rem;
-    font-family: "Oswald", sans-serif;
+    font-family: "Raleway", sans-serif;
     text-rendering: optimizeLegibility;
     line-height: .95;
     font-weight: 500 !important;
-    color: #4CAF50;
+    color: #05894d;
     margin: 0px;
   }
   body .section .content {
@@ -185,7 +181,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     min-height: 220px;
   }
   body .card .sub-title {
-    font-family: Oswald;
+    font-family: "Raleway", sans-serif;
     font-weight: 500;
     margin: 0px;
     line-height: 1;
