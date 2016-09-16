@@ -38,12 +38,19 @@
           </div>
         </div>
         <div class="title" layout="row" layout-align="center start">
-          <div flex="50" class="texto">
-            <h1>Día a día renovables</h1>
-            <h3>CONTRIBUYE AL DESARROLLO SOSTENIBLE Y</h3>
-            <h3>AL APROVECHAMIENTO DE RECURSOS RENOVABLES</h3>
+          <div flex="60" layout="column">
+            <div class="texto">
+              <h1>Día a día renovables</h1>
+              <h3>CONTRIBUYE AL DESARROLLO SOSTENIBLE Y</h3>
+              <h3>AL APROVECHAMIENTO DE RECURSOS RENOVABLES</h3>
+            </div>
+            <div flex layout-xs="column" layout="row" layout-align="center end">
+              <md-button class="button md-raised md-primary">Conócenos</md-button>
+            </div>
           </div>
+
         </div>
+
         <div class="social-header">
           <div layout="row" layout-align="center center" class="social">
             <span class="fa-stack fa-lg">
@@ -69,9 +76,11 @@
 
       <div ng-include="'sections/servicios.html'" id="servicios"></div>
 
+      <div ng-include="'sections/nosotros.html'" id="nosotros"></div>
+
       <div ng-include="'sections/clientes.html'" id="clientes"></div>
 
-      <div ng-include="'sections/nosotros.html'" id="nosotros"></div>
+      
 
       <div ng-include="'sections/contacto.html'"  id="contacto"></div>
 
@@ -115,7 +124,7 @@
       <h4>GIRGY - Día a día renovables.</h4>
     </div>
   </div>
-  <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+  <script   src="/js/jquery-1.12.4.min.js"></script>
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>

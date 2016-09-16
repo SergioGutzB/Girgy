@@ -19,12 +19,11 @@
       margin: 0px;
       background-size: cover;
       position: relative;
-      height: 100vh;
-      background-image: url(../images/solar-power.jpg);
+      height: 90vh;
+      background-image: url(../images/panel3.jpg);
       width: 100%;
       background-attachment: scroll;
-      // border-bottom: 1px solid #E2E2E2;
-      background-position: center top;
+      background-position: 30% 30%;
       transition: all 0.3s ease 0s;
       .logo {        
         position: absolute;
@@ -39,7 +38,7 @@
         }
       }
       .title {
-        height: calc(100vh - 49px);
+        height: calc(90vh - 90px);
   /*       background-color: rgba(0,0,0,.45);
         background-image: url(../images/weft-blue.png); */
         h1, h2, h3{
@@ -48,17 +47,26 @@
           font-family: $font-ralewat;
         }
         h1 {
-          font-size: 3rem;
+          font-size: 4.2rem;
+          font-weight: 300;
+          line-height: .6rem;
         }
         h3 {
           font-family: $font-ralewat;
           line-height: 0.4rem;
-          font-weight: 100;
+          font-weight: 400;
+          font-size: 25px;
+        }
+        .button {
+          padding: 2px 35px;
+          background-color: rgb(226, 203, 16);
+          color: #FFF;
+          font-weight: 500;
         }
       }
       .texto {
         text-align: center;
-        padding: 0px 0px 50px 0px;
+        padding: 50px 0px 50px 0px;
 
       }
       .social-header{
@@ -90,6 +98,7 @@
   .md-nav-bar {
     background-color: #fff;
     height: 90px;
+    border: 0px;
     /* box-shadow: 0 2px 5px #999; */
     nav {
       float: right;
@@ -101,7 +110,7 @@
       padding: 0px 16px;
     }
     .md-button.md-accent {
-      color: $m-green;
+      color: $gray;
     }
     .md-button.md-active {
       color: $m-light-green;
@@ -119,120 +128,113 @@
 
     .button-line {
       background-color: $transparent ;
-      border: solid 1px #fff;
+      border: solid 1px $green;
       min-width: 200px;
       margin:0px;
     }
 
-    /* .button-line:not([disabled]):hover {
-      background-color: #18D5CB;
-    }
-
-    .button-line[disabled] {
-      color : #18D5CB;
-      background-color: transparent;
-      } */
-
-
-      #footer {
-        background-color: $dark;
-        padding: 30px 60px;
-        height: auto;
-        ul {
-          list-style-type: none;
-          display: inline-flex;
-          margin-bottom: 0px;
-          li {
-            padding: 5px 10px;
-            a{
-              color: $gray;
-              text-decoration: none;
-            }
-            a:hover{
-              color: $m-green;
-            }
+    #footer {
+      background-color: $dark;
+      padding: 30px 60px;
+      height: auto;
+      ul {
+        list-style-type: none;
+        display: inline-flex;
+        margin-bottom: 0px;
+        li {
+          padding: 5px 10px;
+          a{
+            color: $gray;
+            text-decoration: none;
           }
-        }
-
-        span {
-          i {
+          a:hover{
             color: $m-green;
           }
-          .fa-inverse{
-            color: $dark;
-          }
         }
-
-      }
-      #sub-footer{
-        background-color: $m-green;      
-        padding: 10px;
-        h4 {
-          color: #fff;
-          margin: 0px;
-          font-family: $font-ralewat;
-          font-size: 1rem;
-          font-weight: 100;
-        }
-
       }
 
-      .section{
-        padding: $space 60px;
-        .title {
-          font-size: 3rem;
-          font-family: $font-ralewat;
-          text-rendering: optimizeLegibility;
-          line-height: .95;
-          font-weight: 500 !important;
+      span {
+        i {
           color: $m-green;
-          margin: 0px;
         }
-        .content{
-          padding-top: $space;
-        }
-      }
-
-
-
-      .card {
-        padding: 0px 20px;
-        text-align: center;
-        min-height: 220px;
-        .sub-title {
-          font-family: $font-ralewat;
-          font-weight: 500;
-          margin: 0px;
-          line-height: 1;
-        }
-        .content-card {
-          margin: 0px;
-          padding: 0px;
-          p {
-            line-height: 1.6;
-            text-rendering: optimizeLegibility;
-          }
-        }
-        &.card-left{
-          padding: 0px 20px 0px 0px;
-        }
-        &.card-right{
-          padding: 0px 0px 0px 20px;
+        .fa-inverse{
+          color: $dark;
         }
       }
 
+    }
+    #sub-footer{
+      background-color: $m-green;      
+      padding: 10px;
+      h4 {
+        color: #fff;
+        margin: 0px;
+        font-family: $font-ralewat;
+        font-size: 1rem;
+        font-weight: 100;
+      }
 
-      .card-logo {
-        overflow: hidden;
-        img {
-          width: 200px;
-          height: 200px;
-          max-width: 200px;
-          max-height: 200px;
-          display: none;
+    }
+
+    .section{
+      padding: $space 98px;
+      .title {
+        font-size: 3rem;
+        font-family: $font-ralewat;
+        text-rendering: optimizeLegibility;
+        line-height: .95;
+        font-weight: 500 !important;
+        color: $m-green;
+        margin: 0px;
+        z-index: 1000;
+      }
+      .content{
+        padding-top: $space;
+      }
+    }
+
+
+
+    .card {
+      padding: 0px 20px;
+      text-align: center;
+      min-height: 220px;
+      .sub-title {
+        font-family: $font-ralewat;
+        font-weight: 500;
+        margin: 0px;
+        line-height: 1;
+      }
+      .content-card {
+        margin: 0px;
+        padding: 0px;
+        p {
+          line-height: 1.6;
+          text-rendering: optimizeLegibility;
+          color: #484848;
+          font-weight: 300
         }
+      }
+      &.card-left{
+        padding: 0px 20px 0px 0px;
+      }
+      &.card-right{
+        padding: 0px 0px 0px 20px;
+      }
+    }
+
+
+    .card-logo {
+      overflow: hidden;
+      img {
+        width: 200px;
+        height: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        display: none;
       }
     }
   }
+}
 
 

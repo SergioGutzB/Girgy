@@ -28,6 +28,16 @@ $in-hover: #23527c;
 
           color: #fff;
         }
+        .subtitle h4{
+          color: #fff;
+          text-align: center;
+          font-family: Raleway;
+          font-weight: 300;
+          font-style: italic;
+          font-size: 20px;
+          margin: 0px;
+          margin-top: 30px;
+        }
       }
 
       .circle-image {
@@ -74,6 +84,13 @@ $in-hover: #23527c;
           visibility: hidden;
           top:70px;
           @include transition(all 500ms ease-out);
+          font-family: $font-ralewat;
+          .nombre {
+            font-weight: 400;
+          }
+          .cargo {
+            font-weight: 500;
+          }
           a{            
             color: #fff;
           }

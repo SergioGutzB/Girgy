@@ -8,7 +8,7 @@
     transition: all 0.3s ease 0s;
   }
   body #nosotros .content {
-    padding: 80px 200px 0px 200px;
+    padding: 70px 200px 0px 200px;
   }
   body #nosotros .section {
     background-size: cover;
@@ -17,6 +17,16 @@
   }
   body #nosotros .section .title {
     color: #fff;
+  }
+  body #nosotros .section .subtitle h4 {
+    color: #fff;
+    text-align: center;
+    font-family: Raleway;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+    margin: 0px;
+    margin-top: 30px;
   }
   body #nosotros .circle-image {
     width: 200px;
@@ -64,6 +74,13 @@
     -o-transition: all 500ms ease-out;
     -webkit-transition: all 500ms ease-out;
     transition: all 500ms ease-out;
+    font-family: "Raleway", sans-serif;
+  }
+  body #nosotros .circle-image .text .nombre {
+    font-weight: 400;
+  }
+  body #nosotros .circle-image .text .cargo {
+    font-weight: 500;
   }
   body #nosotros .circle-image .text a {
     color: #fff;

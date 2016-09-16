@@ -1,9 +1,16 @@
 @media only screen and (min-width: 1px) {
   body #servicios {
-    background-color: #05894d;
-    color: #fff;
+    background-color: #fff;
+    color: #05894d;
   }
   body #servicios .title, body #servicios .sub-title {
-    color: #fff;
+    color: #05894d;
+  }
+  body #servicios p {
+    color: #808080;
+    font-weight: 300;
+  }
+  body #servicios .fa {
+    padding: 0px 0px 15px 0px;
   }
 }
