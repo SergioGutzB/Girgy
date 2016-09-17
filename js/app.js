@@ -1,17 +1,25 @@
-$(document).ready(function(){
-  $('a[href^="#"]').on('click',function (e) {
-      e.preventDefault();
+$(document).foundation();
+// $(document).ready(function(){
+//   $('a[href^="#contacto"]').on('click',function (e) {
+//     console.log("contacto")
+//       e.preventDefault();
 
-      var target = this.hash;
-      var $target = $(target);
+//       var target = this.hash;
+//       var $target = $(target);
 
-      $('html, body').stop().animate({
-          'scrollTop': $target.offset().top
-      }, 900, 'swing', function () {
-          window.location.hash = target;
-      });
-  });
-});
+//       console.log(target)
+//       console.log($target)
+
+//       $('html, body').stop().animate({
+//           'scrollTop': $target.offset().top
+//       }, 900, 'swing', function () {
+//           window.location.hash = target;
+//           console.log(window.location.hash)
+//       });
+//   });
+// });
+
+
 var app = angular.module('Girgy', [
   'ngMaterial',
   'ngRoute',

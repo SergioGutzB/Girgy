@@ -38,7 +38,17 @@ $in-hover: #23527c;
           margin: 0px;
           margin-top: 30px;
         }
+        .button-section{
+          margin-top: $space;
+          .button-line.md-button {
+            background-color: rgba(255, 255, 255, 0.13);
+            border: solid 1px #ffffff;
+            color: #fff;
+          }
+        }
       }
+
+
 
       .circle-image {
         width: $img-width;

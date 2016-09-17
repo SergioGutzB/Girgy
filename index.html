@@ -4,8 +4,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="stylesheets/angular-material.min.css">
+  
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -18,23 +18,20 @@
   <link rel="stylesheet" href="stylesheets/contacto.css">
   
 </head>
-<body ng-app="Girgy">
-  <!--
-    Your HTML content here
-  -->  
+<body ng-app="Girgy"> 
   <div id="wrap">
     <div ng-controller="NavController">
       <div class="header" id="inicio">
         <div layout="row" layout-align="space-between center" >
           <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-            <md-nav-item md-nav-href="#inicio" name="inicio">Inicio</md-nav-item>
-            <md-nav-item md-nav-href="#servicios" name="servicios">Servicios</md-nav-item>
-            <md-nav-item md-nav-href="#clientes" name="page3">Clientes</md-nav-item>
-            <md-nav-item md-nav-href="#nosotros" name="nosotros">Nosotros</md-nav-item>
-            <md-nav-item md-nav-href="#contacto" name="page3">Contacto</md-nav-item>
+            <md-nav-item md-nav-click="gotoAnchor('inicio')" name="inicio">Inicio</md-nav-item>
+            <md-nav-item md-nav-click="gotoAnchor('servicios')" name="servicios">Servicios</md-nav-item>
+            <md-nav-item md-nav-click="gotoAnchor('clientes')" name="cleintes">Clientes</md-nav-item>
+            <md-nav-item md-nav-click="gotoAnchor('nosotros')" name="nosotros">Nosotros</md-nav-item>
+            <md-nav-item md-nav-click="gotoAnchor('contacto')" name="contacto">Contacto</md-nav-item>
           </md-nav-bar>
           <div class="logo" layout="row" layout-align="center center">
-            <img src="images/logo_final.png">
+            <img src="images/logo_final.png"  ng-click="gotoAnchor('/')">
           </div>
         </div>
         <div class="title" layout="row" layout-align="center start">
@@ -74,15 +71,13 @@
         </div> 
       </div>
 
-      <div ng-include="'sections/servicios.html'" id="servicios"></div>
+      <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
+      <div id="initial-container">
+        <div ng-view >
 
-      <div ng-include="'sections/nosotros.html'" id="nosotros"></div>
-
-      <div ng-include="'sections/clientes.html'" id="clientes"></div>
-
+        </div>
+      </div>
       
-
-      <div ng-include="'sections/contacto.html'"  id="contacto"></div>
 
 
     </div>
@@ -126,6 +121,7 @@
   </div>
   <script   src="js/jquery-1.12.4.min.js"></script>
   <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>
   <script src="js/angular.min.js"></script>
   <script src="js/angular-route.js"></script>
   <script src="js/angular-animate.min.js"></script>
@@ -135,10 +131,14 @@
   <!-- Angular Material Library -->
   <script src="js/angular-material.min.js"></script>
 
+
   <!-- Your application bootstrap  -->
   <script src="js/app.js"></script>
+  <script src="js/routes.js"></script>
+
 
   <script src="js/controllers/navController.js"></script>
+  <script src="js/controllers/index.js"></script>
   <script src="js/controllers/contact.js"></script>
 
 
