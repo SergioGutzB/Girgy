@@ -21,7 +21,7 @@
 <body ng-app="Girgy"> 
   <div id="wrap">
     <div ng-controller="NavController">
-      <div class="header" id="inicio">
+      <div class="navigation">
         <div layout="row" layout-align="space-between center" >
           <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
             <md-nav-item md-nav-click="gotoAnchor('inicio')" name="inicio">Inicio</md-nav-item>
@@ -34,41 +34,6 @@
             <img src="images/logo_final.png"  ng-click="gotoAnchor('/')">
           </div>
         </div>
-        <div class="title" layout="row" layout-align="center start">
-          <div flex="60" layout="column">
-            <div class="texto">
-              <h1>Día a día renovables</h1>
-              <h3>CONTRIBUYE AL DESARROLLO SOSTENIBLE Y</h3>
-              <h3>AL APROVECHAMIENTO DE RECURSOS RENOVABLES</h3>
-            </div>
-            <div flex layout-xs="column" layout="row" layout-align="center end">
-              <md-button class="button md-raised md-primary">Conócenos</md-button>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="social-header">
-          <div layout="row" layout-align="center center" class="social">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-            </span>
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-            </span>
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-            </span>
-
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-            </span>
-          </div> 
-        </div> 
       </div>
 
       <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
@@ -77,7 +42,7 @@
 
         </div>
       </div>
-      
+
 
 
     </div>
@@ -112,7 +77,7 @@
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
-        
+
       </div>
     </div>
     <div layout="row" layout-align="center center" id="sub-footer">

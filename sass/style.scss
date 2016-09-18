@@ -14,17 +14,10 @@
 
 @media only screen and (min-width:1px) {
   body {
-
-    .header {
+    .navigation{
       margin: 0px;
-      background-size: cover;
-      position: relative;
-      height: 90vh;
-      background-image: url(../images/panel3.jpg);
       width: 100%;
-      background-attachment: scroll;
-      background-position: 30% 30%;
-      transition: all 0.3s ease 0s;
+      position: relative;
       .logo {        
         position: absolute;
         display: inline-block;
@@ -37,6 +30,19 @@
           margin-left: 90px;
         }
       }
+    }
+
+    .header {
+      margin: 0px;
+      background-size: cover;
+      position: relative;
+      height: clac(90vh - 90);
+      background-image: url(../images/panel3.jpg);
+      width: 100%;
+      background-attachment: scroll;
+      background-position: 30% 30%;
+      transition: all 0.3s ease 0s;
+
       .title {
         height: calc(90vh - 90px);
   /*       background-color: rgba(0,0,0,.45);
@@ -78,28 +84,29 @@
             color:rgb(224, 224, 224)
           }
           .fa-inverse{
-           color: rgb(93, 100, 115);;
+            color: rgb(93, 100, 115);;
+          }
+          i:hover {
+            color: $m-green;
+            cursor: pointer;
+          }
+          .fa-inverse:hover{
+           color: $m-green;
          }
-         i:hover {
-          color: $m-green;
-          cursor: pointer;
-        }
-        .fa-inverse:hover{
-         color: $m-green;
        }
      }
    }
 
- }
 
 
- md-nav-bar{
-  width: 100%;
-  .md-nav-bar {
-    background-color: #fff;
-    height: 90px;
-    border: 0px;
-    /* box-shadow: 0 2px 5px #999; */
+
+   md-nav-bar{
+    width: 100%;
+    .md-nav-bar {
+      background-color: #fff;
+      height: 90px;
+      border: 0px;
+      box-shadow: 0 0px 3px #d4d4d4;
     nav {
       float: right;
       margin-right: 80px;
