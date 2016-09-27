@@ -25,27 +25,31 @@
         <div class="logo" layout="row" layout-align="center center">
           <img src="images/logo_final.png"  ng-click="gotoAnchor('/')">
         </div>
-        <div class="navigation">
-          <div layout="row" layout-align="space-between center" >
-            <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-              <md-nav-item md-nav-href="/#inicio" name="inicio">INICIO</md-nav-item>
-              <md-nav-item md-nav-href="/#servicios" name="servicios">SERVICIOS</md-nav-item>
-              <md-nav-item md-nav-href="/#clientes" name="clientes">CLIENTES</md-nav-item>
-              <md-nav-item md-nav-href="/#cotizador" name="cotizador">COTIZADOR</md-nav-item>
-              <md-nav-item md-nav-href="/#nosotros" name="nosotros">NOSOTROS</md-nav-item>
-              <md-nav-item md-nav-href="/#contacto" name="contacto">CONTACTO</md-nav-item>
-            </md-nav-bar>
-            
+        <div class="container-nav">
+          <div class="navigation">
+            <div layout="row" layout-align="space-between center" id="nav">
+              <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+                <md-nav-item md-nav-href="/#inicio" name="inicio">INICIO</md-nav-item>
+                <md-nav-item md-nav-href="/#servicios" name="servicios">SERVICIOS</md-nav-item>
+                <md-nav-item md-nav-href="/#clientes" name="clientes">CLIENTES</md-nav-item>
+                <md-nav-item md-nav-href="/#cotizador" name="cotizador">COTIZADOR</md-nav-item>
+                <md-nav-item md-nav-href="/#nosotros" name="nosotros">NOSOTROS</md-nav-item>
+                <md-nav-item md-nav-href="/#contacto" name="contacto">CONTACTO</md-nav-item>
+              </md-nav-bar>
+
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
-      <div id="initial-container">
-        <div ng-view >
-        </div>
+    </div>
+    <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
+    <div id="initial-container">
+      <div ng-view >
       </div>
     </div>
+    <div class="infografia" id="infografia">
+      <img src="images/infografia.jpg">
+    </div> 
 
     <div ng-include="'../sections/footer.html'"  id="footer"></div>
 

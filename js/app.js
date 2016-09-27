@@ -19,11 +19,35 @@ $(document).foundation();
 //   });
 // });
 
+$(document).scroll(function () {
+  var scroll = $(this).scrollTop();
+  var topDist = $(".container-nav").position();
+  if (scroll > topDist.top) {
+    $('.navigation').addClass("nav-fixed-top");
+  } else {
+    $('.navigation').removeClass("nav-fixed-top");
+  }
+});
+$(document).ready(function(){
+  $('#ver-mas').toggle( 
+    
+    function(e){ 
+      $('#infografia').slideDown();
+      e.preventDefault();
+      console.log("ver mas");
+    }, 
+    function(e){ 
+      $('#infografia').slideUp();
+      e.preventDefault();
+      console.log("ver menos");
+    }
+    );
+});
 
 var app = angular.module('Girgy', [
   'ngMaterial',
   'ngRoute',
-]);
+  ]);
 
 var volaires = angular.module('Girgy');
 
@@ -32,22 +56,22 @@ volaires.config(function($mdThemingProvider) {
 	$mdThemingProvider.generateThemesOnDemand(true);
 
   $mdThemingProvider.theme('altTheme')
-    .primaryPalette('light-green')
-    .accentPalette('green')
-    .warnPalette('cyan')
-    .backgroundPalette('light-green');
+  .primaryPalette('light-green')
+  .accentPalette('green')
+  .warnPalette('cyan')
+  .backgroundPalette('light-green');
 
 
   $mdThemingProvider.theme('docs-dark', 'default')
-      .primaryPalette('light-green')
-      .backgroundPalette('green');
+  .primaryPalette('light-green')
+  .backgroundPalette('green');
 
   $mdThemingProvider.theme('green')
-      .primaryPalette('green')
-      .accentPalette('light-green')
-      .warnPalette('green');
-      
+  .primaryPalette('green')
+  .accentPalette('light-green')
+  .warnPalette('green');
 
 
-  })
+
+})
 

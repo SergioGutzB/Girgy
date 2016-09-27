@@ -14,6 +14,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 @media only screen and (min-width: 1px) {
+  body .container-nav {
+    position: static;
+  }
   body .nav {
     position: relative;
     margin: 0px;
@@ -25,41 +28,52 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     left: 0px;
     right: 0px;
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: none;
+    transition: background-color 0.5s ease .1s;
   }
-  body .nav .navigation md-nav-bar {
+  body .nav .navigation.nav-fixed-top {
+    margin: 0px;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    border-bottom: 2px solid #FFC000;
+    transition: background-color 0.5s ease .1s;
+  }
+  body .nav md-nav-bar {
     width: 100%;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar {
+  body .nav md-nav-bar .md-nav-bar {
     height: 90px;
     border: 0px;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar ._md-nav-bar-list {
+  body .nav md-nav-bar .md-nav-bar ._md-nav-bar-list {
     margin: 0 auto;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar ._md-nav-bar-list .md-nav-item {
+  body .nav md-nav-bar .md-nav-bar ._md-nav-bar-list .md-nav-item {
     margin: 0 auto;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar nav {
+  body .nav md-nav-bar .md-nav-bar nav {
     width: 70%;
     margin: 0 auto;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar .md-button._md-nav-button {
+  body .nav md-nav-bar .md-nav-bar .md-button._md-nav-button {
     line-height: 90px;
     margin: 0 4px;
     padding: 0px 16px;
     font-size: 1.2rem;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar .md-button.md-accent {
+  body .nav md-nav-bar .md-nav-bar .md-button.md-accent {
     color: #BF9000;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar .md-button.md-active {
+  body .nav md-nav-bar .md-nav-bar .md-button.md-active {
     color: #BF9000;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar md-nav-ink-bar {
+  body .nav md-nav-bar .md-nav-bar md-nav-ink-bar {
     background: #BF9000;
     top: 20px;
   }
-  body .nav .navigation md-nav-bar .md-nav-bar md-nav-ink-bar.md-active {
+  body .nav md-nav-bar .md-nav-bar md-nav-ink-bar.md-active {
     background: #BF9000;
   }
   body .logo {
@@ -83,8 +97,6 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
   body .header .title {
     height: calc(90vh - 70px);
-    /*       background-color: rgba(0,0,0,.45);
-          background-image: url(../images/weft-blue.png); */
   }
   body .header .title h1, body .header .title h2, body .header .title h3 {
     color: #516b22;
@@ -144,6 +156,19 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     border: solid 1px #516b22;
     min-width: 200px;
     margin: 0px;
+  }
+  body .infografia {
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    transition: all 0.3s ease 0s;
+  }
+  body .infografia.show {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    height: auto;
+    transition: all 0.3s ease 0s;
   }
   body #footer {
     background-color: #3c3c3c;
@@ -227,7 +252,6 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     font-weight: 500 !important;
     color: #05894d;
     margin: 0px;
-    z-index: 1000;
   }
   body .section .content {
     padding-top: 70px;
