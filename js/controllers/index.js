@@ -13,7 +13,7 @@ volaires.controller('Index', ['$scope', function($scope){
         var va = $target.offset().top - 70;
         $('html, body').stop().animate({
           'scrollTop': va
-        }, 900, 'swing');
+        }, 500, 'swing');
       });
       $scope.custom = false;
     }else {
