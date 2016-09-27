@@ -1,25 +1,17 @@
 @media only screen and (min-width: 1px) {
-  body #nosotros {
-    border-top: 1px solid #ece9e9;
-    background-size: cover;
-    background-image: url(../images/panel-personal.jpg);
-    background-attachment: fixed;
-    background-position: center center;
-    transition: all 0.3s ease 0s;
+  body #nosotros .texto {
+    padding-top: 60px;
+  }
+  body #nosotros .texto p {
+    color: #808080;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    text-align: justify;
   }
   body #nosotros .content {
     padding: 70px 200px 0px 200px;
   }
-  body #nosotros .section {
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.45);
-    background-image: url(../images/weft-blue.png);
-  }
-  body #nosotros .section .title {
-    color: #fff;
-  }
   body #nosotros .section .subtitle h4 {
-    color: #fff;
     text-align: center;
     font-family: Raleway;
     font-weight: 300;
@@ -27,14 +19,6 @@
     font-size: 20px;
     margin: 0px;
     margin-top: 30px;
-  }
-  body #nosotros .section .button-section {
-    margin-top: 70px;
-  }
-  body #nosotros .section .button-section .button-line.md-button {
-    background-color: rgba(255, 255, 255, 0.13);
-    border: solid 1px #ffffff;
-    color: #fff;
   }
   body #nosotros .circle-image {
     width: 200px;

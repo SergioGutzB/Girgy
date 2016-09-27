@@ -12,5 +12,9 @@
   }
   body #servicios .fa {
     padding: 0px 0px 15px 0px;
+    color: #FFC000;
+  }
+  body #video {
+    padding-top: 60px;
   }
 }

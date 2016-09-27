@@ -18,14 +18,39 @@ angular
       controller: 'Index'
     })
 
+    .when('/servicios', {
+      templateUrl: '/sections/servicios.html',
+      controller: 'Index'
+    })
+
+    .when('/nosotros', {
+      templateUrl: '/sections/nosotros.html',
+      controller: 'Index'
+    })
+
+    .when('/contacto', {
+      templateUrl: '/sections/contacto.html',
+      controller: 'Index'
+    })
+
+    .when('/clientes', {
+      templateUrl: '/sections/clientes.html',
+      controller: 'Index'
+    })
+
     .otherwise({
       redirectTo: '/'
     });
 
-  $locationProvider.html5Mode({
-    enabled: true,
-    requireBase: false
-  });
+    $routeProvider.otherwise( { redirectTo: '/'} );
+
+  // $locationProvider.html5Mode({
+  //   enabled: true,
+  //   requireBase: false
+  // });
+
+  
+  // $locationProvider.html5Mode(true);
 
 
 }]);

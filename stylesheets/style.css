@@ -14,47 +14,91 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 @media only screen and (min-width: 1px) {
-  body .navigation {
-    margin: 0px;
-    width: 100%;
+  body .nav {
     position: relative;
-  }
-  body .navigation .logo {
-    position: absolute;
-    display: inline-block;
-    height: 90px;
-    width: 300px;
     margin: 0px;
   }
-  body .navigation .logo img {
-    height: auto;
-    display: inline;
-    margin-left: 90px;
+  body .nav .navigation {
+    margin: 0px;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+  }
+  body .nav .navigation md-nav-bar {
+    width: 100%;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar {
+    height: 90px;
+    border: 0px;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar ._md-nav-bar-list {
+    margin: 0 auto;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar ._md-nav-bar-list .md-nav-item {
+    margin: 0 auto;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar nav {
+    width: 70%;
+    margin: 0 auto;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar .md-button._md-nav-button {
+    line-height: 90px;
+    margin: 0 4px;
+    padding: 0px 16px;
+    font-size: 1.2rem;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar .md-button.md-accent {
+    color: #BF9000;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar .md-button.md-active {
+    color: #BF9000;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar md-nav-ink-bar {
+    background: #BF9000;
+    top: 20px;
+  }
+  body .nav .navigation md-nav-bar .md-nav-bar md-nav-ink-bar.md-active {
+    background: #BF9000;
+  }
+  body .logo {
+    margin: 0px;
+    height: 70px;
+    border-bottom: 2px solid #FFC000;
+  }
+  body .logo img {
+    height: 80;
   }
   body .header {
     margin: 0px;
     background-size: cover;
     position: relative;
-    height: clac(0vh);
-    background-image: url(../images/panel3.jpg);
+    height: calc(100vh - 70px);
+    background-image: url(../images/Girgy2.jpg);
     width: 100%;
     background-attachment: scroll;
-    background-position: 30% 30%;
+    background-position: center 70%;
     transition: all 0.3s ease 0s;
   }
   body .header .title {
-    height: calc(90vh - 90px);
+    height: calc(90vh - 70px);
     /*       background-color: rgba(0,0,0,.45);
           background-image: url(../images/weft-blue.png); */
   }
   body .header .title h1, body .header .title h2, body .header .title h3 {
-    color: #fff;
-    text-align: center;
+    color: #516b22;
+    text-align: left;
     font-family: "Raleway", sans-serif;
   }
   body .header .title h1 {
-    font-size: 4.2rem;
-    font-weight: 300;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: .6rem;
+  }
+  body .header .title h2 {
+    font-weight: 400;
+    font-size: 2.5rem;
     line-height: .6rem;
   }
   body .header .title h3 {
@@ -69,9 +113,13 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #FFF;
     font-weight: 500;
   }
+  body .header #ver-mas {
+    background-color: #368A88;
+    color: #fff;
+  }
   body .header .texto {
     text-align: center;
-    padding: 50px 0px 50px 0px;
+    padding: 120px 0px 50px 0px;
   }
   body .header .social-header {
     position: absolute;
@@ -91,40 +139,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   body .header .social-header span .fa-inverse:hover {
     color: #05894d;
   }
-  body md-nav-bar {
-    width: 100%;
-  }
-  body md-nav-bar .md-nav-bar {
-    background-color: #fff;
-    height: 90px;
-    border: 0px;
-    box-shadow: 0 0px 3px #d4d4d4;
-  }
-  body md-nav-bar .md-nav-bar nav {
-    float: right;
-    margin-right: 80px;
-  }
-  body md-nav-bar .md-nav-bar .md-button._md-nav-button {
-    line-height: 90px;
-    margin: 0 4px;
-    padding: 0px 16px;
-  }
-  body md-nav-bar .md-nav-bar .md-button.md-accent {
-    color: #808080;
-  }
-  body md-nav-bar .md-nav-bar .md-button.md-active {
-    color: #8BC34A;
-  }
-  body md-nav-bar .md-nav-bar md-nav-ink-bar {
-    background: #8BC34A;
-    bottom: -1px;
-  }
-  body md-nav-bar .md-nav-bar md-nav-ink-bar.md-active {
-    background: #8BC34A;
-  }
   body .button-line {
     background-color: rgba(255, 255, 255, 0);
-    border: solid 1px #05894d;
+    border: solid 1px #516b22;
     min-width: 200px;
     margin: 0px;
   }
@@ -133,20 +150,64 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     padding: 30px 60px;
     height: auto;
   }
+  body #footer hr {
+    border: 0px;
+    width: 50%;
+    border-top: 1px solid #ffc000;
+  }
+  body #footer #contacto ul {
+    display: block;
+  }
+  body #footer #contacto ul li {
+    color: #808080;
+    padding: 0px 30px;
+    font-size: .9rem;
+  }
+  body #footer #contacto ul .cont {
+    padding: 5px 30px;
+  }
+  body #footer #contacto ul strong {
+    color: #FFC000;
+  }
+  body #footer #contacto .social a {
+    color: #808080;
+  }
+  body #footer #contacto .social a:hover {
+    color: #b9b8b8;
+  }
+  body #footer #contacto .social #facebook i {
+    color: #3750A2;
+  }
+  body #footer #contacto .social #facebook .fa-inverse {
+    color: #3c3c3c;
+  }
+  body #footer #contacto .social #youtube i {
+    color: #CF3427;
+  }
+  body #footer #contacto .social #youtube .fa-inverse {
+    color: #3c3c3c;
+  }
+  body #footer #contacto .social #twitter i {
+    color: #54ABEE;
+  }
+  body #footer #contacto .social #twitter .fa-inverse {
+    color: #3c3c3c;
+  }
   body #footer ul {
     list-style-type: none;
     display: inline-flex;
     margin-bottom: 0px;
+    padding: 0px;
   }
   body #footer ul li {
-    padding: 5px 10px;
+    padding: 5px 30px;
   }
   body #footer ul li a {
-    color: #808080;
+    color: #FFC000;
     text-decoration: none;
   }
   body #footer ul li a:hover {
-    color: #05894d;
+    color: #BF9000;
   }
   body #footer span i {
     color: #05894d;
@@ -154,19 +215,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   body #footer span .fa-inverse {
     color: #3c3c3c;
   }
-  body #sub-footer {
-    background-color: #05894d;
-    padding: 10px;
-  }
-  body #sub-footer h4 {
-    color: #fff;
-    margin: 0px;
-    font-family: "Raleway", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-  }
   body .section {
     padding: 70px 98px;
+    padding-top: 120px;
   }
   body .section .title {
     font-size: 3rem;

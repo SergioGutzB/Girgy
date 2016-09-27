@@ -10,26 +10,36 @@ $in-hover: #23527c;
   body {
 
     #nosotros{
-      border-top: 1px solid #ece9e9;
-      background-size: cover;    
-      background-image: url(../images/panel-personal.jpg);
-      background-attachment: fixed;
-      background-position: center center;
-      transition: all 0.3s ease 0s;
+      // border-top: 1px solid #ece9e9;
+      // background-size: cover;    
+      // background-image: url(../images/panel-personal.jpg);
+      // background-attachment: fixed;
+      // background-position: center center;
+      // transition: all 0.3s ease 0s;
+      .texto {
+        padding-top: 60px;
+        p{
+          color: $gray;
+          font-family: $font-ralewat;
+          font-weight: 400;
+          text-align: justify;
+        }
+      }
+      
       .content {
         padding: $space 200px 0px 200px;
       }
       
       .section{
-        background-size: cover;   
-        background-color: rgba(0,0,0,.45);
-        background-image: url(../images/weft-blue.png);
+        // background-size: cover;   
+        // background-color: rgba(0,0,0,.45);
+        // background-image: url(../images/weft-blue.png);
         .title {
 
-          color: #fff;
+          // color: #fff;
         }
         .subtitle h4{
-          color: #fff;
+          // color: #fff;
           text-align: center;
           font-family: Raleway;
           font-weight: 300;
@@ -38,14 +48,14 @@ $in-hover: #23527c;
           margin: 0px;
           margin-top: 30px;
         }
-        .button-section{
-          margin-top: $space;
-          .button-line.md-button {
-            background-color: rgba(255, 255, 255, 0.13);
-            border: solid 1px #ffffff;
-            color: #fff;
-          }
-        }
+        // .button-section{
+        //   margin-top: $space;
+        //   .button-line.md-button {
+        //     background-color: rgba(255, 255, 255, 0.13);
+        //     border: solid 1px #ffffff;
+        //     color: #fff;
+        //   }
+        // }
       }
 
 

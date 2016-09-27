@@ -1,50 +1,52 @@
-<div class="background"></div>
-<div class="section" ng-controller="Contact">
-	<div layout="row" layout-align="center center">
-		<h1 class="title">CONTACTO</h1>
-	</div>
-	<div class="content" layout-xs="column" layout="row" layout-align="center center">
+<div id="contacto">
+	<div class="background"></div>
+	<div class="section" ng-controller="Contact">
+		<div layout="row" layout-align="center center">
+			<h1 class="title">CONTÁCTENOS</h1>
+		</div>
+		<div class="content" layout-xs="column" layout="row" layout-align="center center">
 
-		<md-content layout-padding md-theme="green">
-			<div>
+			<md-content layout-padding md-theme="green">
 				<div>
-					<h3 class="sub-title">ESCRÍBENOS Y OBTÉN LA ASESORÍA TOTALMENTE GRATIS</h3>
-				</div>
-				<div class="div-horizontal"> </div>
-				<form name="userForm">
-					<div layout-gt-sm="row">
-						<md-input-container class="md-block" flex-gt-sm>
-							<label>Nombre</label>
-							<input ng-model="user.name">
-						</md-input-container>
-						<md-input-container>
-							<label>Email</label>
-							<input ng-model="user.email" type="email">
-						</md-input-container>
-						<md-input-container>
-							<label>Teléfono</label>
-							<input ng-model="user.telefono" type="number">
-						</md-input-container>
+					<div>
+						<h3 class="sub-title">ESCRÍBENOS Y OBTÉN LA ASESORÍA TOTALMENTE GRATIS</h3>
 					</div>
-
-					<md-input-container class="md-block">
-						<label>Ciudad</label>
-						<input ng-model="user.address">
-					</md-input-container>
-					<md-input-container class="md-block">
-						<label>¿Cómo podemos ayudarte?</label>
-						<textarea ng-model="user.text" md-maxlength="150" rows="5" md-select-on-focus></textarea>
-					</md-input-container>
-					<div layout-gt-sm="row"  layout-align="space-between center">
-						<div md-theme="green">
-							<md-button class="md-raised md-primary">Enviar</md-button>
+					<div class="div-horizontal"> </div>
+					<form name="userForm">
+						<div layout-gt-sm="row">
+							<md-input-container class="md-block" flex-gt-sm>
+								<label>Nombre</label>
+								<input ng-model="user.name">
+							</md-input-container>
+							<md-input-container>
+								<label>Email</label>
+								<input ng-model="user.email" type="email">
+							</md-input-container>
+							<md-input-container>
+								<label>Teléfono</label>
+								<input ng-model="user.telefono" type="number">
+							</md-input-container>
 						</div>
-						<h4><span>Gracias! Estaremos en contacto en 3 horas o menos.</span></h4>
-					</div>
 
-				</form>
-			</div>
-		</md-content>
+						<md-input-container class="md-block">
+							<label>Ciudad</label>
+							<input ng-model="user.address">
+						</md-input-container>
+						<md-input-container class="md-block">
+							<label>¿Cómo podemos ayudarte?</label>
+							<textarea ng-model="user.text" md-maxlength="800" rows="5" md-select-on-focus></textarea>
+						</md-input-container>
+						<div layout-gt-sm="row"  layout-align="space-between center">
+							<div md-theme="green">
+								<md-button class="md-raised md-primary">Enviar</md-button>
+							</div>
+							<h4><span>Gracias! Estaremos en contacto en 3 horas o menos.</span></h4>
+						</div>
+
+					</form>
+				</div>
+			</md-content>
+		</div>
+
 	</div>
-
 </div>
