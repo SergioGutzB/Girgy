@@ -38,6 +38,11 @@ angular
       controller: 'Index'
     })
 
+    .when('/cotizador', {
+      templateUrl: '/pages/cotizador.html',
+      controller: 'Cotizador'
+    })
+
     .otherwise({
       redirectTo: '/'
     });

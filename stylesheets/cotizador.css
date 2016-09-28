@@ -1,0 +1,123 @@
+@media only screen and (min-width: 1px) {
+  body #cotizador {
+    background-color: #fff;
+    color: #05894d;
+  }
+  body #cotizador .texto {
+    padding-top: 60px;
+  }
+  body #cotizador .texto p {
+    color: #808080;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    text-align: justify;
+  }
+  body #cotizador .title, body #cotizador .sub-title {
+    color: #05894d;
+  }
+  body #cotizador p {
+    color: #3c3c3c;
+    font-weight: 300;
+    text-align: justify;
+  }
+  body #cotizador .fa {
+    padding: 0px 0px 15px 0px;
+    color: #FFC000;
+  }
+  body #con-factura, body #informe {
+    display: none;
+  }
+  body #form-factura {
+    padding: 30px 0px;
+  }
+  body #form-factura form {
+    padding: 20px 50px;
+    background-color: #f5f5f5;
+  }
+  body #form-factura form md-input-container {
+    margin: 10px 0px 0px 0px;
+  }
+  body #form-factura form md-input-container > md-select {
+    margin: 10px 0px 25px 0px;
+  }
+  body #form-factura form md-input-container.md-amber-theme.md-input-invalid .md-input-message-animation {
+    color: #dd2c00;
+  }
+  body #form-factura form md-input-container.md-amber-theme.md-input-invalid .md-input {
+    border-color: #dd2c00;
+  }
+  body #form-factura form md-input-container.md-amber-theme.md-input-invalid label {
+    color: #dd2c00;
+  }
+  body #informe table {
+    margin: 10px;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    vertical-align: top;
+    color: rgba(60, 60, 60, 0.69);
+  }
+  body #informe table td, body #informe table th {
+    padding: 10px;
+  }
+  body #informe #t_una thead {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #FFC000;
+    font-weight: 700;
+  }
+  body #informe #t_una tbody {
+    background-color: #f5f5f5;
+  }
+  body #informe #t_una #nps {
+    font-size: 70px;
+    font-weight: 700;
+  }
+  body #informe #t_una .ars {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  body #informe #t_una #mse {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  body #informe #t_dos thead {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #7B7B7B;
+    font-weight: 700;
+  }
+  body #informe #t_dos td {
+    font-weight: 700;
+    background-color: #C8C8C8;
+  }
+  body #informe #t_tres thead {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #05894d;
+    font-weight: 700;
+  }
+  body #informe #t_tres td {
+    font-weight: 700;
+    background-color: #8BC34A;
+  }
+}
+md-radio-button.md-checked .md-off {
+  border-color: #FFC000;
+}
+
+md-radio-button .md-on {
+  background-color: #FFC000;
+}
+
+md-radio-group .md-checked .md-ink-ripple {
+  color: #FFC000;
+}
+
+md-radio-button .md-off {
+  border-color: #FFC000;
+}
+
+md-radio-button .md-on {
+  background-color: #FFC000;
+}

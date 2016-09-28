@@ -1,0 +1,142 @@
+@import 'variables';
+
+@media only screen and (min-width:1px) {
+  body {    
+    #cotizador{
+      background-color: #fff;
+      color: $m-green;
+      .texto {
+        padding-top: 60px;
+        p{
+          color: $gray;
+          font-family: $font-ralewat;
+          font-weight: 400;
+          text-align: justify;
+        }
+      }
+      .title, .sub-title {
+        color: $m-green;
+      }
+      p{
+        color: $dark;
+        font-weight: 300;
+        text-align: justify;
+      }
+      .fa{
+        padding: 0px 0px 15px 0px;
+        color: $color-naranja;
+      }
+    }
+    #con-factura, #informe{
+      display: none;
+    }
+    #form-factura {
+      padding: 30px 0px;
+      form{
+        padding: 20px 50px;
+        background-color: #f5f5f5;
+        md-input-container{
+          margin: 10px 0px 0px 0px;
+        }
+        md-input-container>md-select {
+          margin: 10px 0px 25px 0px;
+        }
+        md-input-container.md-amber-theme.md-input-invalid .md-input-message-animation{
+          color: rgb(221,44,0);
+        }
+        md-input-container.md-amber-theme.md-input-invalid .md-input {
+          border-color: rgb(221,44,0);
+        }
+        md-input-container.md-amber-theme.md-input-invalid label{
+          color: rgb(221,44,0);
+        }
+      }
+    }
+    #informe{
+      table{
+        // border: 1px solid $gray;
+        margin: 10px;
+        text-align: center;
+        border-collapse:collapse;
+        border-spacing:0;
+        vertical-align:top;
+        color: rgba(60, 60, 60, 0.69);;
+        td, th{
+          // border: 1px solid $gray;
+          padding: 10px;
+        }
+      }
+      #t_una{
+        thead {
+          padding: 10px;
+          font-size: 18px;
+          background-color: $color-naranja;
+          font-weight: 700;
+          th{
+          }          
+        }
+        tbody{
+          background-color: #f5f5f5;
+        }
+        #nps{
+          font-size: 70px;
+          font-weight: 700;
+        }
+        .ars{
+          font-size: 25px;
+          font-weight: 600;
+        }
+        #mse{
+          font-size: 35px;
+          font-weight: 700;
+        }
+      }
+      //#7B7B7B #C8C8C8
+      #t_dos {
+        thead {
+          padding: 10px;
+          font-size: 18px;
+          background-color: #7B7B7B;
+          font-weight: 700;
+          th{
+          }
+        }
+        td{
+          font-weight: 700;
+          background-color: #C8C8C8;
+        }
+      }
+      #t_tres{
+        thead {
+          padding: 10px;
+          font-size: 18px;
+          background-color: $m-green;
+          font-weight: 700;
+          th{
+          }
+        }
+        td{
+          font-weight: 700;
+          background-color: $m-light-green;
+        }
+      }
+    }
+  }
+}
+
+md-radio-button.md-checked .md-off {
+  border-color: $color-naranja;
+}
+md-radio-button .md-on {
+  background-color: $color-naranja;
+}
+md-radio-group .md-checked .md-ink-ripple {
+  color: $color-naranja;
+}
+
+md-radio-button .md-off {
+  border-color: $color-naranja;
+}
+md-radio-button .md-on {
+  background-color: $color-naranja;
+}

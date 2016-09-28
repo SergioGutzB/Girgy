@@ -13,6 +13,19 @@
   font-family: $font-ralewat;
 } 
 
+.text-center {
+  text-align: center;
+}
+
+.div-horizontal {
+  background-image: url(../images/div-horizontal.png);
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+
 @media only screen and (min-width:1px) {
   body {
     .container-nav{
@@ -27,7 +40,7 @@
         top: $height-logo;
         left: 0px;
         right: 0px;
-        z-index: 1;
+        z-index: 2;
         background-color: $transparent;
         border-bottom: none;
         transition: background-color 0.5s ease .1s;
@@ -323,5 +336,4 @@
     }
   }
 }
-
 

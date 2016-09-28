@@ -1,0 +1,195 @@
+<div id="cotizador">
+  <div class="section" >
+    <div class="title-sec" layout="row" layout-align="center center">
+      <h1 class="title" >INTECRÁCTUA CON NUESTRO COTIZADOR</h1>
+    </div>
+    <div layout="column" layout-align="start start" class="texto">
+      <p>Se espera que próximamente la ley 1715 que el gobierno nacional expidió en el año 2014 atribuya beneficios a personas con instalaciones eléctricas por medio de fuentes renovables. Estas personas tendrán la facultad de vender energía excedente a la red de distribución como lo hacen en muchos países, con el propósito de fomentar la utilización de energías alternativas y la preservación ambiental.</p>
+      <div style="margin:30px auto;">
+        <h2 class="sub-title text-center">¿CÓNOCES TU FACTURA?</h2>
+        <div flex layout="row" layout-align="center center">
+          <md-radio-group ng-model="factura" layout="row" layout-align="center center">
+            <md-radio-button value="Si">Si</md-radio-button>
+            <md-radio-button value="No">No</md-radio-button>
+          </md-radio-group>
+        </div>
+      </div>
+
+      <p >{{ factura_txt}} </p>
+    </div>
+    <div layout-padding md-theme="amber" id="form-factura">
+      <div layout="row" layout-align="center center">
+        <form name="cotizador" flex="60">
+
+          <div layout-gt-md="row">
+            <md-input-container class="md-block" flex-gt-md>
+              <label>Nombre</label>
+              <input ng-model="cotizador.nombre" required md-no-asterisk name="cotizador.nombre">
+              <div ng-messages="cotizador.nombre.$error">
+                <div ng-message="required">This is required.</div>
+              </div>
+            </md-input-container>
+          </div>
+
+          <div layout-gt-md="row">
+            <md-input-container class="md-block" flex-gt-md>
+              <label>Correo</label>
+              <input ng-model="cotizador.correo" type="email" required md-no-asterisk name="cotizador.correo">
+              <div ng-messages="cotizador.nombre.$error">
+                <div ng-message="required">This is required.</div>
+              </div>
+            </md-input-container>
+          </div>
+
+          <div layout-gt-md="row">
+            <md-input-container class="md-block" flex-gt-md>
+              <label>Departamento</label>
+              <md-select ng-model="cotizador.departamento">
+                <md-option ng-repeat="depart in departamentos" value="{{depart.dpto}}" required md-no-asterisk name="cotizador.departamento">
+                  {{depart.dpto}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-md>
+              <label>Ciudad</label>
+              <md-select ng-model="cotizador.ciudad">
+                <md-option ng-repeat="ciudad in ciudades" value="{{ciudad.city}}" required md-no-asterisk name="cotizador.ciudad">
+                  {{ciudad.city}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+
+          <md-input-container class="md-block">
+            <label>Dirección</label>
+            <input ng-model="cotizador.direccion">
+          </md-input-container>
+
+          <div layout-gt-md="row">
+            <md-input-container class="md-block" flex="50">
+              <label>Tipo de Inmueble</label>
+              <md-select ng-model="cotizador.tipo_muebles" required md-no-asterisk name="cotizador.tipo_muebles">
+                <md-option ng-repeat="inmueble in inmuebles" value="{{inmueble}}">
+                  {{inmueble}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+          <br/>
+
+          <div id="con-factura">
+            <div class="div-horizontal"> </div> 
+            <h4>Datos de tu factura</h4>
+            <div layout-gt-md="row">
+              <md-input-container class="md-block" flex-gt-md>
+                <label>Cosumo Mes kWh</label>
+                <input ng-model="cotizador.cmkwh" type="number" value="192" required md-no-asterisk name="cotizador.cmkwh" class="form-factura">
+                <div ng-messages="cotizador.nombre.$error">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-md>
+                <label>Cosumo Promedio Mensual kWh</label>
+                <input ng-model="cotizador.cpmkwh" type="number" value="175" required md-no-asterisk name="cotizador.cpmkwh" class="form-factura">
+                <div ng-messages="cotizador.nombre.$error">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
+            </div>
+            <div layout-gt-md="row">
+              <md-input-container class="md-block" flex-gt-md>
+                <label>Porcentaje Atendido por el Aistema</label>
+                <input ng-model="cotizador.pas" type="number" value="1.0" required md-no-asterisk name="cotizador.pas" class="form-factura">
+                <div ng-messages="cotizador.pas.$error">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-md>
+                <label>Valor Factura</label>
+                <input ng-model="cotizador.vfactura" type="number" value="101663" required md-no-asterisk name="cotizador.vfactura" class="form-factura">
+                <div ng-messages="cotizador.vfactura.$error">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
+            </div>
+          </div>
+
+          <div layout-gt-sm="row"  layout-align="start center">
+            <div md-theme="amber" flex="50">
+            <md-button type="submit" class="md-raised md-primary" ng-click="calcular()">CALCULAR</md-button>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+
+
+    <div layout-padding id="informe">
+
+      <h1 class="sub-title text-center">NO DUDES EN PEDIR UNA COTIZACIÓN OFICIAL</h1>
+      <div class="div-horizontal"> </div> 
+      <div layout="row" layout-align="center center" >
+        <table id="t_una">
+          <thead>
+            <tr>
+              <th >NÚMERO DE PANELES SOLARES</th>
+              <th >ÁREA REQUERIDA PARA EL SISTEMA</th>
+              <th >MENSUALMENTE DEJAS DE EMITIR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2" id="nps">{{n_ps}}</td>
+              <td class="ars">{{area_RS}}</td>
+              <td rowspan="2" id="mse">{{gCO2}} <strong> gCO2</strong></td>
+            </tr>
+            <tr>
+              <td class="ars">{{ha}}<strong>  Ha</strong> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div layout="row" layout-align="center center" >
+        <table id="t_dos">
+          <thead>
+            <tr><th colspan="2">Red convencional</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Energía Anual Consumida</strong></td>
+              <td>{{eac}} <strong>  kWh</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Costo Anual con Red Convencional</strong></td>
+              <td><strong>$ </strong> {{carc}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="t_tres">
+          <thead>
+            <tr><th colspan="2">Sistema Fotovoltaico</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Energía Anual Suministrada </td>
+              <td>{{eas}}  <strong>  kWh</strong></td>
+            </tr>
+            <tr>
+              <td>Costo Anual con Sistema Solar</td>
+              <td><strong>$ </strong> {{cass}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div layout="column" layout-align="start start" class="texto">
+      <p><strong>Nota: </strong> Todas las cotizaciones por la plataforma no son de carácter contractual e incluyen equipos e instalación, pero no incluyen baterías (autonomía de la red) ni transporte hacia lugares fuera de Bogotá y alrededores. Para ello, pedir cotización especial a nuestro contacto.</p>
+    </div>
+
+
+  </div>
+</div>
