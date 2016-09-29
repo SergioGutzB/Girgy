@@ -18,26 +18,39 @@
 				background-attachment: scroll;
         background-position: center bottom;
         transition: all 0.3s ease 0s;
-      	// -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
-       //    filter: blur(5px);
-     }
 
-     .sub-title {
-      font-family: Lato;
-      font-weight: 100;
-      color: #4caf50;
-      text-align: center;
-      margin-bottom: 30px;
+      }
+
+      .sub-title {
+        font-family: Lato;
+        font-weight: 100;
+        color: #4caf50;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      h4 span{
+        color:rgba(0,0,0,0.38);
+        font-family: Lato;
+        font-weight: 400;
+      }
+      .md-button{
+        padding: 0px 60px;
+      }
+      #form-contacto {
+        form {
+          md-input-container.md-amber-theme.md-input-invalid .md-input-message-animation{
+            color: rgb(221,44,0) !important;
+          }
+          md-input-container.md-amber-theme.md-input-invalid .md-input {
+            border-color: rgb(221,44,0) !important;
+          }
+          md-input-container.md-amber-theme.md-input-invalid label{
+            color: rgb(221,44,0) !important;
+          }
+        }
+      }
     }
 
-    h4 span{
-      color:rgba(0,0,0,0.38);
-      font-family: Lato;
-      font-weight: 400;
-    }
-    .md-button{
-      padding: 0px 60px;
-    }
   }
-}
 }

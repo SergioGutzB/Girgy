@@ -60,7 +60,7 @@ volaires.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('amber')
   .primaryPalette('amber')
   .accentPalette('orange')
-  .warnPalette('amber');
+  .warnPalette('red');
 
 
 })
