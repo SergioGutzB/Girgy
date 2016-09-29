@@ -27,12 +27,22 @@
   body #con-factura, body #informe {
     display: none;
   }
+  body .hint {
+    color: #808080;
+    font-size: 11px;
+    padding-top: 15px;
+    margin-top: 20px;
+  }
+  body .md-button {
+    margin: 15px 0px;
+  }
   body #form-factura {
     padding: 30px 0px;
   }
   body #form-factura form {
     padding: 20px 50px;
     background-color: #f5f5f5;
+    max-height: initial;
   }
   body #form-factura form md-input-container {
     margin: 10px 0px 0px 0px;
@@ -48,6 +58,24 @@
   }
   body #form-factura form md-input-container.md-amber-theme.md-input-invalid label {
     color: #dd2c00;
+  }
+  body #form-factura form md-input-container label, body #form-factura form md-input-container {
+    font-size: 15px;
+  }
+  body #form-factura form .md-select-value > span:not(.md-select-icon) .md-text {
+    color: #3c3c3c;
+  }
+  body #informe nvd3 {
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 10px 0px;
+  }
+  body #informe .title-d3 {
+    font-size: 20px;
+    color: #05894d;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    padding: 15px;
   }
   body #informe table {
     margin: 10px;
@@ -100,6 +128,21 @@
   body #informe #t_tres td {
     font-weight: 700;
     background-color: #8BC34A;
+  }
+  body #informe #t_cuatro thead {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f5f5f5;
+    font-weight: 700;
+  }
+  body #informe #t_cuatro td {
+    font-weight: 700;
+    background-color: #f5f5f5;
+  }
+  body #informe #t_cinco td {
+    font-size: 30px;
+    font-weight: 700;
+    background-color: #f5f5f5;
   }
 }
 md-radio-button.md-checked .md-off {

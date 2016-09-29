@@ -32,6 +32,7 @@ var app = angular.module('Girgy', [
   'ngMaterial',
   'ngRoute',
   'Colombia',
+  'nvd3',
   ]);
 
 var volaires = angular.module('Girgy');

@@ -185,7 +185,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
   body #footer {
     background-color: #3c3c3c;
-    padding: 30px 60px;
+    padding: 10px 60px 20px 60px;
     height: auto;
   }
   body #footer hr {
@@ -197,7 +197,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     display: block;
   }
   body #footer #contacto ul li {
-    color: #808080;
+    color: #f5f5f5;
     padding: 0px 30px;
     font-size: .9rem;
   }
@@ -208,7 +208,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #FFC000;
   }
   body #footer #contacto .social a {
-    color: #808080;
+    color: #f5f5f5;
   }
   body #footer #contacto .social a:hover {
     color: #b9b8b8;
@@ -262,7 +262,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "Raleway", sans-serif;
     text-rendering: optimizeLegibility;
     line-height: .95;
-    font-weight: 500 !important;
+    font-weight: 500;
     color: #05894d;
     margin: 0px;
   }

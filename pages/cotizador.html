@@ -24,8 +24,8 @@
           <div layout-gt-md="row">
             <md-input-container class="md-block" flex-gt-md>
               <label>Nombre</label>
-              <input ng-model="cotizador.nombre" required md-no-asterisk name="cotizador.nombre">
-              <div ng-messages="cotizador.nombre.$error">
+              <input ng-model="nombre" required md-no-asterisk name="nombre">
+              <div ng-messages="nombre.$error">
                 <div ng-message="required">This is required.</div>
               </div>
             </md-input-container>
@@ -34,8 +34,8 @@
           <div layout-gt-md="row">
             <md-input-container class="md-block" flex-gt-md>
               <label>Correo</label>
-              <input ng-model="cotizador.correo" type="email" required md-no-asterisk name="cotizador.correo">
-              <div ng-messages="cotizador.nombre.$error">
+              <input ng-model="correo" type="email" required md-no-asterisk name="correo">
+              <div ng-messages="nombre.$error">
                 <div ng-message="required">This is required.</div>
               </div>
             </md-input-container>
@@ -44,8 +44,8 @@
           <div layout-gt-md="row">
             <md-input-container class="md-block" flex-gt-md>
               <label>Departamento</label>
-              <md-select ng-model="cotizador.departamento">
-                <md-option ng-repeat="depart in departamentos" value="{{depart.dpto}}" required md-no-asterisk name="cotizador.departamento">
+              <md-select ng-model="departamento">
+                <md-option ng-repeat="depart in departamentos" value="{{depart.dpto}}" required md-no-asterisk name="departamento">
                   {{depart.dpto}}
                 </md-option>
               </md-select>
@@ -53,8 +53,8 @@
 
             <md-input-container class="md-block" flex-gt-md>
               <label>Ciudad</label>
-              <md-select ng-model="cotizador.ciudad">
-                <md-option ng-repeat="ciudad in ciudades" value="{{ciudad.city}}" required md-no-asterisk name="cotizador.ciudad">
+              <md-select ng-model="ciudad">
+                <md-option ng-repeat="ciudad in ciudades" value="{{ciudad.city}}" required md-no-asterisk name="ciudad">
                   {{ciudad.city}}
                 </md-option>
               </md-select>
@@ -63,13 +63,13 @@
 
           <md-input-container class="md-block">
             <label>Dirección</label>
-            <input ng-model="cotizador.direccion">
+            <input ng-model="direccion">
           </md-input-container>
 
           <div layout-gt-md="row">
             <md-input-container class="md-block" flex="50">
               <label>Tipo de Inmueble</label>
-              <md-select ng-model="cotizador.tipo_muebles" required md-no-asterisk name="cotizador.tipo_muebles">
+              <md-select ng-model="tipo_muebles" required md-no-asterisk name="tipo_muebles">
                 <md-option ng-repeat="inmueble in inmuebles" value="{{inmueble}}">
                   {{inmueble}}
                 </md-option>
@@ -84,31 +84,32 @@
             <div layout-gt-md="row">
               <md-input-container class="md-block" flex-gt-md>
                 <label>Cosumo Mes kWh</label>
-                <input ng-model="cotizador.cmkwh" type="number" value="192" required md-no-asterisk name="cotizador.cmkwh" class="form-factura">
-                <div ng-messages="cotizador.nombre.$error">
+                <input ng-model="cmkwh" type="number" value="192" required md-no-asterisk name="cmkwh" class="form-factura" step="1">
+                <div ng-messages="nombre.$error">
                   <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
               <md-input-container class="md-block" flex-gt-md>
                 <label>Cosumo Promedio Mensual kWh</label>
-                <input ng-model="cotizador.cpmkwh" type="number" value="175" required md-no-asterisk name="cotizador.cpmkwh" class="form-factura">
-                <div ng-messages="cotizador.nombre.$error">
+                <input ng-model="cpmkwh" type="number" value="175" required md-no-asterisk name="cpmkwh" class="form-factura" step="1">
+                <div ng-messages="nombre.$error">
                   <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
             </div>
             <div layout-gt-md="row">
               <md-input-container class="md-block" flex-gt-md>
-                <label>Porcentaje Atendido por el Aistema</label>
-                <input ng-model="cotizador.pas" type="number" value="1.0" required md-no-asterisk name="cotizador.pas" class="form-factura">
-                <div ng-messages="cotizador.pas.$error">
+                <label>Porcentaje Atendido por el Sistema</label>
+                <input ng-model="pas " type="number" required md-no-asterisk name="pas" class="form-factura" ng-pattern="/(^[0]+(\.[5-9]{1})?$)|^(1)?$/" step="0.1">
+                <div class="hint">Rango (0.5 - 1)</div>
+                <div ng-messages="pas.$error">
                   <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
               <md-input-container class="md-block" flex-gt-md>
                 <label>Valor Factura</label>
-                <input ng-model="cotizador.vfactura" type="number" value="101663" required md-no-asterisk name="cotizador.vfactura" class="form-factura">
-                <div ng-messages="cotizador.vfactura.$error">
+                <input ng-model="vfactura" type="number" value="101663" required md-no-asterisk name="vfactura" class="form-factura" step="any">
+                <div ng-messages="vfactura.$error">
                   <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
@@ -117,9 +118,11 @@
 
           <div layout-gt-sm="row"  layout-align="start center">
             <div md-theme="amber" flex="50">
-            <md-button type="submit" class="md-raised md-primary" ng-click="calcular()">CALCULAR</md-button>
+              <md-button type="submit" class="md-raised md-primary" ng-click="calcular()">{{bottom}}</md-button>
             </div>
           </div>
+
+          <div class="div-horizontal"> </div> 
 
 
         </form>
@@ -185,10 +188,60 @@
           </tbody>
         </table>
       </div>
+
+      <div layout="row" layout-align="center center"  >
+        <nvd3 flex="60" options="options" data="data" ></nvd3>
+      </div>
+
+
+      <div layout="row" layout-align="center center" >
+        <table id="t_cuatro">
+          <thead>
+            <tr>
+              <th ></th>
+              <th >Sistema Fotovoltaico</th>
+              <th >Sistema Fotovoltaico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pago de Energía en 1 año</td>
+              <td>$  {{carc}}</td>
+              <td>$  {{cass}}</td>
+            </tr>
+            <tr>
+              <td>Pago de Energía en 25 años</td>
+              <td>$  {{pago25}}</td>
+              <td>$  {{vinversion}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div layout="row" layout-align="center center" >
+        <table id="t_cinco">
+          <tbody>
+            <tr>
+              <td>VALOR DE LA INVERSIÓN</td>
+              <td>$  {{vinversion}}</td>
+            </tr>
+            <tr>
+              <td>AHORRO A 25 AÑOS</td>
+              <td>$  {{ahorro}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+
     </div>
     <div layout="column" layout-align="start start" class="texto">
       <p><strong>Nota: </strong> Todas las cotizaciones por la plataforma no son de carácter contractual e incluyen equipos e instalación, pero no incluyen baterías (autonomía de la red) ni transporte hacia lugares fuera de Bogotá y alrededores. Para ello, pedir cotización especial a nuestro contacto.</p>
     </div>
+    
 
 
   </div>
