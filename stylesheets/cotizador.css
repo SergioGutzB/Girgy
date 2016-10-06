@@ -7,7 +7,7 @@
     padding-top: 60px;
   }
   body #cotizador .texto p {
-    color: #808080;
+    color: #000;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     text-align: justify;
@@ -28,7 +28,7 @@
     display: none;
   }
   body .hint {
-    color: #808080;
+    color: #000;
     font-size: 11px;
     padding-top: 15px;
     margin-top: 20px;
@@ -163,4 +163,16 @@ md-radio-button .md-off {
 
 md-radio-button .md-on {
   background-color: #FFC000;
+}
+
+@media (max-width: 599px) {
+  body #cotizador #form-factura {
+    padding: 0px;
+  }
+  body #cotizador #form-factura form {
+    padding: 20px 10px;
+  }
+  body #cotizador .texto {
+    padding-top: 10px;
+  }
 }

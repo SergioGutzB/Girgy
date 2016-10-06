@@ -35,7 +35,7 @@ angular
 
     .when('/clientes', {
       templateUrl: '/sections/clientes.html',
-      controller: 'Index'
+      controller: 'Clientes'
     })
 
     .when('/cotizador', {

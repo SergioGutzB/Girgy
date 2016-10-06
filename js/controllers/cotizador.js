@@ -184,25 +184,25 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', function($
 
       $scope.data = [
       {
-        "key": "Red Convencional",
-        "color": "#d62728",
-        "values": [
-        {
-          "label" : "Costo anual" ,
-          "value" : $scope.carc
-        } 
-        ]
-      },
-      {
         "key": "Sistema Fotovoltaico",
-        "color": "#8BC34A",
+        "color": "#05894d",
         "values": [
         {
           "label" : "Costo anual" ,
           "value" : $scope.cass
         } 
         ]
-      }
+      },
+      {
+        "key": "Red Convencional",
+        "color": "#4D4D4D",
+        "values": [
+        {
+          "label" : "Costo anual" ,
+          "value" : $scope.carc
+        } 
+        ]
+      }      
       ]
       
 

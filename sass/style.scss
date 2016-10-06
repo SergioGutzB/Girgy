@@ -170,18 +170,18 @@
           font-family: $font-ralewat;
         }
         h1 {
-          font-size: 3rem;
+          font-size: 3em;
           font-weight: 400;
-          line-height: .6rem;
+          line-height: .6em;
         }
         h2 {
           font-weight: 400;
-          font-size: 2.5rem;
-          line-height: .6rem;
+          font-size: 2.5em;
+          line-height: .6em;
         }
         h3 {
           font-family: $font-ralewat;
-          line-height: 0.4rem;
+          line-height: 0.4em;
           font-weight: 400;
           font-size: 25px;
         }
@@ -194,8 +194,9 @@
 
       }
       #ver-mas {
-        background-color: $color-agua-marina;
+        background-color: transparent;
         color: #fff;
+        border: 1px solid #fff
       }
       .texto {
         text-align: center;
@@ -395,6 +396,42 @@
         }
       }
     }
+    .navigation{
+      width: 100%;
+      md-nav-bar{
+        .md-nav-bar {
+          nav{
+            width: 100%;
+          }
+          ._md-nav-bar-list{
+            .md-nav-item{
+
+            }
+          }
+          .md-button._md-nav-button{
+            padding: 0px 0px;
+            font-size: 1em;
+            min-width: 0px;
+          }
+        }
+      }
+      .logo{
+        display: none;
+      }
+    }
+    .navigation, .navigation.nav-fixed-top{
+      .logo{
+        display: none;
+      }
+      #nav{
+        float: initial;
+      }
+    }
+    .infografia{
+      img{
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -492,15 +529,50 @@
         }
       } 
     }
+
+    /////////////////////////////////////////////////
     .section{
       padding: 10px 10px;
       margin-top: 45px;
     }
+    /////////////////////////////////////////////////
 
+
+    .title-sec{
+      .title{
+        padding-top: 30px;
+        font-size: 35px;
+      }
+    }
+    .texto {
+      padding-top: 30px;
+    }
+
+    .header{
+      .title {
+        h1 {
+
+          line-height: 1em;
+        }
+        h2 {
+
+          line-height: 1em;
+        }
+      }
+      #ver-mas{
+        margin: 0 auto;
+      }
+    }
+
+    .infografia{
+      img{
+        width: 100%;
+      }
+    }
 
     //################### FOOTER  ##################
     #footer {
-      font-size: 11px;
+      font-size: 14px;
       .menu{
         ul{
           display: block;

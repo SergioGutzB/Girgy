@@ -6,10 +6,42 @@
   <div class="content"  >
     <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-row-height-gt-md="150px" md-row-height="200px" md-gutter="40px" md-gutter-gt-md="50px" >
 
-      <md-grid-tile class="green" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">
-        <img src="images/ecoanalisis.png">
+      <md-grid-tile id="ecoAnalisis" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-click="showAdvanced($event)">
+        <div class="info-cont">
+          <img src="images/ecoanalisis.png">          
+        </div>
       </md-grid-tile>
-    </md-grid-list>
   </div>
+
+
+<div style="visibility: hidden">
+  <div class="md-dialog-container" id="myDialog" >
+    <md-dialog aria-label="{{cliente.nombre}}">
+      <form ng-cloak>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <h2>{{cliente.nombre}}</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+              <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+          <div class="md-dialog-content">
+            <img style="margin: auto; max-width: 100%;" alt="{{cliente.nombre}}" src="{{cliente.imagen}}">
+            <h3>{{cliente.ubicacion}}</h3>
+            <h3>{{cliente.fecha}}</h3>
+            <p>
+              {{cliente.descripcion}}
+            </p>
+          </div>
+        </md-dialog-content>
+      </form>
+    </md-dialog>
+  </div>
+</div>
+
 
 </div>

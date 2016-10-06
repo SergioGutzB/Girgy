@@ -3,7 +3,7 @@
     padding-top: 60px;
   }
   body #nosotros .texto p {
-    color: #808080;
+    color: #000;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     text-align: justify;
@@ -11,7 +11,7 @@
   body #nosotros .content {
     padding: 70px 200px 0px 200px;
   }
-  body #nosotros .section .subtitle h4 {
+  body #nosotros .subtitle h4 {
     text-align: center;
     font-family: Raleway;
     font-weight: 300;
@@ -127,5 +127,21 @@
   }
   body #nosotros .circle-image:hover .text a:hover {
     color: #337ab7;
+  }
+}
+@media (max-width: 599px) {
+  body #nosotros .content {
+    padding: 0px;
+    display: block;
+  }
+  body #nosotros .content .circle-image {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}
+@media (min-width: 600px) and (max-width: 920px) {
+  body #nosotros .content {
+    padding: 45px 0px;
   }
 }

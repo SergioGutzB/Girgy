@@ -3,13 +3,13 @@ body p {
   font-size: 1rem;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
-  color: #808080;
+  color: #000;
 }
 
 #wrap {
   min-height: 100%;
   background-color: #fff;
-  color: #808080;
+  color: #000;
   font-family: "Raleway", sans-serif;
 }
 
@@ -169,18 +169,18 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "Raleway", sans-serif;
   }
   body .header .title h1 {
-    font-size: 3rem;
+    font-size: 3em;
     font-weight: 400;
-    line-height: .6rem;
+    line-height: .6em;
   }
   body .header .title h2 {
     font-weight: 400;
-    font-size: 2.5rem;
-    line-height: .6rem;
+    font-size: 2.5em;
+    line-height: .6em;
   }
   body .header .title h3 {
     font-family: "Raleway", sans-serif;
-    line-height: 0.4rem;
+    line-height: 0.4em;
     font-weight: 400;
     font-size: 25px;
   }
@@ -191,8 +191,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     font-weight: 500;
   }
   body .header #ver-mas {
-    background-color: #368A88;
+    background-color: transparent;
     color: #fff;
+    border: 1px solid #fff;
   }
   body .header .texto {
     text-align: center;
@@ -362,6 +363,29 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   body #footer .menu ul {
     display: list-item;
   }
+  body .navigation {
+    width: 100%;
+  }
+  body .navigation md-nav-bar .md-nav-bar nav {
+    width: 100%;
+  }
+  body .navigation md-nav-bar .md-nav-bar .md-button._md-nav-button {
+    padding: 0px 0px;
+    font-size: 1em;
+    min-width: 0px;
+  }
+  body .navigation .logo {
+    display: none;
+  }
+  body .navigation .logo, body .navigation.nav-fixed-top .logo {
+    display: none;
+  }
+  body .navigation #nav, body .navigation.nav-fixed-top #nav {
+    float: initial;
+  }
+  body .infografia img {
+    width: 100%;
+  }
 }
 @media (max-width: 599px) {
   body .container-nav {
@@ -448,8 +472,27 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     padding: 10px 10px;
     margin-top: 45px;
   }
+  body .title-sec .title {
+    padding-top: 30px;
+    font-size: 35px;
+  }
+  body .texto {
+    padding-top: 30px;
+  }
+  body .header .title h1 {
+    line-height: 1em;
+  }
+  body .header .title h2 {
+    line-height: 1em;
+  }
+  body .header #ver-mas {
+    margin: 0 auto;
+  }
+  body .infografia img {
+    width: 100%;
+  }
   body #footer {
-    font-size: 11px;
+    font-size: 14px;
   }
   body #footer .menu ul {
     display: block;

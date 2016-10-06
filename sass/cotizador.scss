@@ -192,3 +192,19 @@ md-radio-button .md-off {
 md-radio-button .md-on {
   background-color: $color-naranja;
 }
+
+@media (max-width: 599px) {
+  body {
+    #cotizador{
+      #form-factura {
+        padding: 0px;
+        form{
+          padding: 20px 10px;
+        }
+      }
+      .texto{
+        padding-top: 10px;
+      }
+    }
+  }
+}
