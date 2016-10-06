@@ -24,62 +24,65 @@
   <div id="wrap">
     <div ng-controller="NavController" class="nav">
       <div class="nav-bar">
-        <div class="logo" layout="row" layout-align="center center">
-          <img src="images/logo_final.png"  ng-click="gotoAnchor('/')">
-        </div>
         <div class="container-nav">
           <div class="navigation">
-            <div layout="row" layout-align="space-between center" id="nav">
-              <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-                <md-nav-item md-nav-href="/#inicio" name="inicio">INICIO</md-nav-item>
-                <md-nav-item md-nav-href="/#servicios" name="servicios">SERVICIOS</md-nav-item>
-                <md-nav-item md-nav-href="/#clientes" name="clientes">CLIENTES</md-nav-item>
-                <md-nav-item md-nav-href="/#cotizador" name="cotizador">COTIZADOR</md-nav-item>
-                <md-nav-item md-nav-href="/#nosotros" name="nosotros">NOSOTROS</md-nav-item>
-                <md-nav-item md-nav-href="/#contacto" name="contacto">CONTACTO</md-nav-item>
-              </md-nav-bar>
+            <div class="logo" layout="row" layout-align="center center">
+             <img src="images/logo_final.png"  ng-click="gotoAnchor('/')">
+           </div>
+           <div layout-sm="columns" layout="row" layout-align="space-between center" id="nav">
+            <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+              <md-nav-item md-nav-href="/#inicio" ng-click="show()" name="inicio">INICIO</md-nav-item>
+              <md-nav-item md-nav-href="/#servicios" ng-click="show()" name="servicios">SERVICIOS</md-nav-item>
+              <md-nav-item md-nav-href="/#clientes" ng-click="show()" name="clientes">CLIENTES</md-nav-item>
+              <md-nav-item md-nav-href="/#cotizador" ng-click="show()" name="cotizador">COTIZADOR</md-nav-item>
+              <md-nav-item md-nav-href="/#nosotros" ng-click="show()" name="nosotros">NOSOTROS</md-nav-item>
+              <md-nav-item md-nav-href="/#contacto" ng-click="show()" name="contacto">CONTACTO</md-nav-item>
+              <li class="icon md-nav-item" role="option">
+                <a  class="" href="javascript:void(0);" style="font-size:15px;" ng-click="show()">☰</a>
+              </li>
+            </md-nav-bar>
 
-            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
-    <div id="initial-container">
-      <div ng-view >
-      </div>
-    </div>    
-
-    <div ng-include="'../sections/footer.html'"  id="footer"></div>
-
   </div>
-  <script   src="js/jquery-1.12.4.min.js"></script>
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="js/angular-route.js"></script>
-  <script src="js/angular-animate.min.js"></script>
-  <script src="js/angular-aria.min.js"></script>
-  <script src="js/angular-messages.min.js"></script>
+  <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
+  <div id="initial-container">
+    <div ng-view >
+    </div>
+  </div>    
 
-  <!-- Angular Material Library -->
-  <script src="js/angular-material.min.js"></script>
+  <div ng-include="'../sections/footer.html'"  id="footer"></div>
 
-  <script src="bower_components/d3/d3.js"></script>
-  <script src="bower_components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
-  <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
-  
+</div>
+<script   src="js/jquery-1.12.4.min.js"></script>
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/angular-animate.min.js"></script>
+<script src="js/angular-aria.min.js"></script>
+<script src="js/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="js/angular-material.min.js"></script>
+
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
+<script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
 
 
-  <!-- Your application bootstrap  -->
-  <script src="js/app.js"></script>
-  <script src="js/routes.js"></script>
-  
-  <script src="js/services/colombia.js"></script>
 
-  <script src="js/controllers/navController.js"></script>
-  <script src="js/controllers/index.js"></script>
-  <script src="js/controllers/contact.js"></script>
-  <script src="js/controllers/cotizador.js"></script>
+<!-- Your application bootstrap  -->
+<script src="js/app.js"></script>
+<script src="js/routes.js"></script>
+
+<script src="js/services/colombia.js"></script>
+
+<script src="js/controllers/navController.js"></script>
+<script src="js/controllers/index.js"></script>
+<script src="js/controllers/contact.js"></script>
+<script src="js/controllers/cotizador.js"></script>
 
 
 </body>

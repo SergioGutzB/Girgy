@@ -1,4 +1,3 @@
-
 var girgy = angular.module('Girgy')
 
 girgy.controller('NavController', ['$anchorScroll', '$location', '$scope', '$mdTheming', '$q', '$timeout',function($anchorScroll, $location, $scope, $mdTheming, $q, $timeout){
@@ -25,6 +24,11 @@ girgy.controller('NavController', ['$anchorScroll', '$location', '$scope', '$mdT
       });
     }
   };
+
+  $scope.show = function(){
+    console.log(this);
+    $(".navigation").toggleClass("responsive");
+  }
 
 
 }]);
