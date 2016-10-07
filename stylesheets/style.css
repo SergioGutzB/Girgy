@@ -363,31 +363,54 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   body #footer .menu ul {
     display: list-item;
   }
-  body .navigation {
-    width: 100%;
-  }
-  body .navigation md-nav-bar .md-nav-bar nav {
-    width: 100%;
-  }
-  body .navigation md-nav-bar .md-nav-bar .md-button._md-nav-button {
-    padding: 0px 0px;
-    font-size: 1em;
-    min-width: 0px;
-  }
-  body .navigation .logo {
-    display: none;
-  }
-  body .navigation .logo, body .navigation.nav-fixed-top .logo {
-    display: none;
-  }
-  body .navigation #nav, body .navigation.nav-fixed-top #nav {
-    float: initial;
-  }
   body .infografia img {
     width: 100%;
   }
 }
 @media (max-width: 599px) {
+  body .section {
+    padding: 10px 10px;
+    margin-top: 45px;
+  }
+  body .title-sec .title {
+    padding-top: 30px;
+    font-size: 35px;
+  }
+  body .texto {
+    padding-top: 30px;
+  }
+  body .header .title h1 {
+    line-height: 1em;
+  }
+  body .header .title h2 {
+    line-height: 1em;
+  }
+  body .header #ver-mas {
+    margin: 0 auto;
+  }
+  body .infografia img {
+    width: 100%;
+  }
+  body #footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+  body #footer .menu ul {
+    display: block;
+  }
+  body #footer .menu ul li {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+  }
+  body #footer #contacto ul {
+    padding: 0px;
+  }
+  body #footer #contacto ul li {
+    padding: 0px 5px;
+  }
+}
+@media (max-width: 959px) {
   body .container-nav {
     position: relative;
   }
@@ -468,44 +491,20 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     background-color: #fff;
     border-bottom: 1px solid #b9b8b8;
   }
-  body .section {
-    padding: 10px 10px;
-    margin-top: 45px;
+}
+@media (min-width: 960px) and (max-width: 1206px) {
+  body .navigation.nav-fixed-top {
+    padding: 0px 60px;
   }
-  body .title-sec .title {
-    padding-top: 30px;
-    font-size: 35px;
+  body .navigation.nav-fixed-top .logo img {
+    height: 70px;
   }
-  body .texto {
-    padding-top: 30px;
+  body .navigation.nav-fixed-top md-nav-bar .md-nav-bar {
+    height: 70px;
   }
-  body .header .title h1 {
-    line-height: 1em;
-  }
-  body .header .title h2 {
-    line-height: 1em;
-  }
-  body .header #ver-mas {
-    margin: 0 auto;
-  }
-  body .infografia img {
-    width: 100%;
-  }
-  body #footer {
-    font-size: 14px;
-  }
-  body #footer .menu ul {
-    display: block;
-  }
-  body #footer .menu ul li {
-    display: inline-block;
-    width: 30px;
-    text-align: center;
-  }
-  body #footer #contacto ul {
-    padding: 0px;
-  }
-  body #footer #contacto ul li {
+  body .navigation.nav-fixed-top md-nav-bar .md-nav-bar .md-button._md-nav-button {
+    line-height: 70px;
+    font-size: 1em;
     padding: 0px 5px;
   }
 }
