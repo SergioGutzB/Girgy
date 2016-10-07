@@ -392,7 +392,12 @@
     #footer {
       .menu{
         ul{
-          display: list-item;
+          display: block;
+          li{
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+          }
         }
       }
     }
@@ -512,11 +517,12 @@
               margin: 10px 0px;
               a{
                 color: #BF9000;
-                font-size: 1.2rem;
+                font-size: 1.3em;
                 text-align: center;
-                padding: 15px 10px;
+                padding: 15px 15px;
                 text-decoration: none;
-                line-height: 2;
+                line-height: 1.5em; 
+                transition: all 0.3s ease 0s;
               }
             }
           }
@@ -524,6 +530,7 @@
             line-height: 1;
             padding: 15px 10px;
             margin: 0px;
+            font-size: 1.3em;
           }
         }
       }      
@@ -554,15 +561,17 @@
               right: 0;
               top: 0;
               a{
-                line-height: 2;
+                color: #ca8f01;
               }
             }
           }
           .md-button._md-nav-button{
             display: block;
             text-align: left;
-            background-color: #fff;
-            border-bottom: 1px solid $gray-light;
+            border-bottom: 1px solid #ca8f01;
+            background-color: rgb(255, 187, 20);
+            color: #05894d;
+            font-weight: 600;
           }
         }
       } 
