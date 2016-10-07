@@ -406,6 +406,11 @@
         width: 100%;
       }
     }
+    .header #ver-mas{
+      position: absolute;
+      bottom: 0px;
+
+    }
   }
 }
 
@@ -431,6 +436,10 @@
     }
 
     .header{
+      .texto{
+        text-align: left;
+        padding: 50px 0px 0px 20px;
+      }
       .title {
         h1 {
 
@@ -442,7 +451,10 @@
         }
       }
       #ver-mas{
-        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: 10px;
       }
     }
 
@@ -575,6 +587,16 @@
           }
         }
       } 
+    }
+    .header .texto{
+      text-align: left;
+      padding: 80px 0px 0px 50px;
+      h1{
+        font-size: 2.5em;
+      }
+      h2{
+        font-size: 2em;
+      }
     }
   }
 }

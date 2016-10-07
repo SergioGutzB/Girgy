@@ -371,6 +371,10 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   body .infografia img {
     width: 100%;
   }
+  body .header #ver-mas {
+    position: absolute;
+    bottom: 0px;
+  }
 }
 @media (max-width: 599px) {
   body .section {
@@ -384,6 +388,10 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   body .texto {
     padding-top: 30px;
   }
+  body .header .texto {
+    text-align: left;
+    padding: 50px 0px 0px 20px;
+  }
   body .header .title h1 {
     line-height: 1em;
   }
@@ -391,7 +399,10 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     line-height: 1em;
   }
   body .header #ver-mas {
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 10px;
   }
   body .infografia img {
     width: 100%;
@@ -499,6 +510,16 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     background-color: #ffbb14;
     color: #05894d;
     font-weight: 600;
+  }
+  body .header .texto {
+    text-align: left;
+    padding: 80px 0px 0px 50px;
+  }
+  body .header .texto h1 {
+    font-size: 2.5em;
+  }
+  body .header .texto h2 {
+    font-size: 2em;
   }
 }
 @media (min-width: 960px) and (max-width: 1206px) {
