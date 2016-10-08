@@ -1,0 +1,11 @@
+{
+  "name": "Girgy-Solar",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.14.0",
+    "nodemailer": "2.6.4",
+    "nodemailer-smtp-transport": "2.7.2",
+    "body-parser": "1.15.2"
+  }
+}

@@ -30,7 +30,7 @@ angular
 
     .when('/contacto', {
       templateUrl: '/sections/contacto.html',
-      controller: 'Index'
+      controller: 'Contact'
     })
 
     .when('/clientes', {
