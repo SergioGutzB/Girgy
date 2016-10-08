@@ -30,6 +30,33 @@
     #con-factura, #informe{
       display: none;
     }
+
+    #con-factura{
+      #comentario{
+        display: none;
+      }
+    }
+
+    #con-foto{
+      margin-top: 25px;
+      h5{
+        color: $m-green;
+        text-align: center;
+      }
+      .drop-box {
+        background: #F8F8F8;
+        border: 5px dashed #a8d8c2;
+        width: initial;
+        height: 65px;
+        text-align: center;
+        padding-top: 25px;
+        margin: 0px;
+        margin-bottom: 10px;
+      }
+      .dragover {
+        border: 5px dashed blue;
+      }
+    }
     .hint{
       color:$gray;
       font-size: 11px;
@@ -66,6 +93,14 @@
         }
         .md-select-value>span:not(.md-select-icon) .md-text{
           color: $dark;
+        }
+      }
+      .bnt-form{
+        text-align: center;
+        margin: 30px 0px 15px 0px;
+        .md-button{
+          width: 50%;
+          padding: 3px 0px;
         }
       }
 

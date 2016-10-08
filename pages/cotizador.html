@@ -24,7 +24,7 @@
           <div layout-md="row">
             <md-input-container class="md-block" flex-md>
               <label>Nombre</label>
-              <input ng-model="nombre" required md-no-asterisk name="nombre">
+              <input ng-model="nombre" required name="nombre">
               <div ng-messages="nombre.$error">
                 <div ng-message="required">This is required.</div>
               </div>
@@ -34,8 +34,8 @@
           <div layout-gt-md="row">
             <md-input-container class="md-block" flex-gt-md>
               <label>Correo</label>
-              <input ng-model="correo" type="email" required md-no-asterisk name="correo">
-              <div ng-messages="nombre.$error">
+              <input ng-model="correo" type="email" required name="correo">
+              <div ng-messages="correo.$error">
                 <div ng-message="required">This is required.</div>
               </div>
             </md-input-container>
@@ -45,7 +45,7 @@
             <md-input-container class="md-block" flex-xs flex-md>
               <label>Departamento</label>
               <md-select ng-model="departamento">
-                <md-option ng-repeat="depart in departamentos" value="{{depart.dpto}}" required md-no-asterisk name="departamento">
+                <md-option ng-repeat="depart in departamentos" value="{{depart.dpto}}" required name="departamento">
                   {{depart.dpto}}
                 </md-option>
               </md-select>
@@ -54,7 +54,7 @@
             <md-input-container class="md-block" flex-xs flex-md>
               <label>Ciudad</label>
               <md-select ng-model="ciudad">
-                <md-option ng-repeat="ciudad in ciudades" value="{{ciudad.city}}" required md-no-asterisk name="ciudad">
+                <md-option ng-repeat="ciudad in ciudades" value="{{ciudad.city}}" required name="ciudad">
                   {{ciudad.city}}
                 </md-option>
               </md-select>
@@ -69,7 +69,7 @@
           <div layout-gt-md="row">
             <md-input-container class="md-block" flex="50">
               <label>Tipo de Inmueble</label>
-              <md-select ng-model="tipo_muebles" required md-no-asterisk name="tipo_muebles">
+              <md-select ng-model="tipo_muebles" required name="tipo_muebles">
                 <md-option ng-repeat="inmueble in inmuebles" value="{{inmueble}}">
                   {{inmueble}}
                 </md-option>
@@ -84,51 +84,80 @@
             <div layout-xs="column"  layout-md="row">
               <md-input-container class="md-block" flex-xs flex-md>
                 <label>Cosumo Mes kWh</label>
-                <input ng-model="cmkwh" type="number" value="192" required md-no-asterisk name="cmkwh" class="form-factura" step="1">
-                <div ng-messages="nombre.$error">
-                  <div ng-message="required">This is required.</div>
+                <input ng-model="cmkwh" type="number" value="192" name="cmkwh" class="form-factura" step="1">
+                <div ng-messages="nombre.$error">                 
                 </div>
               </md-input-container>
               <md-input-container class="md-block" flex-xs flex-md>
                 <label>Cosumo Promedio Mensual kWh</label>
-                <input ng-model="cpmkwh" type="number" value="175" required md-no-asterisk name="cpmkwh" class="form-factura" step="1">
+                <input ng-model="cpmkwh" type="number" value="175"  name="cpmkwh" class="form-factura" step="1">
                 <div ng-messages="nombre.$error">
-                  <div ng-message="required">This is required.</div>
+
                 </div>
               </md-input-container>
             </div>
             <div layout-xs="column"  layout-md="row">
               <md-input-container class="md-block" flex-xs flex-md>
                 <label>Porcentaje Atendido por el Sistema</label>
-                <input ng-model="pas " type="number" required md-no-asterisk name="pas" class="form-factura" ng-pattern="/(^[0]+(\.[5-9]{1})?$)|^(1)?$/" step="0.1">
+                <input ng-model="pas " type="number" name="pas" class="form-factura" ng-pattern="/(^[0]+(\.[5-9]{1})?$)|^(1)?$/" step="0.1">
                 <div class="hint">Rango (0.5 - 1)</div>
                 <div ng-messages="pas.$error">
-                  <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
               <md-input-container class="md-block" flex-xs flex-md>
                 <label>Valor Factura</label>
-                <input ng-model="vfactura" type="number" value="101663" required md-no-asterisk name="vfactura" class="form-factura" step="any">
+                <input ng-model="vfactura" type="number" value="101663"  name="vfactura" class="form-factura" step="any">
                 <div ng-messages="vfactura.$error">
-                  <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
             </div>
-          </div>
 
-          <div layout-gt-sm="row"  layout-align="start center">
-            <div md-theme="amber" flex="50">
-              <md-button type="submit" class="md-raised md-primary" ng-click="calcular()">Enviar</md-button>
+            <div id="con-foto">
+              <div class="div-horizontal"> </div> 
+              <h5>EN CASO DE QUE NO SEPAS ALGUNO DE LOS VALORES REQUERIDOS, PUEDES ENVIARNOS LA FOTO DE TU FACTURA Y TE ENVIAREMOS LA COTIZACIÓN A TU CORREO SIN COSTO ALGUNO.</h5>
+              <div layout-xs="column"  layout-md="row" layout-align="center center">
+                <md-input-container class="md-block" flex-xs flex-md>
+                  <div ngf-drop ngf-select ng-model="file" class="drop-box" 
+                  ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="true"
+                  accept="image/*,application/pdf" 
+                  ngf-pattern="'image/*,application/pdf'">Click o arrastra tu factura aqui</div>
+                  <div ngf-no-file-drop>El archivo Drag/Drop no es soportado por el navegador</div>
+                  <md-progress-linear md-theme="green" md-mode="determinate" value="{{f.progress}}"></md-progress-linear>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-xs flex-md style="text-align: center;">
+                  <div style="font:smaller" ng-if="f"><h5>Factura: {{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}</h5></div>                
+
+                  <img ng-if="f" ngf-thumbnail="f || '/thumb.jpg'">
+                </md-input-container>              
+              </div>
+              <div layout-xs="column"  layout-md="row" layout-align="center center" id="comentario">      
+                <md-input-container class="md-block" flex-xs="100" flex-md="100">
+                  <label>Comentarios</label>
+                  <textarea ng-model="text" md-maxlength="800" rows="5" minlength="80" md-select-on-focus name="text"></textarea>
+                  <div ng-messages="text.$error">="100"
+                    <div ng-message="md-maxlength">La descripción debe ser máximo de 800 caracteres.</div>
+                    <div ng-message="minlength">La descripción debe ser mínimo de 80 caracteres</div>
+                  </div>
+                </md-input-container>
+              </div> 
             </div>
           </div>
 
+
+
+          <div layout-gt-sm="row"  layout-align="center center">
+            <div md-theme="amber" flex="50" layout-align="center" class="bnt-form">
+              <md-button type="submit" class="md-raised md-primary" ng-click="calcular()"  ng-disabled="cotizador.$invalid">Enviar</md-button>
+            </div>
+          </div>
           <div class="div-horizontal"> </div> 
-
-
+          <div layout-xs="column"  layout-md="row"  layout-align="space-between center">
+            <h4><span>{{message}}</span></h4>
+          </div>
         </form>
       </div>
     </div>
-
 
     <div layout-padding id="informe">
 
@@ -242,7 +271,7 @@
     <div layout="column" layout-align="start start" class="texto">
       <p><strong>Nota: </strong> Todas las cotizaciones por la plataforma no son de carácter contractual e incluyen equipos e instalación, pero no incluyen baterías (autonomía de la red) ni transporte hacia lugares fuera de Bogotá y alrededores. Para ello, pedir cotización especial a nuestro contacto.</p>
     </div>
-    
+
 
 
   </div>

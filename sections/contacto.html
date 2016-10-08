@@ -13,8 +13,8 @@
 					</div>
 					<div class="div-horizontal"> </div>
 					<form name="userForm">
-						<div layout-gt-sm="row">
-							<md-input-container class="md-block" flex-gt-sm>
+						<div layout-xs="column"  layout-md="row">
+							<md-input-container class="md-block" flex-xs flex-md>
 								<label>Nombre</label>
 								<input ng-model="user.name" required name="name">
 								<div ng-messages="userForm.name.$error">
@@ -22,31 +22,32 @@
 								</div>
 							</md-input-container>
 
-							<md-input-container>
+							<md-input-container class="md-block" flex-xs flex-md>
 								<label>Email</label>
 								<input ng-model="user.email" type="email" required name="email">
 								<div ng-messages="userForm.email.$error">
 									<div ng-message="required">El campo es requerido.</div>
 								</div>
 							</md-input-container>
-
-							<md-input-container>
+						</div>
+						<div layout-xs="column"  layout-md="row">
+							<md-input-container class="md-block" flex-xs flex-md>
 								<label>Teléfono</label>
 								<input ng-model="user.telefono" type="number" required name="telefono">
 								<div ng-messages="userForm.telefono.$error">
 									<div ng-message="required">El campo es requerido.</div>
 								</div>
 							</md-input-container>
+
+
+							<md-input-container class="md-block" flex-xs flex-md>
+								<label>Ciudad</label>
+								<input ng-model="user.ciudad" required name="ciudad">
+								<div ng-messages="userForm.ciudad.$error">
+									<div ng-message="required">El campo es requerido.</div>
+								</div>
+							</md-input-container>
 						</div>
-
-						<md-input-container class="md-block">
-							<label>Ciudad</label>
-							<input ng-model="user.ciudad" required name="ciudad">
-							<div ng-messages="userForm.ciudad.$error">
-								<div ng-message="required">El campo es requerido.</div>
-							</div>
-						</md-input-container>
-
 						<md-input-container class="md-block">
 							<label>¿Cómo podemos ayudarte?</label>
 							<textarea ng-model="user.text" md-maxlength="800" rows="5" minlength="80" md-select-on-focus required name="text"></textarea>
@@ -57,11 +58,15 @@
 							</div>
 						</md-input-container>
 
-						<div layout-gt-sm="row"  layout-align="space-between center">
+						<div layout-xs="column"  layout-md="row"  layout-align="space-between center">
 							<div md-theme="green">
-								<md-button type="submit" class="md-raised md-primary" ng-click="send()">Enviar</md-button>
+								<md-button type="submit" class="md-raised md-primary" ng-click="send()" ng-disabled="userForm.$invalid">Enviar</md-button>
 							</div>
 							<h4><span>Gracias! Estaremos en contacto en 3 horas o menos.</span></h4>
+						</div>
+
+						<div layout-xs="column"  layout-md="row"  layout-align="space-between center">
+						<h4><span>{{message}}</span></h4>
 						</div>
 
 					</form>

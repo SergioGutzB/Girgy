@@ -33,6 +33,7 @@ var app = angular.module('Girgy', [
   'ngRoute',
   'Colombia',
   'nvd3',
+  'ngFileUpload',
   ]);
 
 var volaires = angular.module('Girgy');
