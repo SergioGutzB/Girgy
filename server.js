@@ -70,7 +70,7 @@ app.post('/send',function(req,res){
     text : req.body.text,
     from : req.body.from,
     priority: 'high',
-    attachments: [{filename: "http://127.0.0.1:3000/img/"+req.body.file}]
+    attachments: [{filename: "http://54.162.233.157/img/"+req.body.file}]
 
   }
   console.log(mailOptions);
