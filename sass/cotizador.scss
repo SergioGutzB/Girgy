@@ -34,7 +34,14 @@
     #con-factura{
       #comentario{
         display: none;
+        margin-top: 30px;
       }
+    }
+    .message{
+      color: $m-green;
+    }
+    #progress{
+      display: none;
     }
 
     #con-foto{

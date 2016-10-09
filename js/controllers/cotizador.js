@@ -12,7 +12,7 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', 'Upload', 
       return {dpto: departamento.departamento}
     });
   })
-
+  $scope.activated = false;
   $scope.factura = "Si";
   $scope.foto = false;
   $scope.factura_txt = "";
@@ -252,13 +252,15 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', 'Upload', 
   }
 
   function send_cotizacion_factura_foto() {
+    $('#progress').slideToggle("slow");
+    $scope.activated = true;
     $http({
       method: 'POST',
       url: "/send",
       data: {
         to: "sergut18@gmail.com",
         subject: "Cotización - Foto Factura",
-        text: "Nombre: "+ $scope.nombre + "\nCorreo: " + $scope.correo + "\nDepartamento: " + $scope.departamento + "\nCiudad: " + $scope.ciudad + "\nTipo inmueble: "+ $scope.tipo_muebles , 
+        text: "Nombre: "+ $scope.nombre + "\nCorreo: " + $scope.correo + "\nDepartamento: " + $scope.departamento + "\nCiudad: " + $scope.ciudad + "\nTipo inmueble: "+ $scope.tipo_muebles+ "\n\nComentarios:\n"+$scope.text, 
         from: '"'+$scope.name + '" <' +$scope.email+'>',
         file: $scope.file.name
       }
@@ -267,11 +269,15 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', 'Upload', 
       console.log(res);
       $scope.reset($scope.cotizador);
       $scope.message = "Se ha enviado con éxito la factura.";
+      $scope.activated = false;
+      $('#progress').slideToggle("slow");
 
     }, function (error){
       console.log("error: " + error);
       console.log(error);
-      $scope.message = "Hubo un problema al enviar la factura, intentelo más tarde."
+      $scope.message = "Hubo un problema al enviar la factura, intentelo más tarde.";
+      $scope.activated = false;
+      $('#progress').slideToggle("slow");
     })
   }
 
@@ -288,6 +294,7 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', 'Upload', 
    $scope.pas          = "";
    $scope.vfactura     = "";  
    $scope.tipo_muebles = "";
+   $scope.text = "";
    $scope.file = null;
    if (form) {
     form.$setPristine();

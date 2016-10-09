@@ -53,6 +53,7 @@ app.post('/upload',function(req,res){
   var is = fs.createReadStream(path)
   var os = fs.createWriteStream(newPath)
 
+
   is.pipe(os)
   is.on('end', function() {
     fs.unlinkSync(path)
@@ -62,7 +63,8 @@ app.post('/upload',function(req,res){
 app.post('/send',function(req,res){
   console.log("FUncion send");
   console.log(req.body)
- 
+  var path = require('path');
+  console.log(path.join(__dirname, "/img/"+req.body.file));
 
   var mailOptions={
     to : "sergut18@gmail.com",
@@ -71,35 +73,35 @@ app.post('/send',function(req,res){
     from : req.body.from,
     priority: 'high',
     attachments: [{filename: req.body.file,
-	path: "http://54.162.233.157:3000/img/"+req.body.file
-	}]
+     path: "http://54.162.233.157:3000/img/"+req.body.file
+   }]
 
-  }
-  console.log(mailOptions);
-  smtpTransport.sendMail(mailOptions, function(error, response){
-    if(error){
-      console.log(error);
-      res.send({success: false, msg: 'No se pudo enviar'+error});
-    }else{
-      console.log("Message sent: " + response);
-      console.log("success: true")
-      res.json({success: true});
-    }
-  });
+ }
+ console.log(mailOptions);
+ smtpTransport.sendMail(mailOptions, function(error, response){
+  if(error){
+    console.log(error);
+    res.send({success: false, msg: 'No se pudo enviar'+error});
+  }else{
+    console.log("Message sent: " + response);
+    console.log("success: true")
+    res.json({success: true});
 
-var fs = require('fs');
-var gutil = require('gulp-util');
+    var fs = require('fs')
 
-fs.exists("/img/"+req.body.file, function(exists) {
-  if(exists) {
+    fs.exists("./img/"+req.body.file, function(exists) {
+      if(exists) {
     //Show in green
-    console.log(gutil.colors.green('File exists. Deleting now ...'));
-    fs.unlink("/img/"+req.body.file);
+    console.log('File exists. Deleting now ...');
+    fs.unlink("./img/"+req.body.file);
   } else {
     //Show in red
-    console.log(gutil.colors.red('File not found, so not deleting.'));
+    console.log('File not found, so not deleting.');
   }
 });
+  }
+});
+ 
 });
 
 app.post('/contacto',function(req,res){

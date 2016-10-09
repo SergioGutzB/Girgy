@@ -8,6 +8,7 @@
     "nodemailer-smtp-transport": "2.7.2",
     "body-parser": "1.15.2",
     "connect-multiparty": "2.0.0",
-    "moment-timezone": "0.5.5"
+    "moment-timezone": "0.5.5",
+    "gulp-util":"3.0.7"
   }
 }

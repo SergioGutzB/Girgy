@@ -128,16 +128,16 @@
                 <md-input-container class="md-block" flex-xs flex-md style="text-align: center;">
                   <div style="font:smaller" ng-if="f"><h5>Factura: {{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}</h5></div>                
 
-                  <img ng-if="f" ngf-thumbnail="f || '/thumb.jpg'">
+                  <img ng-if="f" ngf-thumbnail="f || '/thumb.jpg'" ngf-size="{width: 120, height: 120, quality: 0.9}">
                 </md-input-container>              
               </div>
-              <div layout-xs="column"  layout-md="row" layout-align="center center" id="comentario">      
+              <div layout-xs="column"  layout-md="row" layout-align="center center" id="comentario">
+
                 <md-input-container class="md-block" flex-xs="100" flex-md="100">
                   <label>Comentarios</label>
-                  <textarea ng-model="text" md-maxlength="800" rows="5" minlength="80" md-select-on-focus name="text"></textarea>
+                  <textarea ng-model="text" md-maxlength="800" rows="4" md-select-on-focus name="text"></textarea>
                   <div ng-messages="text.$error">="100"
                     <div ng-message="md-maxlength">La descripción debe ser máximo de 800 caracteres.</div>
-                    <div ng-message="minlength">La descripción debe ser mínimo de 80 caracteres</div>
                   </div>
                 </md-input-container>
               </div> 
@@ -152,8 +152,11 @@
             </div>
           </div>
           <div class="div-horizontal"> </div> 
+          <div md-theme="green" layout="row"  layout-align="center center" >
+          <md-progress-circular id="progress" md-mode="indeterminate" ng-disabled="!activated" class="md-hue-2" md-diameter="30px"></md-progress-circular> 
+          </div>
           <div layout-xs="column"  layout-md="row"  layout-align="space-between center">
-            <h4><span>{{message}}</span></h4>
+            <h4 class="message"><span>{{message}}</span></h4>
           </div>
         </form>
       </div>

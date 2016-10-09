@@ -29,6 +29,13 @@
   }
   body #con-factura #comentario {
     display: none;
+    margin-top: 30px;
+  }
+  body .message {
+    color: #05894d;
+  }
+  body #progress {
+    display: none;
   }
   body #con-foto {
     margin-top: 25px;
