@@ -1,4 +1,9 @@
 .sass-cache/**
 sass/.*
 *.map
+img/
+img/**
+node_modules/
+node_modules/**
+temp.html
 
