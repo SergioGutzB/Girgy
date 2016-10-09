@@ -288,6 +288,7 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', 'Upload', 
    $scope.pas          = "";
    $scope.vfactura     = "";  
    $scope.tipo_muebles = "";
+   $scope.file = null;
    if (form) {
     form.$setPristine();
     form.$setUntouched();

@@ -62,7 +62,7 @@ app.post('/upload',function(req,res){
 app.post('/send',function(req,res){
   console.log("FUncion send");
   console.log(req.body)
-  
+ 
 
   var mailOptions={
     to : "sergut18@gmail.com",
@@ -70,7 +70,9 @@ app.post('/send',function(req,res){
     text : req.body.text,
     from : req.body.from,
     priority: 'high',
-    attachments: [{filename: "http://54.162.233.157/img/"+req.body.file}]
+    attachments: [{filename: req.body.file,
+	path: "http://54.162.233.157:3000/img/"+req.body.file
+	}]
 
   }
   console.log(mailOptions);
@@ -84,6 +86,20 @@ app.post('/send',function(req,res){
       res.json({success: true});
     }
   });
+
+var fs = require('fs');
+var gutil = require('gulp-util');
+
+fs.exists("/img/"+req.body.file, function(exists) {
+  if(exists) {
+    //Show in green
+    console.log(gutil.colors.green('File exists. Deleting now ...'));
+    fs.unlink("/img/"+req.body.file);
+  } else {
+    //Show in red
+    console.log(gutil.colors.red('File not found, so not deleting.'));
+  }
+});
 });
 
 app.post('/contacto',function(req,res){
