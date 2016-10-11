@@ -207,6 +207,7 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', 'Upload', 
             'scrollTop': va
           }, 500, 'swing');
         });
+        send_cotizacion_factura();
       }else{
         console.log("enviando factrua a email")
         send_cotizacion_factura_foto();
@@ -265,21 +266,47 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', 'Upload', 
         file: $scope.file.name
       }
     }).then(function(res){
-      console.log("correo enviado: " + res);
-      console.log(res);
       $scope.reset($scope.cotizador);
       $scope.message = "Se ha enviado con éxito la factura.";
       $scope.activated = false;
       $('#progress').slideToggle("slow");
 
     }, function (error){
-      console.log("error: " + error);
-      console.log(error);
       $scope.message = "Hubo un problema al enviar la factura, intentelo más tarde.";
       $scope.activated = false;
       $('#progress').slideToggle("slow");
     })
   }
+
+  function send_cotizacion_factura() {
+    $('#progress').slideToggle("slow");
+    $scope.activated = true;
+    $http({
+      method: 'POST',
+      url: "/send",
+      data: {
+        to: "sergut18@gmail.com",
+        subject: "Cotización - Factura",
+        text: "Nombre: "+ $scope.nombre + "\nCorreo: " + $scope.correo + "\nDepartamento: " + $scope.departamento + "\nCiudad: " + $scope.ciudad + "\nTipo inmueble: "+ $scope.tipo_muebles + "\n\n\nDatos de la factura:\nConsumo mes kWh: "+$scope.cmkwh+"\nConsumo promedio mensual: "+$scope.cpmkwh+"\nPorcentaje atendido por el sitema: "+$scope.pas+"\nValor Factura: "+scope.vfactura, 
+        from: '"'+$scope.name + '" <' +$scope.email+'>',
+      }
+    }).then(function(res){
+      $scope.reset($scope.cotizador);
+      $scope.message = "Se ha enviado con éxito la factura.";
+      $scope.activated = false;
+      $('#progress').slideToggle("slow");
+
+    }, function (error){
+      $scope.message = "Hubo un problema al enviar la factura, intentelo más tarde.";
+      $scope.activated = false;
+      $('#progress').slideToggle("slow");
+    })
+  }
+
+  $scope.cmkwh        = "";
+  $scope.cpmkwh       = "";
+  $scope.pas          = "";
+  $scope.vfactura     = ""; 
 
   $scope.reset = function (form) {
    $scope.foto = false;

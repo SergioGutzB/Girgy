@@ -4,6 +4,7 @@ var smtpTransport = require("nodemailer-smtp-transport");
 var bodyParser  = require('body-parser');
 var Moment      = require('moment-timezone');
 var multipart = require('connect-multiparty');
+var xoauth2 = require('xoauth2');
 var app=express();
 
 var allowCrossDomain = function(req, res, next) {
@@ -13,6 +14,8 @@ var allowCrossDomain = function(req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 }
+
+var email_send =  "servicios@girgysolar.com";
 
 process.env.TZ = 'America/Bogota';
 
@@ -25,15 +28,53 @@ app.use('/img', express.static(__dirname + '/img'));
 
 /*  Here we are configuring our SMTP Server details.
 STMP is mail server which is responsible for sending and recieving email.*/
-var smtpTransport = nodemailer.createTransport(smtpTransport({
-  host : "smtp.gmail.com",
-  secureConnection : false,
-  port: 25,
+// var smtpTransport = nodemailer.createTransport(smtpTransport({
+//   host : "smtp.gmail.com",
+//   secureConnection : false,
+//   port: 25,
+//   auth: {
+//     user: "sergut18@gmail.com",
+//     pass: "#anonymous88#6847gpSM"
+//   }
+// }));
+
+
+
+var generator = require('xoauth2').createXOAuth2Generator({
+  user: '{username}',
+  clientId: '750395441404-cqr3mtlabjfv694vt6292fi99tp880gv.apps.googleusercontent.com',
+  clientSecret: '9oo50ZrcGFNnkIo1NFw1SX-Z',
+  refreshToken: '{refresh-token}',
+    accessToken: '{cached access token}' // optional
+  });
+
+// listen for token updates
+// you probably want to store these to a db
+generator.on('token', function(token){
+  console.log('New token for %s: %s', token.user, token.accessToken);
+});
+
+// login
+var transporter = nodemailer.createTransport(smtpTransport({
+  service: 'gmail',
   auth: {
-    user: "sergut18@gmail.com",
-    pass: "#anonymous88#6847gpSM"
+    xoauth2: generator
   }
 }));
+
+// // login
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     xoauth2: xoauth2.createXOAuth2Generator({
+//       user: '{username}',
+//       clientId: '750395441404-cqr3mtlabjfv694vt6292fi99tp880gv.apps.googleusercontent.com',
+//       clientSecret: '9oo50ZrcGFNnkIo1NFw1SX-Z',
+//       refreshToken: '{refresh-token}',
+//       accessToken: '{cached access token}'
+//     })
+//   }
+// });
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
@@ -67,7 +108,7 @@ app.post('/send',function(req,res){
   console.log(path.join(__dirname, "/img/"+req.body.file));
 
   var mailOptions={
-    to : "sergut18@gmail.com",
+    to : email_send,
     subject : "Cotización con factura",
     text : req.body.text,
     from : req.body.from,
@@ -106,7 +147,7 @@ app.post('/send',function(req,res){
 
 app.post('/contacto',function(req,res){
   var mailOptions={
-    to : "sergut18@gmail.com",
+    to : email_send,
     subject : req.body.subject,
     text : req.body.text,
     from : req.body.from,
