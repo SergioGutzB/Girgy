@@ -287,7 +287,7 @@ volaires.controller('Cotizador', ['$scope', 'colombia', '$mdTheming', 'Upload', 
       data: {
         to: "sergut18@gmail.com",
         subject: "Cotización - Factura",
-        text: "Nombre: "+ $scope.nombre + "\nCorreo: " + $scope.correo + "\nDepartamento: " + $scope.departamento + "\nCiudad: " + $scope.ciudad + "\nTipo inmueble: "+ $scope.tipo_muebles + "\n\n\nDatos de la factura:\nConsumo mes kWh: "+$scope.cmkwh+"\nConsumo promedio mensual: "+$scope.cpmkwh+"\nPorcentaje atendido por el sitema: "+$scope.pas+"\nValor Factura: "+scope.vfactura, 
+        text: "Nombre: "+ $scope.nombre + "\nCorreo: " + $scope.correo + "\nDepartamento: " + $scope.departamento + "\nCiudad: " + $scope.ciudad + "\nTipo inmueble: "+ $scope.tipo_muebles + "\n\n\nDatos de la factura:\nConsumo mes kWh: "+$scope.cmkwh+"\nConsumo promedio mensual: "+$scope.cpmkwh+"\nPorcentaje atendido por el sitema: "+$scope.pas+"\nValor Factura: "+$scope.vfactura, 
         from: '"'+$scope.name + '" <' +$scope.email+'>',
       }
     }).then(function(res){

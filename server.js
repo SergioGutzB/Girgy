@@ -28,24 +28,13 @@ app.use('/img', express.static(__dirname + '/img'));
 
 /*  Here we are configuring our SMTP Server details.
 STMP is mail server which is responsible for sending and recieving email.*/
-// var smtpTransport = nodemailer.createTransport(smtpTransport({
-//   host : "smtp.gmail.com",
-//   secureConnection : false,
-//   port: 25,
-//   auth: {
-//     user: "servicios@girgysolar.com",
-//     pass: "#anonymous88#6847gpSM"
-//   }
-// }));
-
-
 
 var generator = require('xoauth2').createXOAuth2Generator({
   user: 'servicios@girgysolar.com',
   clientId: '750395441404-cqr3mtlabjfv694vt6292fi99tp880gv.apps.googleusercontent.com',
   clientSecret: '9oo50ZrcGFNnkIo1NFw1SX-Z',
   refreshToken: '1/qgg2bNiDKk5lTgx1MmDNODwszwjMyAnX2Yho0ym3ZLk'
-  });
+});
 
 // listen for token updates
 // you probably want to store these to a db
@@ -61,19 +50,7 @@ var smtpTransport = nodemailer.createTransport(smtpTransport({
   }
 }));
 
-// // login
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     xoauth2: xoauth2.createXOAuth2Generator({
-//       user: '{username}',
-//       clientId: '750395441404-cqr3mtlabjfv694vt6292fi99tp880gv.apps.googleusercontent.com',
-//       clientSecret: '9oo50ZrcGFNnkIo1NFw1SX-Z',
-//       refreshToken: '{refresh-token}',
-//       accessToken: '{cached access token}'
-//     })
-//   }
-// });
+
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
@@ -105,20 +82,28 @@ app.post('/send',function(req,res){
   console.log(req.body)
   var path = require('path');
   console.log(path.join(__dirname, "/img/"+req.body.file));
-
-  var mailOptions={
-    to : email_send,
-    subject : "Cotización con factura",
-    text : req.body.text,
-    from : req.body.from,
-    priority: 'high',
-    attachments: [{filename: req.body.file,
-     path: "http://54.162.233.157:3000/img/"+req.body.file
-   }]
-
- }
- console.log(mailOptions);
- smtpTransport.sendMail(mailOptions, function(error, response){
+  if (req.body.file) {
+    var mailOptions={
+      to : email_send,
+      subject : "Cotización con factura",
+      text : req.body.text,
+      from : req.body.from,
+      priority: 'high',
+      attachments: [{filename: req.body.file,
+        path: "http://54.162.233.157:3000/img/"+req.body.file
+      }]   
+    }
+  }else {
+    var mailOptions={
+      to : email_send,
+      subject : "Cotización con factura",
+      text : req.body.text,
+      from : req.body.from,
+      priority: 'high'
+    }
+  }
+console.log(mailOptions);
+smtpTransport.sendMail(mailOptions, function(error, response){
   if(error){
     console.log(error);
     res.send({success: false, msg: 'No se pudo enviar'+error});
@@ -141,7 +126,7 @@ app.post('/send',function(req,res){
 });
   }
 });
- 
+
 });
 
 app.post('/contacto',function(req,res){
