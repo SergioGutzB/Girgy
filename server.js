@@ -66,7 +66,7 @@ app.post('/upload',function(req,res){
   console.log(req.files.file.name);
   console.log(typeof(req.files.file.name))
   var type = req.files.file.name.split(".");  
-  var newPath = './img/'+ req.files.file.name;
+  var newPath = '/img/'+ req.files.file.name;
   var is = fs.createReadStream(path)
   var os = fs.createWriteStream(newPath)
 
@@ -90,7 +90,7 @@ app.post('/send',function(req,res){
       from : req.body.from,
       priority: 'high',
       attachments: [{filename: req.body.file,
-        path: "http://54.162.233.157:3000/img/"+req.body.file
+        path: "./img/"+req.body.file
       }]   
     }
   }else {
