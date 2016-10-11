@@ -41,11 +41,10 @@ STMP is mail server which is responsible for sending and recieving email.*/
 
 
 var generator = require('xoauth2').createXOAuth2Generator({
-  user: '{username}',
+  user: 'servicios@girgysolar.com',
   clientId: '750395441404-cqr3mtlabjfv694vt6292fi99tp880gv.apps.googleusercontent.com',
   clientSecret: '9oo50ZrcGFNnkIo1NFw1SX-Z',
-  refreshToken: '{refresh-token}',
-    accessToken: '{cached access token}' // optional
+  refreshToken: '1/6MtKnUuCnpCkepvx6l-HNM6O1IclabgicCeR82ZpWaA'
   });
 
 // listen for token updates
