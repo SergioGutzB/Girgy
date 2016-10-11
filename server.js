@@ -54,7 +54,7 @@ generator.on('token', function(token){
 });
 
 // login
-var transporter = nodemailer.createTransport(smtpTransport({
+var smtpTransport = nodemailer.createTransport(smtpTransport({
   service: 'gmail',
   auth: {
     xoauth2: generator
