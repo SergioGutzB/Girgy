@@ -66,7 +66,7 @@ app.post('/upload',function(req,res){
   console.log(req.files.file.name);
   console.log(typeof(req.files.file.name))
   var type = req.files.file.name.split(".");  
-  var newPath = '/img/'+ req.files.file.name;
+  var newPath = './img/'+ req.files.file.name;
   var is = fs.createReadStream(path)
   var os = fs.createWriteStream(newPath)
 
