@@ -102,30 +102,29 @@ app.post('/send',function(req,res){
       priority: 'high'
     }
   }
-console.log(mailOptions);
-smtpTransport.sendMail(mailOptions, function(error, response){
-  if(error){
-    console.log(error);
-    res.send({success: false, msg: 'No se pudo enviar'+error});
-  }else{
-    console.log("Message sent: " + response);
-    console.log("success: true")
-    res.json({success: true});
+  console.log(mailOptions);
+  smtpTransport.sendMail(mailOptions, function(error, response){
+    if(error){
+      console.log(error);
+      res.send({success: false, msg: 'No se pudo enviar'+error});
+    }else{
+      console.log("Message sent: " + response);
+      console.log("success: true")
+      res.json({success: true});
+      if (req.body.file) {
+        var fs = require('fs')
 
-    var fs = require('fs')
-
-    fs.exists("./img/"+req.body.file, function(exists) {
-      if(exists) {
-    //Show in green
-    console.log('File exists. Deleting now ...');
-    fs.unlink("./img/"+req.body.file);
-  } else {
-    //Show in red
-    console.log('File not found, so not deleting.');
-  }
-});
-  }
-});
+        fs.exists("./img/"+req.body.file, function(exists) {
+          if(exists) {
+            console.log('File exists. Deleting now ...');
+            fs.unlink("./img/"+req.body.file);
+          } else {
+            console.log('File not found, so not deleting.');
+          }
+        });
+      }
+    }
+  });
 
 });
 
