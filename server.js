@@ -33,7 +33,7 @@ STMP is mail server which is responsible for sending and recieving email.*/
 //   secureConnection : false,
 //   port: 25,
 //   auth: {
-//     user: "sergut18@gmail.com",
+//     user: "servicios@girgysolar.com",
 //     pass: "#anonymous88#6847gpSM"
 //   }
 // }));
@@ -44,7 +44,7 @@ var generator = require('xoauth2').createXOAuth2Generator({
   user: 'servicios@girgysolar.com',
   clientId: '750395441404-cqr3mtlabjfv694vt6292fi99tp880gv.apps.googleusercontent.com',
   clientSecret: '9oo50ZrcGFNnkIo1NFw1SX-Z',
-  refreshToken: '1/6MtKnUuCnpCkepvx6l-HNM6O1IclabgicCeR82ZpWaA'
+  refreshToken: '1/qgg2bNiDKk5lTgx1MmDNODwszwjMyAnX2Yho0ym3ZLk'
   });
 
 // listen for token updates
