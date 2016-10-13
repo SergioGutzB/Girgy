@@ -12,9 +12,6 @@
     font-weight: 400;
     text-align: justify;
   }
-  body #cotizador .title, body #cotizador .sub-title {
-    color: #05894d;
-  }
   body #cotizador p {
     color: #3c3c3c;
     font-weight: 300;

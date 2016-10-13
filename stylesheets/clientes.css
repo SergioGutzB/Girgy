@@ -1,35 +1,38 @@
 @media only screen and (min-width: 1px) {
-  body .content md-grid-tile {
+  body #clientes .title .sub-title {
+    color: #FFC000;
+  }
+  body #clientes .content md-grid-tile {
     background-color: whitesmoke;
     overflow: hidden;
     border: 1px solid #e8e8e8;
     transition: all 0.5s ease .1s;
   }
-  body .content md-grid-tile .info-cont {
+  body #clientes .content md-grid-tile .info-cont {
     display: block;
     text-align: center;
     padding: 0px 30px;
     font-family: "Raleway", sans-serif;
   }
-  body .content md-grid-tile .info-cont img {
+  body #clientes .content md-grid-tile .info-cont img {
     max-width: 100%;
     max-height: 100%;
   }
-  body .content md-grid-tile .info-cont .info {
+  body #clientes .content md-grid-tile .info-cont .info {
     display: none;
     color: #000;
     transition: all 0.5s ease .1s;
   }
-  body .content md-grid-tile .info-cont .info h1, body .content md-grid-tile .info-cont .info h2, body .content md-grid-tile .info-cont .info h3 {
+  body #clientes .content md-grid-tile .info-cont .info h1, body #clientes .content md-grid-tile .info-cont .info h2, body #clientes .content md-grid-tile .info-cont .info h3 {
     text-align: left;
   }
-  body .content md-grid-tile .info-cont .info p {
+  body #clientes .content md-grid-tile .info-cont .info p {
     text-align: justify;
     color: #000;
     padding: 10px 0px 0px 0px;
     font-weight: 300;
   }
-  body .content md-grid-tile .info-cont .info.view {
+  body #clientes .content md-grid-tile .info-cont .info.view {
     display: block;
     transition: all 0.5s ease .1s;
   }

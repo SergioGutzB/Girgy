@@ -3,8 +3,8 @@
     background-color: #fff;
     color: #05894d;
   }
-  body #servicios .title, body #servicios .sub-title {
-    color: #05894d;
+  body #servicios .sub-title {
+    color: #000;
   }
   body #servicios p {
     color: #000;

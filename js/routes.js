@@ -33,7 +33,7 @@ angular
       controller: 'Contact'
     })
 
-    .when('/clientes', {
+    .when('/proyectos', {
       templateUrl: '/sections/clientes.html',
       controller: 'Clientes'
     })

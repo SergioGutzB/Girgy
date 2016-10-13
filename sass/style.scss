@@ -131,7 +131,7 @@
       .title {
         height: calc(90vh - 70px);
         h1, h2, h3{
-          color: $color-green-dark;
+          color: $g-green;
           text-align: left;
           font-family: $font-ralewat;
         }
@@ -296,16 +296,17 @@
     }
 
     .section{
-      padding: $space 98px;
-      padding-top: 120px;
+      padding: $space;
+      padding-top: 80px;
       .title {
         font-size: 3rem;
         font-family: $font-ralewat;
         text-rendering: optimizeLegibility;
         line-height: .95;
         font-weight: 500;
-        color: $m-green;
+        color: $g-green;
         margin: 0px;
+        margin-top: 50px;
       }
       .content{
         padding-top: $space;

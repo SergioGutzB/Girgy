@@ -129,7 +129,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     height: calc(90vh - 70px);
   }
   body .header .title h1, body .header .title h2, body .header .title h3 {
-    color: #516b22;
+    color: #385723;
     text-align: left;
     font-family: "Raleway", sans-serif;
   }
@@ -271,8 +271,8 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #3c3c3c;
   }
   body .section {
-    padding: 70px 98px;
-    padding-top: 120px;
+    padding: 70px;
+    padding-top: 80px;
   }
   body .section .title {
     font-size: 3rem;
@@ -280,8 +280,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     text-rendering: optimizeLegibility;
     line-height: .95;
     font-weight: 500;
-    color: #05894d;
+    color: #385723;
     margin: 0px;
+    margin-top: 50px;
   }
   body .section .content {
     padding-top: 70px;
