@@ -37,28 +37,29 @@
 <body ng-app="Girgy"> 
   <div id="wrap">
     <div ng-controller="NavController" class="nav">
-      <div class="nav-bar">
-        <div class="container-nav">
-          <div class="navigation">
-            <div class="logo" layout="row" layout-align="center center">
-             <img src="images/logo_final.png"  ng-click="gotoAnchor('/')">
-           </div>
-           <div layout-sm="columns" layout="row" layout-align="space-between center" id="nav">
-            <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-              <md-nav-item md-nav-href="/#inicio" ng-click="show()" name="inicio">INICIO</md-nav-item>
-              <md-nav-item md-nav-href="/#servicios" ng-click="show()" name="servicios">SERVICIOS</md-nav-item>
-              <md-nav-item md-nav-href="/#clientes" ng-click="show()" name="clientes">CLIENTES</md-nav-item>
-              <md-nav-item md-nav-href="/#cotizador" ng-click="show()" name="cotizador">COTIZADOR</md-nav-item>
-              <md-nav-item md-nav-href="/#nosotros" ng-click="show()" name="nosotros">NOSOTROS</md-nav-item>
-              <md-nav-item md-nav-href="/#contacto" ng-click="show()" name="contacto">CONTACTO</md-nav-item>
-              <li class="icon md-nav-item" role="option">
-                <a  class="" href="javascript:void(0);" ng-click="show()"><i class="fa fa-bars" aria-hidden="true"></i></a>
-              </li>
-            </md-nav-bar>
-
-          </div>
-        </div>
+      <div class="navigation">
+        <div class="logo" layout="row" layout-align="center center">
+         <img src="images/logo_final.png"  ng-click="gotoAnchor('/')">
+       </div>
+       <div layout-sm="columns" layout="row" layout-align="space-between center" id="nav">
+        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+          <md-nav-item md-nav-href="/#inicio" ng-click="show()" name="inicio">INICIO</md-nav-item>
+          <li class="divider-vertical"></li>
+          <md-nav-item md-nav-href="/#servicios" ng-click="show()" name="servicios">SERVICIOS</md-nav-item>
+          <li class="divider-vertical"></li>
+          <md-nav-item md-nav-href="/#clientes" ng-click="show()" name="clientes">CLIENTES</md-nav-item>
+          <li class="divider-vertical"></li>
+          <md-nav-item md-nav-href="/#cotizador" ng-click="show()" name="cotizador">COTIZADOR</md-nav-item>
+          <li class="divider-vertical"></li>
+          <md-nav-item md-nav-href="/#nosotros" ng-click="show()" name="nosotros">NOSOTROS</md-nav-item>
+          <li class="divider-vertical"></li>
+          <md-nav-item md-nav-href="/#contacto" ng-click="show()" name="contacto">CONTACTO</md-nav-item>
+          <li class="icon md-nav-item" role="option">
+            <a  class="" href="javascript:void(0);" ng-click="show()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+          </li>
+        </md-nav-bar>
       </div>
+      <div class="line-horizontal"></div>
     </div>
   </div>
   <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
