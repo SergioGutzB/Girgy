@@ -1,249 +1,247 @@
 @import 'variables';
-
 @media only screen and (min-width:1px) {
-  body {    
-    #cotizador{
-      background-color: #fff;
-      color: $m-green;
-      .texto {
-        padding-top: 60px;
-        p{
-          color: $gray;
-          font-family: $font-ralewat;
-          font-weight: 400;
-          text-align: justify;
+    body {
+        #cotizador {
+            background-color: #fff;
+            position: relative;
+            color: $m-green;
+            .texto {
+                padding-top: 60px;
+                p {
+                    color: $gray;
+                    font-family: $font-ralewat;
+                    font-weight: 400;
+                    text-align: justify;
+                }
+            }
+            p {
+                color: $dark;
+                font-weight: 300;
+                text-align: justify;
+            }
+            .fa {
+                padding: 0px 0px 15px 0px;
+                color: $color-naranja;
+            }
         }
-      }
-      p{
-        color: $dark;
-        font-weight: 300;
-        text-align: justify;
-      }
-      .fa{
-        padding: 0px 0px 15px 0px;
-        color: $color-naranja;
-      }
+        #con-factura,
+        #informe {
+            display: none;
+        }
+        #con-factura {
+            #comentario {
+                display: none;
+                margin-top: 30px;
+            }
+        }
+        .message {
+            color: $m-green;
+        }
+        #progress {
+            display: none;
+        }
+        #con-foto {
+            margin-top: 25px;
+            h5 {
+                color: $m-green;
+                text-align: center;
+            }
+            .drop-box {
+                background: #F8F8F8;
+                border: 5px dashed #a8d8c2;
+                width: initial;
+                height: 65px;
+                text-align: center;
+                padding-top: 25px;
+                margin: 0px;
+                margin-bottom: 10px;
+            }
+            .dragover {
+                border: 5px dashed blue;
+            }
+        }
+        .hint {
+            color: $gray;
+            font-size: 11px;
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+        .md-button {
+            margin: 15px 0px;
+        }
+        #form-factura {
+            padding: 30px 0px;
+            form {
+                padding: 20px 50px;
+                background-color: #f5f5f5;
+                max-height: initial;
+                md-input-container {
+                    margin: 10px 0px 0px 0px;
+                }
+                md-input-container>md-select {
+                    margin: 10px 0px 25px 0px;
+                }
+                md-input-container.md-amber-theme.md-input-invalid .md-input-message-animation {
+                    color: rgb(221, 44, 0);
+                }
+                md-input-container.md-amber-theme.md-input-invalid .md-input {
+                    border-color: rgb(221, 44, 0);
+                }
+                md-input-container.md-amber-theme.md-input-invalid label {
+                    color: rgb(221, 44, 0);
+                }
+                md-input-container label,
+                md-input-container {
+                    font-size: 15px;
+                }
+                .md-select-value>span:not(.md-select-icon) .md-text {
+                    color: $dark;
+                }
+            }
+            .bnt-form {
+                text-align: center;
+                margin: 30px 0px 15px 0px;
+                .md-button {
+                    width: 50%;
+                    padding: 3px 0px;
+                }
+            }
+        }
+        #informe {
+            nvd3 {
+                background-color: #f5f5f5;
+                padding: 10px;
+                margin: 10px 0px;
+            }
+            .title-d3 {
+                font-size: 20px;
+                color: $m-green;
+                font-family: $font-ralewat;
+                font-weight: 700;
+                padding: 15px;
+            }
+            table {
+                // border: 1px solid $gray;
+                margin: 10px;
+                text-align: center;
+                border-collapse: collapse;
+                border-spacing: 0;
+                vertical-align: top;
+                color: rgba(60, 60, 60, 0.69);
+                ;
+                td,
+                th {
+                    // border: 1px solid $gray;
+                    padding: 10px;
+                }
+            }
+            #t_una {
+                thead {
+                    padding: 10px;
+                    font-size: 18px;
+                    background-color: $color-naranja;
+                    font-weight: 700;
+                    th {}
+                }
+                tbody {
+                    background-color: #f5f5f5;
+                }
+                #nps {
+                    font-size: 70px;
+                    font-weight: 700;
+                }
+                .ars {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                #mse {
+                    font-size: 35px;
+                    font-weight: 700;
+                }
+            }
+            //#7B7B7B #C8C8C8
+            #t_dos {
+                thead {
+                    padding: 10px;
+                    font-size: 18px;
+                    background-color: #7B7B7B;
+                    font-weight: 700;
+                    th {}
+                }
+                td {
+                    font-weight: 700;
+                    background-color: #C8C8C8;
+                }
+            }
+            #t_tres {
+                thead {
+                    padding: 10px;
+                    font-size: 18px;
+                    background-color: $m-green;
+                    font-weight: 700;
+                    th {}
+                }
+                td {
+                    font-weight: 700;
+                    background-color: $m-light-green;
+                }
+            }
+            #t_cuatro {
+                thead {
+                    padding: 10px;
+                    font-size: 18px;
+                    background-color: #f5f5f5;
+                    font-weight: 700;
+                    th {}
+                }
+                td {
+                    font-weight: 700;
+                    background-color: #f5f5f5;
+                }
+            }
+            #t_cinco {
+                td {
+                    font-size: 30px;
+                    font-weight: 700;
+                    background-color: #f5f5f5;
+                }
+            }
+        }
     }
-    #con-factura, #informe{
-      display: none;
-    }
-
-    #con-factura{
-      #comentario{
-        display: none;
-        margin-top: 30px;
-      }
-    }
-    .message{
-      color: $m-green;
-    }
-    #progress{
-      display: none;
-    }
-
-    #con-foto{
-      margin-top: 25px;
-      h5{
-        color: $m-green;
-        text-align: center;
-      }
-      .drop-box {
-        background: #F8F8F8;
-        border: 5px dashed #a8d8c2;
-        width: initial;
-        height: 65px;
-        text-align: center;
-        padding-top: 25px;
-        margin: 0px;
-        margin-bottom: 10px;
-      }
-      .dragover {
-        border: 5px dashed blue;
-      }
-    }
-    .hint{
-      color:$gray;
-      font-size: 11px;
-      padding-top: 15px;
-      margin-top: 20px;
-    }
-    .md-button{
-      margin: 15px 0px;
-    }
-    #form-factura {
-      padding: 30px 0px;
-      form{
-        padding: 20px 50px;
-        background-color: #f5f5f5;
-        max-height: initial;
-        md-input-container{
-          margin: 10px 0px 0px 0px;
-        }
-        md-input-container>md-select {
-          margin: 10px 0px 25px 0px;
-        }
-        md-input-container.md-amber-theme.md-input-invalid .md-input-message-animation{
-          color: rgb(221,44,0);
-        }
-        md-input-container.md-amber-theme.md-input-invalid .md-input {
-          border-color: rgb(221,44,0);
-        }
-        md-input-container.md-amber-theme.md-input-invalid label{
-          color: rgb(221,44,0);
-        }
-        md-input-container label, md-input-container{
-          font-size: 15px;
-
-        }
-        .md-select-value>span:not(.md-select-icon) .md-text{
-          color: $dark;
-        }
-      }
-      .bnt-form{
-        text-align: center;
-        margin: 30px 0px 15px 0px;
-        .md-button{
-          width: 50%;
-          padding: 3px 0px;
-        }
-      }
-
-    }
-    #informe{
-      nvd3{
-        background-color: #f5f5f5;
-        padding: 10px;
-        margin: 10px 0px;
-
-      }
-      .title-d3{
-        font-size: 20px;
-        color: $m-green;
-        font-family: $font-ralewat;
-        font-weight: 700;
-        padding: 15px;
-      }
-      table{
-        // border: 1px solid $gray;
-        margin: 10px;
-        text-align: center;
-        border-collapse:collapse;
-        border-spacing:0;
-        vertical-align:top;
-        color: rgba(60, 60, 60, 0.69);;
-        td, th{
-          // border: 1px solid $gray;
-          padding: 10px;
-        }
-      }
-      #t_una{
-        thead {
-          padding: 10px;
-          font-size: 18px;
-          background-color: $color-naranja;
-          font-weight: 700;
-          th{
-          }          
-        }
-        tbody{
-          background-color: #f5f5f5;
-        }
-        #nps{
-          font-size: 70px;
-          font-weight: 700;
-        }
-        .ars{
-          font-size: 25px;
-          font-weight: 600;
-        }
-        #mse{
-          font-size: 35px;
-          font-weight: 700;
-        }
-      }
-      //#7B7B7B #C8C8C8
-      #t_dos {
-        thead {
-          padding: 10px;
-          font-size: 18px;
-          background-color: #7B7B7B;
-          font-weight: 700;
-          th{
-          }
-        }
-        td{
-          font-weight: 700;
-          background-color: #C8C8C8;
-        }
-      }
-      #t_tres{
-        thead {
-          padding: 10px;
-          font-size: 18px;
-          background-color: $m-green;
-          font-weight: 700;
-          th{
-          }
-        }
-        td{
-          font-weight: 700;
-          background-color: $m-light-green;
-        }
-      }
-      #t_cuatro{
-        thead {
-          padding: 10px;
-          font-size: 18px;
-          background-color: #f5f5f5;
-          font-weight: 700;
-          th{
-          }
-        }
-        td{
-          font-weight: 700;
-          background-color: #f5f5f5;
-        }
-      }
-      #t_cinco{
-        td{
-          font-size: 30px;
-          font-weight: 700;
-          background-color: #f5f5f5;
-        }
-      }
-    }
-  }
 }
 
 md-radio-button.md-checked .md-off {
-  border-color: $color-naranja;
+    border-color: $color-naranja;
 }
+
 md-radio-button .md-on {
-  background-color: $color-naranja;
+    background-color: $color-naranja;
 }
+
 md-radio-group .md-checked .md-ink-ripple {
-  color: $color-naranja;
+    color: $color-naranja;
 }
 
 md-radio-button .md-off {
-  border-color: $color-naranja;
+    border-color: $color-naranja;
 }
+
 md-radio-button .md-on {
-  background-color: $color-naranja;
+    background-color: $color-naranja;
 }
 
 @media (max-width: 599px) {
-  body {
-    #cotizador{
-      #form-factura {
-        padding: 0px;
-        form{
-          padding: 20px 10px;
+    body {
+        #cotizador {
+            #form-factura {
+                padding: 0px;
+                form {
+                    padding: 20px 10px;
+                }
+            }
+            .texto {
+                padding-top: 10px;
+            }
         }
-      }
-      .texto{
-        padding-top: 10px;
-      }
     }
-  }
 }

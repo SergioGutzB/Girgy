@@ -1,5 +1,6 @@
 @media only screen and (min-width: 1px) {
   body #servicios {
+    position: relative;
     background-color: #fff;
     color: #05894d;
   }
@@ -16,5 +17,12 @@
   }
   body #video {
     padding-top: 60px;
+  }
+}
+@media (max-width: 599px) {
+  body #servicios .card {
+    -webkit-box-flex: 1 1 35%;
+    -webkit-flex: 1 1 35%;
+    flex: 1 1 35%;
   }
 }

@@ -1,24 +1,36 @@
 @import 'variables';
-
 @media only screen and (min-width:1px) {
-  body {    
-    #servicios{
-      background-color: #fff;
-      color: $m-green;
-      .sub-title {
-        color: #000;
-      }
-      p{
-        color: $gray;
-        font-weight: 300;
-      }
-      .fa{
-        padding: 0px 0px 15px 0px;
-        color: $color-naranja;
-      }
+    body {
+        #servicios {
+            position: relative;
+            background-color: #fff;
+            color: $m-green;
+            .sub-title {
+                color: #000;
+            }
+            p {
+                color: $gray;
+                font-weight: 300;
+            }
+            .fa {
+                padding: 0px 0px 15px 0px;
+                color: $color-naranja;
+            }
+        }
+        #video {
+            padding-top: 60px;
+        }
     }
-    #video {
-      padding-top: 60px;
+}
+
+@media (max-width: 599px) {
+    body {
+        #servicios {
+            .card {
+                -webkit-box-flex: 1 1 35%;
+                -webkit-flex: 1 1 35%;
+                flex: 1 1 35%;
+            }
+        }
     }
-  }
 }

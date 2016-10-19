@@ -1,6 +1,7 @@
 @media only screen and (min-width: 1px) {
-  body #nosotros .texto {
-    padding-top: 60px;
+  body #nosotros {
+    position: relative;
+    background-color: #fff;
   }
   body #nosotros .texto p {
     color: #000;
@@ -13,7 +14,7 @@
   }
   body #nosotros .subtitle h4 {
     text-align: center;
-    font-family: Raleway;
+    font-family: "Raleway", sans-serif;
     font-weight: 300;
     font-style: italic;
     font-size: 20px;
@@ -37,9 +38,9 @@
     width: 200px;
     height: 200px;
     text-align: center;
-    filter: grayscale(50%);
-    -webkit-filter: grayscale(50%);
-    -moz-filter: grayscale(50%);
+    filter: grayscale(30%);
+    -webkit-filter: grayscale(30%);
+    -moz-filter: grayscale(30%);
     -moz-transition: all 500ms ease-out;
     -o-transition: all 500ms ease-out;
     -webkit-transition: all 500ms ease-out;
@@ -110,8 +111,8 @@
   body #nosotros .circle-image:hover .text h4 {
     color: #fff;
     margin: 0px;
-    font-family: Lato;
-    font-weight: 100;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
   }
   body #nosotros .circle-image:hover .text h4.cargo {
     font-family: Oswald;

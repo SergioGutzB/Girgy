@@ -1,56 +1,56 @@
-
-
 @import 'variables';
-
 @media only screen and (min-width:1px) {
-	body {    
-		#contacto{
-			position: relative;
-			overflow: hidden;
-			.background {
-				position: absolute;
-				top: -10px;
-				left: -10px;
-				right: -10px;
-				bottom: -10px;
-				background-size: cover;
-				background-image: url(../images/contact.jpg);
-				background-attachment: scroll;
-        background-position: center bottom;
-        transition: all 0.3s ease 0s;
-
-      }
-
-      .sub-title {
-        font-family: Lato;
-        font-weight: 100;
-        color: #4caf50;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      h4 span{
-        color:rgba(0,0,0,0.38);
-        font-family: Lato;
-        font-weight: 400;
-      }
-      .md-button{
-        padding: 0px 60px;
-      }
-      #form-contacto {
-        form {
-          md-input-container.md-amber-theme.md-input-invalid .md-input-message-animation{
-            color: rgb(221,44,0) !important;
-          }
-          md-input-container.md-amber-theme.md-input-invalid .md-input {
-            border-color: rgb(221,44,0) !important;
-          }
-          md-input-container.md-amber-theme.md-input-invalid label{
-            color: rgb(221,44,0) !important;
-          }
+    body {
+        #contacto {
+            position: relative;
+            overflow: hidden;
+            .content {
+                padding-top: $space;
+            }
+            .background {
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                right: -10px;
+                bottom: -10px;
+                background-size: cover;
+                background-image: url(../images/contact.jpg);
+                background-attachment: scroll;
+                background-position: center bottom;
+                transition: all 0.3s ease 0s;
+            }
+            .sub-title {
+                font-family: $font-ralewat;
+                font-weight: 100;
+                color: $m-green;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            h5 span {
+                color: rgba(0, 0, 0, 0.38);
+                font-family: $m-green;
+                font-weight: 400;
+            }
+            h5 {
+                color: rgba(0, 0, 0, 0.38);
+            }
+            .md-button {
+                padding: 0px 60px;
+            }
+            #form-contacto {
+                padding: 20px;
+                form {
+                    md-input-container.md-amber-theme.md-input-invalid .md-input-message-animation {
+                        color: rgb(221, 44, 0) !important;
+                    }
+                    md-input-container.md-amber-theme.md-input-invalid .md-input {
+                        border-color: rgb(221, 44, 0) !important;
+                    }
+                    md-input-container.md-amber-theme.md-input-invalid label {
+                        color: rgb(221, 44, 0) !important;
+                    }
+                }
+            }
         }
-      }
     }
-
-  }
 }

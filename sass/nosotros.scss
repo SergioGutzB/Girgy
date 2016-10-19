@@ -1,161 +1,151 @@
 @import 'variables';
-
 $img-width: 200px;
 $in: #337ab7;
 $in-hover: #23527c;
-
-
-
 @media only screen and (min-width:1px) {
-  body {
-
-    #nosotros{
-      .texto {
-        padding-top: 60px;
-        p{
-          color: $gray;
-          font-family: $font-ralewat;
-          font-weight: 400;
-          text-align: justify;
-        }
-      }      
-      .content {
-        padding: $space 200px 0px 200px;
-      }      
-
-      .subtitle h4{
-        text-align: center;
-        font-family: Raleway;
-        font-weight: 300;
-        font-style: italic;
-        font-size: 20px;
-        margin: 0px;
-        margin-top: 30px;
-      }
-
-      .circle-image {
-        width: $img-width;
-        height: $img-width;
-        max-width: $img-width;
-        overflow: hidden;
-        text-align: center;
-        margin: 0 auto;
-        position: relative;
-
-        img {
-          position: absolute;
-          left: 0px;
-          top:0px;
-          border-radius: 50%;
-          width: $img-width;  
-          height: $img-width; 
-          text-align: center;           
-          filter: grayscale(50%);
-          -webkit-filter: grayscale(50%);
-          -moz-filter: grayscale(50%);
-          @include transition(all 500ms ease-out);
-        } 
-        .telon{
-          position: absolute;
-          left: 0px;
-          top: 0px;
-          background-color: #000;
-          width: $img-width; 
-          height: $img-width; 
-          border-radius: 50%;
-          opacity:0;
-          @include transition(all 500ms ease-out);
-        }
-
-        .text {
-          visibility: hidden;
-          top:70px;
-          @include transition(all 500ms ease-out);
-          font-family: $font-ralewat;
-          .nombre {
-            font-weight: 400;
-          }
-          .cargo {
-            font-weight: 500;
-          }
-          a{            
-            color: #fff;
-          }
-        }
-      }
-      .circle-image:hover{
-        img {
-          filter: grayscale(0%);
-          -webkit-filter: grayscale(0%);
-          -moz-filter: grayscale(0%);
-          -webkit-filter: grayscale(0%);
-          @include transition(all 500ms ease-out);
-        }
-        .telon{
-          opacity:.5;
-          @include transition(all 500ms ease-out);
-        }
-        .text{
-          visibility: visible;
-          position: absolute;
-          left: 0px;
-          top:30px;
-          text-align: center;
-          width: $img-width;
-          padding: 40px 0px;
-
-          @include transition(all 500ms ease-out);
-          h4 {
-            color: #fff;
-            margin: 0px;
-            font-family: Lato;
-            font-weight: 100;
-          }
-          h4.cargo{
-            font-family: Oswald;
-            font-size: 15px;
-            padding-top: 5px;
-          }
-          a{            
-            color: #fff;
-            text-decoration: none;
-            i {
-              padding-top:20px;
+    body {
+        #nosotros {
+            position: relative;
+            background-color: #fff;
+            .texto {
+                p {
+                    color: $gray;
+                    font-family: $font-ralewat;
+                    font-weight: 400;
+                    text-align: justify;
+                }
             }
-
-          }
-          a:hover{
-            color: $in;
-
-          }
-        }        
-      }      
-    }
-  }
-}
-@media (max-width: 599px) {
-  $img-width: 150px;
-  body{
-    #nosotros{
-      .content{
-        padding: 0px;
-        display: block;
-        .circle-image{
-          margin: 0 auto;
-          margin-bottom: 15px;
-          margin-top: 15px;
+            .content {
+                padding: $space 200px 0px 200px;
+            }
+            .subtitle h4 {
+                text-align: center;
+                font-family: $font-ralewat;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 20px;
+                margin: 0px;
+                margin-top: 30px;
+            }
+            .circle-image {
+                width: $img-width;
+                height: $img-width;
+                max-width: $img-width;
+                overflow: hidden;
+                text-align: center;
+                margin: 0 auto;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    border-radius: 50%;
+                    width: $img-width;
+                    height: $img-width;
+                    text-align: center;
+                    filter: grayscale(30%);
+                    -webkit-filter: grayscale(30%);
+                    -moz-filter: grayscale(30%);
+                    @include transition(all 500ms ease-out);
+                }
+                .telon {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    background-color: #000;
+                    width: $img-width;
+                    height: $img-width;
+                    border-radius: 50%;
+                    opacity: 0;
+                    @include transition(all 500ms ease-out);
+                }
+                .text {
+                    visibility: hidden;
+                    top: 70px;
+                    @include transition(all 500ms ease-out);
+                    font-family: $font-ralewat;
+                    .nombre {
+                        font-weight: 400;
+                    }
+                    .cargo {
+                        font-weight: 500;
+                    }
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+            .circle-image:hover {
+                img {
+                    filter: grayscale(0%);
+                    -webkit-filter: grayscale(0%);
+                    -moz-filter: grayscale(0%);
+                    -webkit-filter: grayscale(0%);
+                    @include transition(all 500ms ease-out);
+                }
+                .telon {
+                    opacity: .5;
+                    @include transition(all 500ms ease-out);
+                }
+                .text {
+                    visibility: visible;
+                    position: absolute;
+                    left: 0px;
+                    top: 30px;
+                    text-align: center;
+                    width: $img-width;
+                    padding: 40px 0px;
+                    @include transition(all 500ms ease-out);
+                    h4 {
+                        color: #fff;
+                        margin: 0px;
+                        font-family: $font-ralewat;
+                        font-weight: 400;
+                    }
+                    h4.cargo {
+                        font-family: Oswald;
+                        font-size: 15px;
+                        padding-top: 5px;
+                    }
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        i {
+                            padding-top: 20px;
+                        }
+                    }
+                    a:hover {
+                        color: $in;
+                    }
+                }
+            }
         }
-      }
     }
-  }
+}
+
+@media (max-width: 599px) {
+    $img-width: 150px;
+    body {
+        #nosotros {
+            .content {
+                padding: 0px;
+                display: block;
+                .circle-image {
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 600px) and (max-width: 920px) {
-  body{
-    #nosotros{
-      .content{
-        padding: 45px 0px;
-      }
+    body {
+        #nosotros {
+            .content {
+                padding: 45px 0px;
+            }
+        }
     }
-  }
 }

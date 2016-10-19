@@ -1,281 +1,289 @@
-<div id="cotizador">
-  <div class="section" >
-    <div class="title-sec" layout="row" layout-align="center center">
-      <h1 class="title" >INTECRÁCTUA CON NUESTRO COTIZADOR</h1>
-    </div>
-    <div layout="column" layout-align="start start" class="texto">
-      <p>Se espera que próximamente la ley 1715 que el gobierno nacional expidió en el año 2014 atribuya beneficios a personas con instalaciones eléctricas por medio de fuentes renovables. Estas personas tendrán la facultad de vender energía excedente a la red de distribución como lo hacen en muchos países, con el propósito de fomentar la utilización de energías alternativas y la preservación ambiental.</p>
-      <div style="margin:30px auto;">
-        <h2 class="sub-title text-center">¿CÓNOCES TU FACTURA?</h2>
-        <div flex layout="row" layout-align="center center">
-          <md-radio-group ng-model="factura" layout="row" layout-align="center center">
-            <md-radio-button value="Si">Si</md-radio-button>
-            <md-radio-button value="No">No</md-radio-button>
-          </md-radio-group>
+<div class="margen">
+    <img class="img-margen" src="../images/girgy2h3.jpg">
+    <div id="cotizador">
+        <div class="section">
+            <div class="title-sec" layout="row" layout-align="center center">
+                <h1 class="title">INTECRÁCTUA CON NUESTRO COTIZADOR</h1>
+            </div>
+            <div layout="column" layout-align="start start" class="texto">
+                <p>Se espera que próximamente la ley 1715 que el gobierno nacional expidió en el año 2014 atribuya beneficios a personas con instalaciones eléctricas por medio de fuentes renovables. Estas personas tendrán la facultad de vender energía excedente
+                    a la red de distribución como lo hacen en muchos países, con el propósito de fomentar la utilización de energías alternativas y la preservación ambiental.</p>
+                <div style="margin:30px auto;">
+                    <h2 class="sub-title text-center">¿CÓNOCES TU FACTURA?</h2>
+                    <div flex layout="row" layout-align="center center">
+                        <md-radio-group ng-model="factura" layout="row" layout-align="center center">
+                            <md-radio-button value="Si">Si</md-radio-button>
+                            <md-radio-button value="No">No</md-radio-button>
+                        </md-radio-group>
+                    </div>
+                </div>
+
+                <p>{{ factura_txt}} </p>
+            </div>
+            <div layout-padding md-theme="amber" id="form-factura">
+                <div layout="row" layout-align="center center">
+                    <form name="cotizador" flex-xs="100" flex-sm="100" flex-sm="90" flex-md="80" flex-lg="60">
+
+                        <div layout-md="row">
+                            <md-input-container class="md-block" flex-md>
+                                <label>Nombre</label>
+                                <input ng-model="nombre" required name="nombre">
+                                <div ng-messages="nombre.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+
+                        <div layout-gt-md="row">
+                            <md-input-container class="md-block" flex-gt-md>
+                                <label>Correo</label>
+                                <input ng-model="correo" type="email" required name="correo">
+                                <div ng-messages="correo.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+
+                        <div layout-xs="column" layout-md="row">
+                            <md-input-container class="md-block" flex-xs flex-md>
+                                <label>Departamento</label>
+                                <md-select ng-model="departamento">
+                                    <md-option ng-repeat="depart in departamentos" value="{{depart.dpto}}" required name="departamento">
+                                        {{depart.dpto}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+
+                            <md-input-container class="md-block" flex-xs flex-md>
+                                <label>Ciudad</label>
+                                <md-select ng-model="ciudad">
+                                    <md-option ng-repeat="ciudad in ciudades" value="{{ciudad.city}}" required name="ciudad">
+                                        {{ciudad.city}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+
+                        <md-input-container class="md-block">
+                            <label>Dirección</label>
+                            <input ng-model="direccion">
+                        </md-input-container>
+
+                        <div layout-gt-md="row">
+                            <md-input-container class="md-block" flex="50">
+                                <label>Tipo de Inmueble</label>
+                                <md-select ng-model="tipo_muebles" required name="tipo_muebles">
+                                    <md-option ng-repeat="inmueble in inmuebles" value="{{inmueble}}">
+                                        {{inmueble}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <br/>
+
+                        <div id="con-factura">
+                            <div class="div-horizontal"> </div>
+                            <h4>Datos de tu factura</h4>
+                            <div layout-xs="column" layout-md="row">
+                                <md-input-container class="md-block" flex-xs flex-md>
+                                    <label>Cosumo Mes kWh</label>
+                                    <input ng-model="cmkwh" type="number" value="192" name="cmkwh" class="form-factura" step="1">
+                                    <div ng-messages="nombre.$error">
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-xs flex-md>
+                                    <label>Cosumo Promedio Mensual kWh</label>
+                                    <input ng-model="cpmkwh" type="number" value="175" name="cpmkwh" class="form-factura" step="1">
+                                    <div ng-messages="nombre.$error">
+
+                                    </div>
+                                </md-input-container>
+                            </div>
+                            <div layout-xs="column" layout-md="row">
+                                <md-input-container class="md-block" flex-xs flex-md>
+                                    <label>Porcentaje Atendido por el Sistema</label>
+                                    <input ng-model="pas " type="number" name="pas" class="form-factura" ng-pattern="/(^[0]+(\.[5-9]{1})?$)|^(1)?$/" step="0.1">
+                                    <div class="hint">Rango (0.5 - 1)</div>
+                                    <div ng-messages="pas.$error">
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-xs flex-md>
+                                    <label>Valor Factura</label>
+                                    <input ng-model="vfactura" type="number" value="101663" name="vfactura" class="form-factura" step="any">
+                                    <div ng-messages="vfactura.$error">
+                                    </div>
+                                </md-input-container>
+                            </div>
+
+                            <div id="con-foto">
+                                <div class="div-horizontal"> </div>
+                                <h5>EN CASO DE QUE NO SEPAS ALGUNO DE LOS VALORES REQUERIDOS, PUEDES ENVIARNOS LA FOTO DE TU FACTURA Y TE ENVIAREMOS LA COTIZACIÓN A TU CORREO SIN COSTO ALGUNO.</h5>
+                                <div layout-xs="column" layout-md="row" layout-align="center center">
+                                    <md-input-container class="md-block" flex-xs flex-md>
+                                        <div ngf-drop ngf-select ng-model="file" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="true" accept="image/*,application/pdf" ngf-pattern="'image/*,application/pdf'">Click o arrastra tu factura aqui</div>
+                                        <div ngf-no-file-drop>El archivo Drag/Drop no es soportado por el navegador</div>
+                                        <md-progress-linear md-theme="green" md-mode="determinate" value="{{f.progress}}"></md-progress-linear>
+                                    </md-input-container>
+
+                                    <md-input-container class="md-block" flex-xs flex-md style="text-align: center;">
+                                        <div style="font:smaller" ng-if="f">
+                                            <h5>Factura: {{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}</h5>
+                                        </div>
+
+                                        <img ng-if="f" ngf-thumbnail="f || '/thumb.jpg'" ngf-size="{width: 120, height: 120, quality: 0.9}">
+                                    </md-input-container>
+                                </div>
+                                <div layout-xs="column" layout-md="row" layout-align="center center" id="comentario">
+
+                                    <md-input-container class="md-block" flex-xs="100" flex-md="100">
+                                        <label>Comentarios</label>
+                                        <textarea ng-model="text" md-maxlength="800" rows="4" md-select-on-focus name="text"></textarea>
+                                        <div ng-messages="text.$error">="100"
+                                            <div ng-message="md-maxlength">La descripción debe ser máximo de 800 caracteres.</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div layout-gt-sm="row" layout-align="center center">
+                            <div md-theme="amber" flex="50" layout-align="center" class="bnt-form">
+                                <md-button type="submit" class="md-raised md-primary" ng-click="calcular()" ng-disabled="cotizador.$invalid">Enviar</md-button>
+                            </div>
+                        </div>
+                        <div class="div-horizontal"> </div>
+                        <div md-theme="green" layout="row" layout-align="center center">
+                            <md-progress-circular id="progress" md-mode="indeterminate" ng-disabled="!activated" class="md-hue-2" md-diameter="30px"></md-progress-circular>
+                        </div>
+                        <div layout-xs="column" layout-md="row" layout-align="space-between center">
+                            <h4 class="message"><span>{{message}}</span></h4>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div layout-padding id="informe">
+
+                <h1 class="sub-title text-center">RESULTADOS CON FACTURA</h1>
+                <h3 class="sub-title text-center">NO DUDES EN PEDIR UNA COTIZACIÓN OFICIAL</h3>
+                <div class="div-horizontal"> </div>
+                <div layout="row" layout-align="center center">
+                    <table id="t_una">
+                        <thead>
+                            <tr>
+                                <th>NÚMERO DE PANELES SOLARES</th>
+                                <th>ÁREA REQUERIDA PARA EL SISTEMA</th>
+                                <th>MENSUALMENTE DEJAS DE EMITIR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" id="nps">{{n_ps}}</td>
+                                <td class="ars">{{area_RS}}</td>
+                                <td rowspan="2" id="mse">{{gCO2}} <strong> gCO2</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="ars">{{ha}}<strong>  Ha</strong> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div layout-xs="column" layout="row" layout-align="center center">
+                    <table id="t_dos">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Red convencional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Energía Anual Consumida</strong></td>
+                                <td>{{eac}} <strong>  kWh</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Costo Anual con Red Convencional</strong></td>
+                                <td><strong>$ </strong> {{carc}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table id="t_tres">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Sistema Fotovoltaico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Energía Anual Suministrada </td>
+                                <td>{{eas}} <strong>  kWh</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Costo Anual con Sistema Solar</td>
+                                <td><strong>$ </strong> {{cass}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div layout="row" layout-align="center center">
+                    <nvd3 flex-xs="100" flex-sm="80" flex-md="60" options="options" data="data"></nvd3>
+                </div>
+
+
+                <div layout="row" layout-align="center center">
+                    <table id="t_cuatro">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Sistema Fotovoltaico</th>
+                                <th>Sistema Fotovoltaico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pago de Energía en 1 año</td>
+                                <td>$ {{carc}}</td>
+                                <td>$ {{cass}}</td>
+                            </tr>
+                            <tr>
+                                <td>Pago de Energía en 25 años</td>
+                                <td>$ {{pago25}}</td>
+                                <td>$ {{vinversion}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div layout="row" layout-align="center center">
+                    <table id="t_cinco">
+                        <tbody>
+                            <tr>
+                                <td>VALOR DE LA INVERSIÓN</td>
+                                <td>$ {{vinversion}}</td>
+                            </tr>
+                            <tr>
+                                <td>AHORRO A 25 AÑOS</td>
+                                <td>$ {{ahorro}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+            </div>
+            <div layout="column" layout-align="start start" class="texto">
+                <p><strong>Nota: </strong> Todas las cotizaciones por la plataforma no son de carácter contractual e incluyen equipos e instalación, pero no incluyen baterías (autonomía de la red) ni transporte hacia lugares fuera de Bogotá y alrededores.
+                    Para ello, pedir cotización especial a nuestro contacto.</p>
+            </div>
+
+
+
         </div>
-      </div>
-
-      <p >{{ factura_txt}} </p>
     </div>
-    <div layout-padding md-theme="amber" id="form-factura">
-      <div layout="row" layout-align="center center">
-        <form name="cotizador" flex-xs="100" flex-sm="100" flex-sm="90" flex-md="80" flex-lg="60">
-
-          <div layout-md="row">
-            <md-input-container class="md-block" flex-md>
-              <label>Nombre</label>
-              <input ng-model="nombre" required name="nombre">
-              <div ng-messages="nombre.$error">
-                <div ng-message="required">This is required.</div>
-              </div>
-            </md-input-container>
-          </div>
-
-          <div layout-gt-md="row">
-            <md-input-container class="md-block" flex-gt-md>
-              <label>Correo</label>
-              <input ng-model="correo" type="email" required name="correo">
-              <div ng-messages="correo.$error">
-                <div ng-message="required">This is required.</div>
-              </div>
-            </md-input-container>
-          </div>
-
-          <div layout-xs="column"  layout-md="row">
-            <md-input-container class="md-block" flex-xs flex-md>
-              <label>Departamento</label>
-              <md-select ng-model="departamento">
-                <md-option ng-repeat="depart in departamentos" value="{{depart.dpto}}" required name="departamento">
-                  {{depart.dpto}}
-                </md-option>
-              </md-select>
-            </md-input-container>
-
-            <md-input-container class="md-block" flex-xs flex-md>
-              <label>Ciudad</label>
-              <md-select ng-model="ciudad">
-                <md-option ng-repeat="ciudad in ciudades" value="{{ciudad.city}}" required name="ciudad">
-                  {{ciudad.city}}
-                </md-option>
-              </md-select>
-            </md-input-container>
-          </div>
-
-          <md-input-container class="md-block">
-            <label>Dirección</label>
-            <input ng-model="direccion">
-          </md-input-container>
-
-          <div layout-gt-md="row">
-            <md-input-container class="md-block" flex="50">
-              <label>Tipo de Inmueble</label>
-              <md-select ng-model="tipo_muebles" required name="tipo_muebles">
-                <md-option ng-repeat="inmueble in inmuebles" value="{{inmueble}}">
-                  {{inmueble}}
-                </md-option>
-              </md-select>
-            </md-input-container>
-          </div>
-          <br/>
-
-          <div id="con-factura">
-            <div class="div-horizontal"> </div> 
-            <h4>Datos de tu factura</h4>
-            <div layout-xs="column"  layout-md="row">
-              <md-input-container class="md-block" flex-xs flex-md>
-                <label>Cosumo Mes kWh</label>
-                <input ng-model="cmkwh" type="number" value="192" name="cmkwh" class="form-factura" step="1">
-                <div ng-messages="nombre.$error">                 
-                </div>
-              </md-input-container>
-              <md-input-container class="md-block" flex-xs flex-md>
-                <label>Cosumo Promedio Mensual kWh</label>
-                <input ng-model="cpmkwh" type="number" value="175"  name="cpmkwh" class="form-factura" step="1">
-                <div ng-messages="nombre.$error">
-
-                </div>
-              </md-input-container>
-            </div>
-            <div layout-xs="column"  layout-md="row">
-              <md-input-container class="md-block" flex-xs flex-md>
-                <label>Porcentaje Atendido por el Sistema</label>
-                <input ng-model="pas " type="number" name="pas" class="form-factura" ng-pattern="/(^[0]+(\.[5-9]{1})?$)|^(1)?$/" step="0.1">
-                <div class="hint">Rango (0.5 - 1)</div>
-                <div ng-messages="pas.$error">
-                </div>
-              </md-input-container>
-              <md-input-container class="md-block" flex-xs flex-md>
-                <label>Valor Factura</label>
-                <input ng-model="vfactura" type="number" value="101663"  name="vfactura" class="form-factura" step="any">
-                <div ng-messages="vfactura.$error">
-                </div>
-              </md-input-container>
-            </div>
-
-            <div id="con-foto">
-              <div class="div-horizontal"> </div> 
-              <h5>EN CASO DE QUE NO SEPAS ALGUNO DE LOS VALORES REQUERIDOS, PUEDES ENVIARNOS LA FOTO DE TU FACTURA Y TE ENVIAREMOS LA COTIZACIÓN A TU CORREO SIN COSTO ALGUNO.</h5>
-              <div layout-xs="column"  layout-md="row" layout-align="center center">
-                <md-input-container class="md-block" flex-xs flex-md>
-                  <div ngf-drop ngf-select ng-model="file" class="drop-box" 
-                  ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="true"
-                  accept="image/*,application/pdf" 
-                  ngf-pattern="'image/*,application/pdf'">Click o arrastra tu factura aqui</div>
-                  <div ngf-no-file-drop>El archivo Drag/Drop no es soportado por el navegador</div>
-                  <md-progress-linear md-theme="green" md-mode="determinate" value="{{f.progress}}"></md-progress-linear>
-                </md-input-container>
-
-                <md-input-container class="md-block" flex-xs flex-md style="text-align: center;">
-                  <div style="font:smaller" ng-if="f"><h5>Factura: {{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}</h5></div>                
-
-                  <img ng-if="f" ngf-thumbnail="f || '/thumb.jpg'" ngf-size="{width: 120, height: 120, quality: 0.9}">
-                </md-input-container>              
-              </div>
-              <div layout-xs="column"  layout-md="row" layout-align="center center" id="comentario">
-
-                <md-input-container class="md-block" flex-xs="100" flex-md="100">
-                  <label>Comentarios</label>
-                  <textarea ng-model="text" md-maxlength="800" rows="4" md-select-on-focus name="text"></textarea>
-                  <div ng-messages="text.$error">="100"
-                    <div ng-message="md-maxlength">La descripción debe ser máximo de 800 caracteres.</div>
-                  </div>
-                </md-input-container>
-              </div> 
-            </div>
-          </div>
-
-
-
-          <div layout-gt-sm="row"  layout-align="center center">
-            <div md-theme="amber" flex="50" layout-align="center" class="bnt-form">
-              <md-button type="submit" class="md-raised md-primary" ng-click="calcular()"  ng-disabled="cotizador.$invalid">Enviar</md-button>
-            </div>
-          </div>
-          <div class="div-horizontal"> </div> 
-          <div md-theme="green" layout="row"  layout-align="center center" >
-          <md-progress-circular id="progress" md-mode="indeterminate" ng-disabled="!activated" class="md-hue-2" md-diameter="30px"></md-progress-circular> 
-          </div>
-          <div layout-xs="column"  layout-md="row"  layout-align="space-between center">
-            <h4 class="message"><span>{{message}}</span></h4>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div layout-padding id="informe">
-
-      <h1 class="sub-title text-center">RESULTADOS CON FACTURA</h1>
-      <h3 class="sub-title text-center">NO DUDES EN PEDIR UNA COTIZACIÓN OFICIAL</h3>
-      <div class="div-horizontal"> </div> 
-      <div layout="row" layout-align="center center" >
-        <table id="t_una">
-          <thead>
-            <tr>
-              <th >NÚMERO DE PANELES SOLARES</th>
-              <th >ÁREA REQUERIDA PARA EL SISTEMA</th>
-              <th >MENSUALMENTE DEJAS DE EMITIR</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td rowspan="2" id="nps">{{n_ps}}</td>
-              <td class="ars">{{area_RS}}</td>
-              <td rowspan="2" id="mse">{{gCO2}} <strong> gCO2</strong></td>
-            </tr>
-            <tr>
-              <td class="ars">{{ha}}<strong>  Ha</strong> </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div layout-xs="column" layout="row" layout-align="center center" >
-        <table id="t_dos">
-          <thead>
-            <tr><th colspan="2">Red convencional</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Energía Anual Consumida</strong></td>
-              <td>{{eac}} <strong>  kWh</strong></td>
-            </tr>
-            <tr>
-              <td><strong>Costo Anual con Red Convencional</strong></td>
-              <td><strong>$ </strong> {{carc}}</td>
-            </tr>
-          </tbody>
-        </table>
-        <table id="t_tres">
-          <thead>
-            <tr><th colspan="2">Sistema Fotovoltaico</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Energía Anual Suministrada </td>
-              <td>{{eas}}  <strong>  kWh</strong></td>
-            </tr>
-            <tr>
-              <td>Costo Anual con Sistema Solar</td>
-              <td><strong>$ </strong> {{cass}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div layout="row" layout-align="center center"  >
-        <nvd3 flex-xs="100" flex-sm="80" flex-md="60" options="options" data="data" ></nvd3>
-      </div>
-
-
-      <div layout="row" layout-align="center center" >
-        <table id="t_cuatro">
-          <thead>
-            <tr>
-              <th ></th>
-              <th >Sistema Fotovoltaico</th>
-              <th >Sistema Fotovoltaico</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Pago de Energía en 1 año</td>
-              <td>$  {{carc}}</td>
-              <td>$  {{cass}}</td>
-            </tr>
-            <tr>
-              <td>Pago de Energía en 25 años</td>
-              <td>$  {{pago25}}</td>
-              <td>$  {{vinversion}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div layout="row" layout-align="center center" >
-        <table id="t_cinco">
-          <tbody>
-            <tr>
-              <td>VALOR DE LA INVERSIÓN</td>
-              <td>$  {{vinversion}}</td>
-            </tr>
-            <tr>
-              <td>AHORRO A 25 AÑOS</td>
-              <td>$  {{ahorro}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-
-
-
-    </div>
-    <div layout="column" layout-align="start start" class="texto">
-      <p><strong>Nota: </strong> Todas las cotizaciones por la plataforma no son de carácter contractual e incluyen equipos e instalación, pero no incluyen baterías (autonomía de la red) ni transporte hacia lugares fuera de Bogotá y alrededores. Para ello, pedir cotización especial a nuestro contacto.</p>
-    </div>
-
-
-
-  </div>
 </div>

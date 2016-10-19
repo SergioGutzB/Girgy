@@ -1,12 +1,22 @@
 @media only screen and (min-width: 1px) {
-  body #clientes .title .sub-title {
+  body #clientes {
+    background-color: #fff;
+    position: relative;
+  }
+  body #clientes .title,
+  body #clientes .sub-title {
     color: #FFC000;
+  }
+  body #clientes .content {
+    padding: 0px;
+    margin: 70px 0px;
   }
   body #clientes .content md-grid-tile {
     background-color: whitesmoke;
     overflow: hidden;
     border: 1px solid #e8e8e8;
     transition: all 0.5s ease .1s;
+    cursor: pointer;
   }
   body #clientes .content md-grid-tile .info-cont {
     display: block;
@@ -17,13 +27,18 @@
   body #clientes .content md-grid-tile .info-cont img {
     max-width: 100%;
     max-height: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.5s ease .1s;
   }
   body #clientes .content md-grid-tile .info-cont .info {
     display: none;
     color: #000;
     transition: all 0.5s ease .1s;
   }
-  body #clientes .content md-grid-tile .info-cont .info h1, body #clientes .content md-grid-tile .info-cont .info h2, body #clientes .content md-grid-tile .info-cont .info h3 {
+  body #clientes .content md-grid-tile .info-cont .info h1,
+  body #clientes .content md-grid-tile .info-cont .info h2,
+  body #clientes .content md-grid-tile .info-cont .info h3 {
     text-align: left;
   }
   body #clientes .content md-grid-tile .info-cont .info p {
@@ -36,7 +51,16 @@
     display: block;
     transition: all 0.5s ease .1s;
   }
-  body md-toolbar.md-default-theme:not(.md-menu-toolbar), body md-toolbar:not(.md-menu-toolbar) {
+  body #clientes .content md-grid-tile:hover {
+    background-color: rgba(245, 245, 245, 0.5);
+  }
+  body #clientes .content md-grid-tile:hover img {
+    -webkit-filter: grayscale(10%);
+    filter: grayscale(10%);
+    transition: all 0.5s ease .1s;
+  }
+  body md-toolbar.md-default-theme:not(.md-menu-toolbar),
+  body md-toolbar:not(.md-menu-toolbar) {
     background-color: #FFC000;
   }
   body md-dialog {

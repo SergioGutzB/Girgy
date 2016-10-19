@@ -114,6 +114,20 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     height: 20px;
     display: block;
   }
+  body .margen {
+    background-color: #e8e8e8;
+    padding: 180px 70px 70px 70px;
+    position: relative;
+  }
+  body .margen .img-margen {
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+  }
   body .header {
     margin: 0px;
     background-size: cover;
@@ -128,7 +142,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   body .header .title {
     height: calc(90vh - 70px);
   }
-  body .header .title h1, body .header .title h2, body .header .title h3 {
+  body .header .title h1,
+  body .header .title h2,
+  body .header .title h3 {
     color: #385723;
     text-align: left;
     font-family: "Raleway", sans-serif;
@@ -282,10 +298,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     font-weight: 500;
     color: #385723;
     margin: 0px;
-    margin-top: 50px;
-  }
-  body .section .content {
-    padding-top: 70px;
+    text-align: center;
   }
   body .card {
     padding: 0px 20px;
@@ -325,71 +338,33 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     display: none;
   }
 }
-@media (min-width: 600px) and (max-width: 960px) {
-  body #footer .menu ul {
-    display: block;
+@media (min-width: 960px) and (max-width: 1224px) {
+  body .navigation {
+    padding: 0px 50px;
   }
-  body #footer .menu ul li {
-    display: inline-block;
-    width: 30px;
-    text-align: center;
+  body .navigation .logo img {
+    height: 70px;
   }
-  body .infografia img {
-    width: 100%;
+  body .navigation md-nav-bar .md-nav-bar {
+    height: 70px;
   }
-  body .header #ver-mas {
-    position: absolute;
-    bottom: 0px;
+  body .navigation md-nav-bar .md-nav-bar ._md-nav-bar-list {
+    margin-right: -10px;
   }
-}
-@media (max-width: 599px) {
-  body .section {
-    padding: 10px 10px;
-    margin-top: 45px;
-  }
-  body .title-sec .title {
-    padding-top: 30px;
-    font-size: 35px;
-  }
-  body .texto {
-    padding-top: 30px;
-  }
-  body .header .texto {
-    text-align: left;
-    padding: 50px 0px 0px 20px;
-  }
-  body .header .title h1 {
-    line-height: 1em;
-  }
-  body .header .title h2 {
-    line-height: 1em;
-  }
-  body .header #ver-mas {
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    bottom: 10px;
-  }
-  body .infografia img {
-    width: 100%;
-  }
-  body #footer {
-    font-size: 14px;
-    padding: 10px;
-  }
-  body #footer .menu ul {
-    display: block;
-  }
-  body #footer .menu ul li {
-    display: inline-block;
-    width: 30px;
-    text-align: center;
-  }
-  body #footer #contacto ul {
-    padding: 0px;
-  }
-  body #footer #contacto ul li {
+  body .navigation md-nav-bar .md-nav-bar .md-button._md-nav-button {
+    line-height: 70px;
+    font-size: 1em;
     padding: 0px 5px;
+  }
+  body .navigation .line-horizontal {
+    left: 50px;
+    right: 50px;
+  }
+  body .margen {
+    padding-top: 130px;
+  }
+  body .margen .img-margen {
+    top: 70px;
   }
 }
 @media (max-width: 959px) {
@@ -419,7 +394,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
   body .navigation md-nav-bar .md-nav-bar ._md-nav-bar-list {
     display: block;
-    margin: 0px  !important;
+    margin: 0px !important;
   }
   body .navigation md-nav-bar .md-nav-bar ._md-nav-bar-list .md-nav-item {
     display: list-item;
@@ -483,6 +458,13 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     font-size: 1em;
     font-family: "Raleway", sans-serif;
   }
+  body .margen {
+    padding: 50px;
+    padding-top: 90px;
+  }
+  body .margen .img-margen {
+    top: 45px;
+  }
   body .header .texto {
     text-align: left;
     padding: 80px 0px 0px 50px;
@@ -494,26 +476,84 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     font-size: 2em;
   }
 }
-@media (min-width: 960px) and (max-width: 1206px) {
-  body .navigation {
-    padding: 0px 50px;
+@media (min-width: 600px) and (max-width: 960px) {
+  body #footer .menu ul {
+    display: block;
   }
-  body .navigation .logo img {
-    height: 70px;
+  body #footer .menu ul li {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
   }
-  body .navigation md-nav-bar .md-nav-bar {
-    height: 70px;
+  body .infografia img {
+    width: 100%;
   }
-  body .navigation md-nav-bar .md-nav-bar ._md-nav-bar-list {
-    margin-right: -10px;
+  body .header #ver-mas {
+    position: absolute;
+    bottom: 0px;
   }
-  body .navigation md-nav-bar .md-nav-bar .md-button._md-nav-button {
-    line-height: 70px;
-    font-size: 1em;
+  body .margen {
+    padding: 50px;
+    padding-top: 100px;
+  }
+  body .margen .img-margen {
+    top: 45px;
+  }
+}
+@media (max-width: 599px) {
+  body .section {
+    padding: 10px 10px;
+    margin-top: 45px;
+  }
+  body .title-sec .title {
+    padding-top: 30px;
+    font-size: 35px;
+  }
+  body .texto {
+    padding-top: 30px;
+  }
+  body .header .texto {
+    text-align: left;
+    padding: 50px 0px 0px 20px;
+  }
+  body .header .title h1 {
+    line-height: 1em;
+  }
+  body .header .title h2 {
+    line-height: 1em;
+  }
+  body .header #ver-mas {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 10px;
+  }
+  body .infografia img {
+    width: 100%;
+  }
+  body #footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+  body #footer .menu ul {
+    display: block;
+  }
+  body #footer .menu ul li {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+  }
+  body #footer #contacto ul {
+    padding: 0px;
+  }
+  body #footer #contacto ul li {
     padding: 0px 5px;
   }
-  body .navigation .line-horizontal {
-    left: 50px;
-    right: 50px;
+  body .margen {
+    padding: 30px;
+    padding-top: 40px;
+  }
+  body .margen .img-margen {
+    top: 45px;
   }
 }

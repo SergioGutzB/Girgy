@@ -3,6 +3,9 @@
     position: relative;
     overflow: hidden;
   }
+  body #contacto .content {
+    padding-top: 70px;
+  }
   body #contacto .background {
     position: absolute;
     top: -10px;
@@ -16,19 +19,25 @@
     transition: all 0.3s ease 0s;
   }
   body #contacto .sub-title {
-    font-family: Lato;
+    font-family: "Raleway", sans-serif;
     font-weight: 100;
-    color: #4caf50;
+    color: #05894d;
     text-align: center;
     margin-bottom: 30px;
   }
-  body #contacto h4 span {
+  body #contacto h5 span {
     color: rgba(0, 0, 0, 0.38);
-    font-family: Lato;
+    font-family: #05894d;
     font-weight: 400;
+  }
+  body #contacto h5 {
+    color: rgba(0, 0, 0, 0.38);
   }
   body #contacto .md-button {
     padding: 0px 60px;
+  }
+  body #contacto #form-contacto {
+    padding: 20px;
   }
   body #contacto #form-contacto form md-input-container.md-amber-theme.md-input-invalid .md-input-message-animation {
     color: #dd2c00 !important;
