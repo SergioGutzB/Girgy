@@ -182,7 +182,7 @@
                             <tr>
                                 <td rowspan="2" id="nps">{{n_ps}}</td>
                                 <td class="ars">{{area_RS}}</td>
-                                <td rowspan="2" id="mse">{{gCO2}} <strong> gCO2</strong></td>
+                                <td rowspan="2" id="mse">{{gCO2 | number:0}} <strong> gCO2</strong></td>
                             </tr>
                             <tr>
                                 <td class="ars">{{ha}}<strong>  Ha</strong> </td>
@@ -205,7 +205,7 @@
                             </tr>
                             <tr>
                                 <td><strong>Costo Anual con Red Convencional</strong></td>
-                                <td><strong>$ </strong> {{carc}}</td>
+                                <td> {{carc | currency:"$":0}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -222,7 +222,7 @@
                             </tr>
                             <tr>
                                 <td>Costo Anual con Sistema Solar</td>
-                                <td><strong>$ </strong> {{cass}}</td>
+                                <td>{{cass | currency:"$":0}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -233,7 +233,7 @@
                 </div>
 
 
-                <div layout="row" layout-align="center center">
+                <!--<div layout="row" layout-align="center center">
                     <table id="t_cuatro">
                         <thead>
                             <tr>
@@ -255,18 +255,18 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </div>-->
 
                 <div layout="row" layout-align="center center">
                     <table id="t_cinco">
                         <tbody>
                             <tr>
                                 <td>VALOR DE LA INVERSIÓN</td>
-                                <td>$ {{vinversion}}</td>
+                                <td>{{vinversion | currency:"$":0}}</td>
                             </tr>
                             <tr>
                                 <td>AHORRO A 25 AÑOS</td>
-                                <td>$ {{ahorro}}</td>
+                                <td>{{ahorro | currency:"$":0}}</td>
                             </tr>
                         </tbody>
                     </table>
