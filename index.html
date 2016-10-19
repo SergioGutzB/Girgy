@@ -1,97 +1,102 @@
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-  <meta name="description" content="Nuestra responsabilidad es suplir los requerimientos energéticos a nuestros clientes, con soluciones más limpias. Nosotros realizamos estudios de ingeniería pertinentes para determinar la viabilidad y costo-beneficio del proyecto de instalación solar, generando confianza al momento de optar por energías sustentables al medioambiente. Desarrollamos simulación del sistema fotovoltaico expuesto a diferentes condiciones bioclimáticas para obtener la mejor eficiencia energética" />
-  <meta name="google" content="nositelinkssearchbox" />
-  <meta name="robots" content="Index,Follow">
-  <meta name="keywords" content="Sistema fotovoltaico, panel solar, energía limpia, cotizador, ingeniería, energías sustentables, energías, alternativas, energías renovables">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Nuestra responsabilidad es suplir los requerimientos energéticos a nuestros clientes, con soluciones más limpias. Nosotros realizamos estudios de ingeniería pertinentes para determinar la viabilidad y costo-beneficio del proyecto de instalación solar, generando confianza al momento de optar por energías sustentables al medioambiente. Desarrollamos simulación del sistema fotovoltaico expuesto a diferentes condiciones bioclimáticas para obtener la mejor eficiencia energética"
+    />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="robots" content="Index,Follow">
+    <meta name="keywords" content="Sistema fotovoltaico, panel solar, energía limpia, cotizador, ingeniería, energías sustentables, energías, alternativas, energías renovables">
 
-  <link rel="shortcut icon" href="images/favicon.png" />
-  
-  <link href="stylesheets/fonts.css">
-  <link href="stylesheets/font-awesome/font-awesome.css" rel="stylesheet" >
-  <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.min.css">
-  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="shortcut icon" href="images/favicon.png" />
 
-  <link rel="stylesheet" href="stylesheets/style.css">
-  <link rel="stylesheet" href="stylesheets/servicios.css">
-  <link rel="stylesheet" href="stylesheets/clientes.css">
-  <link rel="stylesheet" href="stylesheets/nosotros.css">
-  <link rel="stylesheet" href="stylesheets/contacto.css">
-  <link rel="stylesheet" href="stylesheets/cotizador.css">
+    <link href="stylesheets/fonts.css">
+    <link href="stylesheets/font-awesome/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.min.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="bower_components/angular-route/angular-route.min.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-  <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/servicios.css">
+    <link rel="stylesheet" href="stylesheets/clientes.css">
+    <link rel="stylesheet" href="stylesheets/nosotros.css">
+    <link rel="stylesheet" href="stylesheets/contacto.css">
+    <link rel="stylesheet" href="stylesheets/cotizador.css">
 
-  <!-- Angular Material Library -->
-  <script src="bower_components/angular-material/angular-material.min.js"></script>
-  
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+
 </head>
-<body ng-app="Girgy"> 
-  <div id="wrap">
-    <div ng-controller="NavController" class="nav">
-      <div class="navigation">
-        <div class="logo" layout="row" layout-align="center center">
-         <img src="images/logo_final.png"  ng-click="gotoAnchor('/')">
-       </div>
-       <div layout-sm="columns" layout="row" layout-align="space-between center" id="nav">
-        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-          <md-nav-item md-nav-href="/#inicio" ng-click="show()" name="inicio">INICIO</md-nav-item>
-          <li class="divider-vertical"></li>
-          <md-nav-item md-nav-href="/#servicios" ng-click="show()" name="servicios">SERVICIOS</md-nav-item>
-          <li class="divider-vertical"></li>
-          <md-nav-item md-nav-href="/#proyectos" ng-click="show()" name="proyectos">PROYECTOS</md-nav-item>
-          <li class="divider-vertical"></li>
-          <md-nav-item md-nav-href="/#cotizador" ng-click="show()" name="cotizador">COTIZADOR</md-nav-item>
-          <li class="divider-vertical"></li>
-          <md-nav-item md-nav-href="/#nosotros" ng-click="show()" name="nosotros">NOSOTROS</md-nav-item>
-          <li class="divider-vertical"></li>
-          <md-nav-item md-nav-href="/#contacto" ng-click="show()" name="contacto">CONTACTO</md-nav-item>
-          <li class="icon md-nav-item" role="option">
-            <a  class="" href="javascript:void(0);" ng-click="show()"><i class="fa fa-bars" aria-hidden="true"></i></a>
-          </li>
-        </md-nav-bar>
-      </div>
-      <div class="line-horizontal"></div>
+
+<body ng-app="Girgy">
+    <div id="wrap">
+        <div ng-controller="NavController" class="nav">
+            <div class="navigation">
+                <div class="logo" layout="row" layout-align="center center">
+                    <img src="images/logo_final.png" ng-click="gotoAnchor('/')" aria-describedat="Girgy Solar" title="Girgy Solar">
+                </div>
+                <div layout-sm="columns" layout="row" layout-align="space-between center" id="nav">
+                    <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+                        <md-nav-item md-nav-href="/#inicio" ng-click="show()" name="inicio">INICIO</md-nav-item>
+                        <li class="divider-vertical"></li>
+                        <md-nav-item md-nav-href="/#servicios" ng-click="show()" name="servicios">SERVICIOS</md-nav-item>
+                        <li class="divider-vertical"></li>
+                        <md-nav-item md-nav-href="/#proyectos" ng-click="show()" name="proyectos">PROYECTOS</md-nav-item>
+                        <li class="divider-vertical"></li>
+                        <md-nav-item md-nav-href="/#cotizador" ng-click="show()" name="cotizador">COTIZADOR</md-nav-item>
+                        <li class="divider-vertical"></li>
+                        <md-nav-item md-nav-href="/#nosotros" ng-click="show()" name="nosotros">NOSOTROS</md-nav-item>
+                        <li class="divider-vertical"></li>
+                        <md-nav-item md-nav-href="/#contacto" ng-click="show()" name="contacto">CONTACTO</md-nav-item>
+                        <li class="icon md-nav-item" role="option">
+                            <a class="" href="javascript:void(0);" ng-click="show()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                        </li>
+                    </md-nav-bar>
+                </div>
+                <div class="line-horizontal"></div>
+            </div>
+        </div>
+        <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
+        <div id="initial-container">
+            <div ng-view>
+            </div>
+        </div>
+
+        <div ng-include="'../sections/footer.html'" id="footer"></div>
+
     </div>
-  </div>
-  <!-- <div ng-include="'pages/content.html'" id="content"></div> -->
-  <div id="initial-container">
-    <div ng-view >
-    </div>
-  </div>    
-
-  <div ng-include="'../sections/footer.html'"  id="footer"></div>
-
-</div>
 
 
-<script src="bower_components/d3/d3.min.js"></script>
-<script src="bower_components/nvd3/build/nv.d3.min.js"></script> <!-- or use another assembly -->
-<script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
-<script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="bower_components/nvd3/build/nv.d3.min.js"></script>
+    <!-- or use another assembly -->
+    <script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
 
 
 
-<!-- Your application bootstrap  -->
-<script src="js/app.js"></script>
-<script src="js/routes.js"></script>
+    <!-- Your application bootstrap  -->
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
 
-<script src="js/services/colombia.js"></script>
+    <script src="js/services/colombia.js"></script>
 
-<script src="js/controllers/navController.js"></script>
-<script src="js/controllers/index.js"></script>
-<script src="js/controllers/contact.js"></script>
-<script src="js/controllers/cotizador.js"></script>
-<script src="js/controllers/clientes.js"></script>
+    <script src="js/controllers/navController.js"></script>
+    <script src="js/controllers/index.js"></script>
+    <script src="js/controllers/contact.js"></script>
+    <script src="js/controllers/cotizador.js"></script>
+    <script src="js/controllers/clientes.js"></script>
 
 
 </body>
+
 </html>

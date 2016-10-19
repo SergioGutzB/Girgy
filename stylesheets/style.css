@@ -35,7 +35,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     top: 0;
     right: 0px;
     left: 0px;
-    padding: 0px 70px;
+    padding: 0px 80px;
     z-index: 1000;
     transition: all 0.5s ease .1s;
   }
@@ -100,8 +100,8 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     border-bottom: 1px solid #BF9000;
     position: absolute;
     bottom: 1px;
-    left: 70px;
-    right: 70px;
+    left: 80px;
+    right: 80px;
     display: block;
   }
   body .navigation md-nav-ink-bar {
@@ -116,7 +116,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
   body .margen {
     background-color: #e8e8e8;
-    padding: 180px 70px 70px 70px;
+    padding: 190px 80px 80px 80px;
     position: relative;
   }
   body .margen .img-margen {
@@ -287,7 +287,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #3c3c3c;
   }
   body .section {
-    padding: 70px;
+    padding: 80px;
     padding-top: 80px;
   }
   body .section .title {
