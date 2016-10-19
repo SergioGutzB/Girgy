@@ -22,10 +22,10 @@
     padding: 0px 0px 15px 0px;
     color: #FFC000;
   }
-  body #cotizador .title-d3 {
+  body #cotizador .title-sec .title {
     color: #FFC000;
   }
-  body #cotizador .sub-title {
+  body #cotizador .title-sec .sub-title {
     color: #000;
   }
   body #con-factura,

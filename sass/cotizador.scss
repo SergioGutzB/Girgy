@@ -23,11 +23,13 @@
                 padding: 0px 0px 15px 0px;
                 color: $color-naranja;
             }
-            .title-d3 {
-                color: $color-naranja;
-            }
-            .sub-title {
-                color: #000;
+            .title-sec {
+                .title {
+                    color: $color-naranja;
+                }
+                .sub-title {
+                    color: #000;
+                }
             }
         }
         #con-factura,
