@@ -137,6 +137,7 @@
             transition: all 0.3s ease 0s;
             .title {
                 height: calc(90vh - 70px);
+                padding-left: $space;
                 h1,
                 h2,
                 h3 {
@@ -167,14 +168,21 @@
                     font-weight: 500;
                 }
             }
-            #ver-mas {
-                background-color: transparent;
-                color: #fff;
-                border: 1px solid #fff
+            #btn-infografia {
+                #ver-mas {
+                    background-color: transparent;
+                    color: #fff;
+                    border: 1px solid #fff
+                }
+            }
+            #btn-portafolio {
+                .md-button.md-primary.md-raised:not([disabled]):hover {
+                    background-color: rgba(226, 203, 16, .5);
+                }
             }
             .texto {
                 text-align: center;
-                padding: 120px 0px 50px 0px;
+                padding: 120px 0px 15px 0px;
             }
             .social-header {
                 position: absolute;
@@ -352,7 +360,7 @@
     }
 }
 
-@media (min-width: 960px) and(max-width: 1224px) {
+@media (min-width: 960px) and(max-width: 1242px) {
     body {
         .navigation {
             padding: 0px $space_mv;
@@ -495,7 +503,7 @@
         }
         .header .texto {
             text-align: left;
-            padding: 80px 0px 0px 50px;
+            padding: 80px 0px 0px 0px;
             h1 {
                 font-size: 2.5em;
             }
@@ -559,21 +567,16 @@
         .header {
             .texto {
                 text-align: left;
-                padding: 50px 0px 0px 20px;
+                padding: 50px 0px 0px 0px;
             }
             .title {
+                padding-left: 20px;
                 h1 {
                     line-height: 1em;
                 }
                 h2 {
                     line-height: 1em;
                 }
-            }
-            #ver-mas {
-                position: absolute;
-                left: 50%;
-                right: 50%;
-                bottom: 10px;
             }
         }
         .infografia {
