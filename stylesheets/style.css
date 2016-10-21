@@ -177,8 +177,11 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #fff;
     border: 1px solid #fff;
   }
-  body .header #btn-portafolio .md-button.md-primary.md-raised:not([disabled]):hover {
-    background-color: rgba(226, 203, 16, 0.5);
+  body .header #btn-portafolio .md-button:hover {
+    background-color: rgba(226, 203, 16, 0.7);
+  }
+  body .header #btn-portafolio .md-button {
+    background-color: #e2cb10;
   }
   body .header .texto {
     text-align: center;

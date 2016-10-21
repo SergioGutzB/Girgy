@@ -1,23 +1,21 @@
-
 var volaires = angular.module('Girgy')
 
-volaires.controller('Clientes', ['$scope', '$mdDialog', function($scope, $mdDialog){
+volaires.controller('Clientes', ['$scope', '$mdDialog', function($scope, $mdDialog) {
 
   $scope.showAdvanced = function(ev) {
-    console.log(ev)
     $mdDialog.show({
-      controller: DialogController,
-      contentElement: '#myDialog',
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose: true,
-      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
-    })
-    .then(function(answer) {
-      $scope.status = 'You said the information was "' + answer + '".';
-    }, function() {
-      $scope.status = 'You cancelled the dialog.';
-    });
+        controller: DialogController,
+        contentElement: '#myDialog',
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+      })
+      .then(function(answer) {
+        $scope.status = 'You said the information was "' + answer + '".';
+      }, function() {
+        $scope.status = 'You cancelled the dialog.';
+      });
   };
 
   function DialogController($scope, $mdDialog) {
