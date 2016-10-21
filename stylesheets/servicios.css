@@ -19,10 +19,20 @@
     padding-top: 60px;
   }
 }
+@media (min-width: 600px) and (max-width: 900px) {
+  body #servicios .section {
+    padding: 40px;
+    padding-top: 80px;
+  }
+  body #servicios .card {
+    padding: 0px;
+  }
+}
 @media (max-width: 599px) {
   body #servicios .card {
-    -webkit-box-flex: 1 1 35%;
-    -webkit-flex: 1 1 35%;
-    flex: 1 1 35%;
+    padding: 10px 40px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
   }
 }

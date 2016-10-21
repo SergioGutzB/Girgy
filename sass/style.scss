@@ -527,6 +527,7 @@
             display: inline-block;
             width: 30px;
             text-align: center;
+              width: 100px;
           }
         }
       }
@@ -581,6 +582,9 @@
           line-height: 1em;
         }
       }
+      #ver-mas {
+        margin: 0px;
+      }
     }
     .infografia {
       img {
@@ -615,6 +619,30 @@
       padding-top: 40px;
       .img-margen {
         top: 45px;
+      }
+    }
+  }
+}
+
+@media (max-height: 380px) {
+  body {
+    .header {
+      .title {
+        height: calc(90vh - 90px);
+      }
+      .texto {
+        text-align: left;
+        padding: 50px 0px 0px 0px;
+        h1,
+        h2 {
+          margin: 10px 0px;
+        }
+      }
+      #btn-portafolio .md-button {
+        margin: 0px;
+      }
+      #btn-infografia #ver-mas {
+        margin-bottom: 5px;
       }
     }
   }
