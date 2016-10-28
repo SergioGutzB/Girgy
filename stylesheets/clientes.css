@@ -59,6 +59,13 @@
     filter: grayscale(10%);
     transition: all 0.5s ease .1s;
   }
+  body #clientes .content.alianzas md-grid-tile {
+    cursor: auto;
+  }
+  body #clientes .content.alianzas md-grid-tile .info-cont img {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
   body md-toolbar.md-default-theme:not(.md-menu-toolbar),
   body md-toolbar:not(.md-menu-toolbar) {
     background-color: #FFC000;

@@ -130,7 +130,7 @@
       background-size: cover;
       position: relative;
       height: calc(100vh - 70px);
-      background-image: url(../images/Girgy2.jpg);
+      background-image: url(../images/portada.jpg);
       width: 100%;
       background-attachment: scroll;
       background-position: center 70%;
@@ -234,7 +234,7 @@
       height: auto;
       hr {
         border: 0px;
-        width: 50%;
+        width: 70%;
         border-top: 1px solid #ffc000;
       }
       #contacto {
@@ -527,7 +527,7 @@
             display: inline-block;
             width: 30px;
             text-align: center;
-              width: 100px;
+            width: 100px;
           }
         }
       }
@@ -595,6 +595,9 @@
     #footer {
       font-size: 14px;
       padding: 10px;
+      hr {
+        width: 100%;
+      }
       .menu {
         ul {
           display: block;

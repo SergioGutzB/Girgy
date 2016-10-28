@@ -6,4 +6,5 @@ img/**
 node_modules/
 node_modules/**
 temp.html
-
+Documentos/**
+Documentos/*
