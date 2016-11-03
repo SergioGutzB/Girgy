@@ -137,12 +137,15 @@
       transition: all 0.3s ease 0s;
       .title {
         height: calc(90vh - 70px);
-        padding-left: $space;
+        padding: 0px $space;
+        .texto {
+          float: right;
+        }
         h1,
         h2,
         h3 {
           color: $g-green;
-          text-align: left;
+          text-align: right;
           font-family: $font-ralewat;
         }
         h1 {
@@ -176,11 +179,13 @@
         }
       }
       #btn-portafolio {
-        .md-button:hover {
-          background-color: rgba(226, 203, 16, .7);
-        }
+        float: right;
         .md-button {
+          float: right;
           background-color: rgba(226, 203, 16, 1);
+          &:hover {
+            background-color: rgba(226, 203, 16, .7);
+          }
         }
       }
       .texto {

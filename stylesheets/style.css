@@ -141,13 +141,16 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
   body .header .title {
     height: calc(90vh - 70px);
-    padding-left: 80px;
+    padding: 0px 80px;
+  }
+  body .header .title .texto {
+    float: right;
   }
   body .header .title h1,
   body .header .title h2,
   body .header .title h3 {
     color: #385723;
-    text-align: left;
+    text-align: right;
     font-family: "Raleway", sans-serif;
   }
   body .header .title h1 {
@@ -177,11 +180,15 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #fff;
     border: 1px solid #fff;
   }
-  body .header #btn-portafolio .md-button:hover {
-    background-color: rgba(226, 203, 16, 0.7);
+  body .header #btn-portafolio {
+    float: right;
   }
   body .header #btn-portafolio .md-button {
+    float: right;
     background-color: #e2cb10;
+  }
+  body .header #btn-portafolio .md-button:hover {
+    background-color: rgba(226, 203, 16, 0.7);
   }
   body .header .texto {
     text-align: center;
